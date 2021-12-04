@@ -10,5 +10,4 @@
      * [`pmcd`](https://man7.org/linux/man-pages/man1/pmcd.1.html) service enabled & running.
      * `pmcd` configured to only allow remote metric query's from the host `metrics-host.` 
      * `pmcd` to strictly enfroce TLS based authentication.
-  
-  
+   * A trusted `CA` to issue the (required) pair of TLS certificates (a server certificate for the service and a client certificate to install in PRTG.)
