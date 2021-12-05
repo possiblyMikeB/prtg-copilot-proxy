@@ -1,0 +1,27 @@
+{
+  "signing": {
+    "default": {
+      "auth_remote": {
+        "auth_key": "client_key",
+        "remote": "cfssl_server"
+      }
+    },
+    "profiles": {
+      "client": {
+        "auth_remote": {
+          "auth_key": "client_key",
+          "remote": "cfssl_server"
+        }
+      }
+    }
+  },
+  "auth_keys": {
+    "client_key": {
+       "key": "115ad42708bc233YYYYYYYYYYYYe9efb",
+       "type": "standard"
+    }
+  },
+  "remotes": {
+    "cfssl_server": "http://metrics-host:8889"
+  }
+}

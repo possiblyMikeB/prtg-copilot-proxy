@@ -1,0 +1,18 @@
+{
+    "CN": "metrics-host",
+    "hosts": [
+        "metrics-host.my.totally-real.tld",
+        "192.168.0.102",
+	"localhost"
+    ],
+    "key": {
+        "algo": "ecdsa",
+        "size": 256
+    },
+    "names": [
+        {
+            "C": "US"
+        }
+    ]
+}
+

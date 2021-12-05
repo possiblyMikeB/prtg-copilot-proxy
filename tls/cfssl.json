@@ -1,0 +1,105 @@
+{
+  "signing": {
+
+    "default": {
+      "expiry": "17520h"
+    },
+
+    "profiles": {
+    
+      "classifier": {
+        "expiry": "17520h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "cert sign",
+          "crl sign"
+        ],
+        "ca_constraint": {
+          "is_ca": true,
+          "max_path_len": 0,
+          "max_path_len_zero": true
+        }
+      },
+
+      "intermediate": {
+        "expiry": "17520h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "cert sign",
+          "crl sign"
+        ],
+        "ca_constraint": {
+          "is_ca": true,
+          "max_path_len": 1
+        }
+      },
+      
+      "ocsp": {
+        "expiry": "26280h",
+        "usages": [
+          "digital signature",
+          "ocsp signing"
+        ]
+      },
+
+      "auth-server": {
+        "expiry": "17520h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "server auth",
+          "cert sign",
+          "crl sign"
+        ]
+      },
+
+      "server": {
+        "auth_key": "server_key",
+        "expiry": "17520h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "server auth"
+        ]
+      },
+
+      "client": {
+        "auth_key": "client_key",
+        "expiry": "4380h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "client auth"
+        ]
+      },
+
+      "peer": {
+        "auth_key": "peer_key",
+        "expiry": "17520h",
+        "usages": [
+          "signing",
+          "key encipherment",
+          "client auth",
+          "server auth"
+        ]
+      }
+    }
+  },
+
+  "auth_keys": {
+    "client_key": {
+       "key": "fcebe41a2a8806374e01b021d32190c1",
+      "type": "standard"
+    },
+    "server_key": {
+       "key": "e515fa8cc99ed05491f19c463f7fd75a",
+      "type": "standard"
+    },
+    "peer_key": {
+       "key": "ee4044cdda46f969f07381dd1dbc89e9",
+      "type": "standard"
+    }
+  }
+}

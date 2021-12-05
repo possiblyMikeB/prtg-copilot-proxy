@@ -107,17 +107,19 @@ The `CN` is the only field really useful (aside from the private key) when creat
 Finding that it fits with what we want, let's create the client certificates. Making the assumption that the forgoing instruction for the `CA` and `server` certificate have been done on `metrics-host`, we will do the following 
 
 
- 1. Run `openssl rand -hex 16` and use the output to replace the `key` field under `client_key` in the file `cfssl.json`.
- 2. Copy `cfssl.json` and `csr/client.json` to `PRTG` or, where ever are going to upload the client certificates from.
+ 1. Run `openssl rand -hex 16` and use the output to replace the `key` field under `client_key` in the files `cfssl.json` & `remote.json`.
+ 2. Copy `remote.json` and `csr/client.json` to `PRTG`, or where ever are going to upload the client certificates from.
  3. Once done, begin the `cfssl` remote signing service on `metrics-host` as follows:
 
 ```
-$ cfssl serve -config "cfssl.json" -ca "ca.pem" -ca-key "ca-key.pem" -port [SOME-PORT] -address metrics-host
+$ cfssl serve -config "cfssl.json" -ca "ca.pem" -ca-key "ca-key.pem" -port 8889 -address metrics-host
 ```
- 4. From where your copies of `cfssl.json` & `csr/client.json` reside run the following,
+ 4. From where your copies of `remote.json` & `client.json` reside run the following,
 ```
 $ cfssl genkey client.json | cfssljson -bare client
-$ cfssl sign -remote metrics-host:[SOME-PORT]  -config "cfssl.json" -profile client "client.csr" | cfssljson -bare client
+$ cfssl sign  -config "remote.json" -profile=client "client.csr" | cfssljson -bare client
 ```
+ 5. Stop the `cfssl` remote signing server on `metrics-host`
 
-Now, from the other end-point 
+
+You should now have `client.pem`, `client-key.pem`, and `client.csr`.
