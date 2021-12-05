@@ -34,7 +34,7 @@ $ cfssl -bare -f obj.json "cert"
 ```
 
 will produce similar files as before, only this time prefixed with `cert` instead of `ca`; in addition 
-looking at the output from `openssl x509 -in cert.pem -text -noout` we should something similar to:
+looking at the output from `openssl x509 -in cert.pem -text -noout` we should have something similar to:
 
 ```
 Certificate:
@@ -104,17 +104,17 @@ The `CN` is the only field really useful (aside from the private key) when creat
 }
 ```
 
-Finding that it fits with what we want, let's create the client certificates. Making the assumption that the forgoing instruction for the `CA` and `server` certificate have been done on `metrics-host`, we will do the following 
+Finding that it fits with what we want, let's create the client certificates. Making the assumption that the forgoing instructions for the `CA` and `server` certificates have been done on `metrics-host`, we will do the following 
 
 
  1. Run `openssl rand -hex 16` and use the output to replace the `key` field under `client_key` in the files `cfssl.json` & `remote.json`.
- 2. Copy `remote.json` and `csr/client.json` to `PRTG`, or where ever are going to upload the client certificates from.
- 3. Once done, begin the `cfssl` remote signing service on `metrics-host` as follows:
+ 2. Copy `remote.json` and `csr/client.json` to `PRTG`, or the end-point you are going to upload the client certificates from.
+ 3. Once done, begin the `cfssl` remote signing service on `metrics-host`:
 
 ```
 $ cfssl serve -config "cfssl.json" -ca "ca.pem" -ca-key "ca-key.pem" -port 8889 -address metrics-host
 ```
- 4. From where your copies of `remote.json` & `client.json` reside run the following,
+ 4. From where the copies of `remote.json` & `client.json` reside, run the following,
 ```
 $ cfssl genkey client.json | cfssljson -bare client
 $ cfssl sign  -config "remote.json" -profile=client "client.csr" | cfssljson -bare client
@@ -122,4 +122,6 @@ $ cfssl sign  -config "remote.json" -profile=client "client.csr" | cfssljson -ba
  5. Stop the `cfssl` remote signing server on `metrics-host`
 
 
-You should now have `client.pem`, `client-key.pem`, and `client.csr`.
+You should now have `client.pem`, `client-key.pem`, and `client.csr` on (or adjacent to) the client server; in addition, since the private-key was locally generated and likely exists nowhere else on earth, we can be confident when this client verifies themselves with the service. 
+
+Repeat with as many trusted clients as you require.
