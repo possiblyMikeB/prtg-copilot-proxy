@@ -1,5 +1,5 @@
 
-from . import options, tornado, application, define
+from . import options, tornado, make_app, define
 
 def cli_parameters():
     ## command-list parameters 
@@ -44,6 +44,9 @@ def main():
             pass
         pass
 
+    # build application
+    application = make_app()
+    
     # do the thing..
     http_server = tornado.httpserver.HTTPServer(application, ssl_options=ssl_options)
     http_server.listen(options.port)

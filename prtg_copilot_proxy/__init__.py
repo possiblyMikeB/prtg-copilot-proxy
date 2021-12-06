@@ -20,10 +20,9 @@ class PRTGHandler(tornado.web.RequestHandler):
         ]
 
         # process `ca` to see if there's anything of value
-        if ca and Path(ca).is_file():
-            self.sess.verify = ca
-        else:
-            raise FileNotFoundError(ca)
+        if ca:
+            if Path(ca).is_file():
+                self.sess.verify = ca
 
         # process `cert` & `key` to ...
         if cert and not key:
