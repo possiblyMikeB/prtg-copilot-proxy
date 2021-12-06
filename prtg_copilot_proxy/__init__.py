@@ -156,8 +156,8 @@ class SeriesHandler(PRTGHandler):
             sid = item.get('series')
             
             # get hostname from series labels
-            inst = get_instances(sid)
-            host = get_sources(inst[0]['source']).split('.')[0]
+            inst = self.get_instances(sid)
+            host = self.get_sources(inst[0]['source']).split('.')[0]
             hosts[host] = hosts.get(host, 0)
             name = [obj['name'] for obj in inst if obj['id'] == hosts[host]]
             name = name[0]
