@@ -61,21 +61,27 @@ class PRTGHandler(tornado.web.RequestHandler):
 
 
 class FetchHandler(PRTGHandler):
-    def get(self):
+    async def fetch_metrics(self, params):
+        res = self.sess.get(f'{options.proxy_host}/pmapi/fetch', params=params)
+        if res.status_code != 200:
+            # if the request didn't succed then report the error to PRTG
+            self.error_json("HTTP Request to PMPRoxy failed.")
+            # and raise an exception
+            raise Exception("HTTP Request to PMPRoxy failed.")
+        
+        # return responses json content
+        return res.json()
+        
+        
+    async def get(self):
         # both of these are required
         params = {
             'hostspec': self.get_argument('hostspec'),
             'names': self.get_argument('names')
         }
-        
-        res = self.sess.get(f'{options.proxy_host}/pmapi/fetch', params=params)
-        if res.status_code != 200:
-            # if the request didn't succed then report the error to PRTG
-            self.error_json("HTTP Request to PMPRoxy failed.")
-            return
-        
-        # get the result's json content
-        response = res.json()
+
+        # send request to `pmproxy`
+        response = await self.fetch_metrics(params)
         
         # initialize response 'results' objects
         results = list()
@@ -95,10 +101,9 @@ class FetchHandler(PRTGHandler):
                 results.append(robj)
                 pass
             
+        # send reworked results
         self.write_result(results)
         pass
-    pass
-
 
 class SeriesHandler(PRTGHandler):
     
