@@ -1,404 +1,21 @@
-
-### jbd2.njournals
-
-Count of active JBD2 (Journal Block Device v2) devices
-
-### jbd2.transaction.count
-
-This metric is sourced from the per-device /proc/fs/jbd2 info file.
-
-### jbd2.transaction.requested
-
-This metric is sourced from the per-device /proc/fs/jbd2 info file.
-
-### jbd2.transaction.max_blocks
-
-This metric is sourced from the per-device /proc/fs/jbd2 info file.
-
-### jbd2.transaction.total.blocks
-
-Total number of blocks in all transactions since device mounted.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.blocks_logged
-
-Total number of blocks logged in all transactions since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.handles
-
-Total count of handles used in all transactions since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.waiting
-
-Total time spent waiting for transactions to complete since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.request_delay
-
-Total request delay for all transactions to complete since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.running
-
-Total transaction running time over all transactions since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.being_locked
-
-Total transaction locked time over all transactions since mount.
-Derived from values in the per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.flushing_ordered_mode_data
-
-Total time flushing data (ordered mode) for all transactions since
-mount.  Derived from values in per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.total.time.logging
-
-Total time spent logging transactions for all transactions since
-mount.  Derived from values in per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.blocks
-
-Average number of blocks per transaction for all transactions.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.blocks_logged
-
-Average number of blocks logged per transaction for all transactions.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.handles
-
-Average number of handles used per transaction for all transactions.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.waiting
-
-Average time spent waiting for transactions to complete since mount.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.request_delay
-
-Average request delay for all transactions to complete since mount.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.running
-
-Average transaction running time over all transactions since mount.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.being_locked
-
-Average transaction locked time over all transactions since mount.
-Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.flushing_ordered_mode_data
-
-Average time flushing data (ordered mode) for all transactions since
-mount.  Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.logging
-
-Average time spent logging transactions for all transactions since
-mount.  Exported directly from per-device /proc/fs/jbd2 info files.
-
-### jbd2.transaction.average.time.committing
-
-Average time spent committing transactions for all transactions since
-mount.  Exported directly from per-device /proc/fs/jbd2 info files.
-
-### kvm.trace.kvm_vcpu_wakeup
-
-KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
-
-### kvm.trace.kvm_hypercall
-
-KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
-
-### kvm.trace.kvm_mmio
-
-KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
-
-### kvm.trace.kvm_entry
-
-KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
-
-### kvm.trace.kvm_exit
-
-KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
-
-### kvm.trace.count
-
-Number of KVM trace points from /var/lib/pcp/pmdas/kvm/kvm.conf
-
-### kvm.efer_reload
-
-Number of Extended Feature Enable Register (EFER) reloads.
-
-### kvm.exits
-
-Number of guest exits from I/O port accesses. 
-
-### kvm.fpu_reload
-
-Number of reload fpu(Float Point Unit).
-
-### kvm.halt_attempted_poll
-
-Number of times the vcpu attempts to polls.
-
-### kvm.halt_exits
-
-This type of exit is usually seen when a guest is idle.
-
-### kvm.halt_successful_poll
-
-The number of times the vcpu attempts to polls successfully.
-
-### kvm.halt_wakeup
-
-Number of wakeups from a halt.
-
-### kvm.host_state_reload
-
-Currently tallies MSR setup and guest MSR reads.
-
-### kvm.hypercalls
-
-Number of guest hypervisor service calls.
-
-### kvm.insn_emulation
-
-Number of insn_emulation attempts.
-
-### kvm.insn_emulation_fail
-
-Number of failed insn_emulation attempts.
-
-### kvm.invlpg
-
-Number of invlpg attepts. 
-
-### kvm.io_exits
-
-Number of guest exits from I/O port accesses.
-
-### kvm.irq_exits
-
-Number of guest exits due to external interrupts.
-
-### kvm.irq_injections
-
-Number of interrupts sent to guests.
-
-### kvm.irq_window
-
-Number of guest exits from an outstanding interrupt window.
-
-### kvm.largepages
-
-Number of large pages currently in use.
-
-### kvm.mmio_exits
-
-Number of guest exits due to memory mapped I/O (MMIO) accesses.
-
-### kvm.mmu_cache_miss
-
-Number of cache miss.
-
-### kvm.mmu_flooded
-
-This counts detected write operations not of individual write operations.
-
-### kvm.mmu_pde_zapped
-
-Number of page directory entry (PDE) destruction operations.
-
-### kvm.mmu_pte_updated
-
-Number of PTE updated. 
-
-### kvm.mmu_pte_write
-
-Number of PTE write.
-
-### kvm.mmu_recycled
-
-Number of shadow pages that can be reclaimed.
-
-### kvm.mmu_shadow_zapped
-
-Number of shadow pages that has been zapped.
-
-### kvm.mmu_unsync
-
-Number of non-synchronized pages which are not yet unlinked 
-
-### kvm.nmi_injections
-
-Number of Non-maskable Interrupt (NMI) injections.
-
-### kvm.nmi_window
-
-Number of guest exits from (outstanding) Non-maskable Interrupt (NMI) windows.
-
-### kvm.pf_fixed
-
-Number of fixed (non-paging) page table entry (PTE) maps.
-
-### kvm.pf_guest
-
-Number of page faults injected into guests.
-
-### kvm.remote_tlb_flush
-
-Number of tlb_flush operations performed by the hypervisor.
-
-### kvm.request_irq
-
-Number of guest interrupt window request exits.
-
-### kvm.signal_exits
-
-Number of guest exits due to pending signals from the host.
-
-### kvm.tlb_flush
-
-Number of tlb_flush operations performed by the hypervisor.
-
-### hinv.physmem
-
-total system memory metric from /proc/meminfo
-
-### hinv.pagesize
-
-The memory page size of the running kernel in bytes.
-
-### hinv.ncpu
-
-number of CPUs in the system
-
-### hinv.ndisk
-
-number of disks in the system
-
-### hinv.nfilesys
-
-number of (local) file systems currently mounted
-
-### hinv.ninterface
-
-number of active (up) network interfaces
-
-### hinv.nnode
-
-number of NUMA nodes in the system
-
-### hinv.machine
-
-hardware identifier as reported by uname(2)
-
-### hinv.hugepagesize
-
-The memory huge page size of the running kernel in bytes.
-
-### hinv.ntape
-
-number of Linux scsi tape devices
-
-### hinv.nfchost
-
-Number of fibre channel host bus adapters from /sys/class/fc_host/host*
-
-### hinv.map.scsi
-
-There is one string value for each SCSI device active in the system,
-as extracted from /proc/scsi/scsi. The external instance name
-for each device is in the format scsiD:C:I:L where
-D is controller number, C is channel number, I is device ID
-and L is the SCSI LUN number for the device. The values for this
-metric are the actual device names (sd[a-z] are SCSI disks, st[0-9]
-are SCSI tapes and scd[0-9] are SCSI CD-ROMS.
-
-### hinv.map.cpu_num
-
-logical to physical CPU mapping for each CPU
-
-### hinv.map.cpu_node
-
-logical CPU to NUMA node mapping for each CPU
-
-### hinv.map.dmname
-
-per-device-mapper device persistent name mapping to dm-[0-9]*
-
-### hinv.map.mdname
-
-per-multi-device device persistent name mapping to md[0-9]*
-
-### hinv.cpu.clock
-
-clock rate in Mhz for each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.vendor
-
-manufacturer of each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.model
-
-model number of each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.stepping
-
-stepping of each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.cache
-
-primary cache size of each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.bogomips
-
-bogo mips rating for each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.model_name
-
-model name of each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.flags
-
-Hardware capability flags for each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.cache_alignment
-
-Cache alignment for each CPU as reported by /proc/cpuinfo
-
-### hinv.cpu.online
-
-CPU online state from /sys/devices/system/cpu/*/online
-
-### hinv.cpu.thermal_throttle.core.count
-
-CPU core throttles from /sys/devices/system/cpu/*/thermal_throttle
-
-### hinv.cpu.thermal_throttle.core.time
-
-CPU core throttle time from /sys/devices/system/cpu/*/thermal_throttle
-
-### hinv.cpu.thermal_throttle.package.count
-
-CPU package throttles from /sys/devices/system/cpu/*/thermal_throttle
-
-### hinv.cpu.thermal_throttle.package.time
-
-CPU package throttle time from /sys/devices/system/cpu/*/thermal_throttle
-
-### hinv.node.online
-
-NUMA node online state from /sys/devices/system/node/*/online
+# _Some_ Available Metrics
+ * [kernel](#kernel)
+ * [disk](#disk)
+ * [filesys](#filesys)
+ * [swap](#swap)
+ * [mem](#mem)
+ * [network](#network)
+ * [ipc](#ipc)
+ * [vfs](#vfs)
+ * [sysfs](#sysfs)
+ * [tmpfs](#tmpfs)
+ * [containers](#containers)
+ * [nvidia](#nvidia)
+ * [nfs4](#nfs4)
+ * [cgroup](#cgroup)
+ * [acct](#acct)
+ * [kvm](#kvm)
+## kernel
 
 ### kernel.all.load
 
@@ -796,6 +413,1129 @@ The Linux distribution name, as determined by a number of heuristics.
 For example:
 + on Fedora, the contents of /etc/fedora-release
 + on RedHat, the contents of /etc/redhat-release
+
+### kernel.cpu.util.user
+
+percentage of user time across all CPUs, including guest CPU time
+
+### kernel.cpu.util.nice
+
+percentage of nice user time across all CPUs, including guest nice CPU time
+
+### kernel.cpu.util.sys
+
+percentage of sys time across all CPUs
+
+### kernel.cpu.util.idle
+
+percentage of idle time across all CPUs
+
+### kernel.cpu.util.intr
+
+Percentage of time spent processing interrupts across all CPUs.
+This value includes both soft and hard interrupt processing time.
+
+### kernel.cpu.util.wait
+
+percentage of wait time across all CPUs
+
+### kernel.cpu.util.steal
+
+Percentage of time across all CPUs when a CPU had a runnable process,
+but the hypervisor (virtualisation layer) chose to run something else
+instead.
+## disk
+
+### disk.dev.read
+
+Cumulative number of disk read operations since system boot time (subject
+to counter wrap).
+
+### disk.dev.write
+
+Cumulative number of disk write operations since system boot time (subject
+to counter wrap).
+
+### disk.dev.total
+
+Cumulative number of disk read and write operations since system boot
+time (subject to counter wrap).
+
+### disk.dev.blkread
+
+Cumulative number of disk block read operations since system boot time
+(subject to counter wrap).
+
+### disk.dev.blkwrite
+
+Cumulative number of disk block write operations since system boot time
+(subject to counter wrap).
+
+### disk.dev.blktotal
+
+Cumulative number of disk block read and write operations since system
+boot time (subject to counter wrap).
+
+### disk.dev.read_bytes
+
+per-disk count of bytes read
+
+### disk.dev.write_bytes
+
+per-disk count of bytes written
+
+### disk.dev.total_bytes
+
+per-disk count of total bytes read and written
+
+### disk.dev.read_merge
+
+Count of read requests that were merged with an already queued read request.
+
+### disk.dev.write_merge
+
+Count of write requests that were merged with an already queued write request.
+
+### disk.dev.avactive
+
+Counts the number of milliseconds for which at least one I/O is in
+progress for each device.
+
+When converted to a rate, this metric represents the average utilization of
+the disk during the sampling interval.  A value of 0.5 (or 50%) means the
+disk was active (i.e. busy) half the time.
+
+### disk.dev.read_rawactive
+
+For each completed read on each disk the response time (queue time plus
+service time) in milliseconds is added to the associated instance of
+this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding reads for a disk.  When divided by the number
+of completed reads for a disk (disk.dev.read), the value represents the
+stochastic average of the read response (or wait) time for that disk.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dev.r_await = delta(disk.dev.read_rawactive) / delta(disk.dev.read)
+
+### disk.dev.write_rawactive
+
+For each completed write on each disk the response time (queue time plus
+service time) in milliseconds is added to the associated instance of
+this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding writes for a disk.  When divided by
+the number of completed writes for a disk (disk.dev.write), the value
+represents the stochastic average of the write response (or wait)
+time for that disk.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dev.w_await = delta(disk.dev.write_rawactive) / delta(disk.dev.write)
+
+### disk.dev.total_rawactive
+
+For each completed I/O on each disk the response time (queue time plus
+service time) in milliseconds is added to the associated instance of
+this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding I/Os for a disk.  When divided by the number
+of completed I/Os for a disk (disk.dev.total), the value represents the
+stochastic average of the I/O response (or wait) time for that disk.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dev.await = delta(disk.dev.total_rawactive) / delta(disk.dev.total)
+
+### disk.dev.aveq
+
+When converted to a rate, this metric represents the time averaged disk
+request queue length during the sampling interval.  A value of 2.5 (or 250%)
+represents a time averaged queue length of 2.5 requests during the sampling
+interval.
+
+### disk.dev.scheduler
+
+The name of the I/O scheduler in use for each device.  The scheduler
+is part of the block layer in the kernel, and attempts to optimise the
+I/O submission patterns using various techniques (typically, sorting
+and merging adjacent requests into larger ones to reduce seek activity,
+but certainly not limited to that).
+
+### disk.dev.capacity
+
+Total space presented by each block device, from /proc/partitions.
+
+### disk.dev.discard
+
+Cumulative number of disk discard operations since system boot time.
+
+### disk.dev.blkdiscard
+
+Cumulative number of disk block discard operations since system boot time.
+
+### disk.dev.discard_bytes
+
+per-disk count of bytes discard'ed
+
+### disk.dev.discard_merge
+
+Count of discard requests that were merged with an already queued discard
+request.
+
+### disk.dev.discard_rawactive
+
+For each completed discard on each disk the response time (queue time plus
+service time) in milliseconds is added to the associated instance of
+this metric.
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dev.d_await = delta(disk.dev.discard_rawactive) / delta(disk.dev.discard)
+
+### disk.dev.flush
+
+per-disk flush operations
+
+### disk.dev.flush_rawactive
+
+For each completed flush on each disk the response time (queue time plus
+service time) in milliseconds is added to the associated instance of
+this metric.
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dev.f_await = delta(disk.dev.flush_rawactive) / delta(disk.dev.flush)
+
+### disk.all.read
+
+Cumulative number of disk read operations since system boot time
+(subject to counter wrap), summed over all disk devices.
+
+### disk.all.write
+
+Cumulative number of disk read operations since system boot time
+(subject to counter wrap), summed over all disk devices.
+
+### disk.all.total
+
+Cumulative number of disk read and write operations since system boot
+time (subject to counter wrap), summed over all disk devices.
+
+### disk.all.blkread
+
+Cumulative number of disk block read operations since system boot time
+(subject to counter wrap), summed over all disk devices.
+
+### disk.all.blkwrite
+
+Cumulative number of disk block write operations since system boot time
+(subject to counter wrap), summed over all disk devices.
+
+### disk.all.blktotal
+
+Cumulative number of disk block read and write operations since system
+boot time (subject to counter wrap), summed over all disk devices.
+
+### disk.all.read_bytes
+
+count of bytes read for all disk devices
+
+### disk.all.write_bytes
+
+count of bytes written for all disk devices
+
+### disk.all.total_bytes
+
+total count of bytes read and written for all disk devices
+
+### disk.all.read_merge
+
+Total count of read requests that were merged with an already queued read request.
+
+### disk.all.write_merge
+
+Total count of write requests that were merged with an already queued write request.
+
+### disk.all.avactive
+
+Counts the number of milliseconds for which at least one I/O is in
+progress on each disk, summed across all disks.
+
+When converted to a rate and divided by the number of disks (hinv.ndisk),
+this metric represents the average utilization of all disks during the
+sampling interval.  A value of 0.25 (or 25%) means that on average every
+disk was active (i.e. busy) one quarter of the time.
+
+### disk.all.read_rawactive
+
+For each completed read on every disk the response time (queue time plus
+service time) in milliseconds is added to this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding reads across all disks.  When divided
+by the number of completed reads for all disks (disk.all.read), value
+represents the stochastic average of the read response (or wait) time
+across all disks.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.all.r_await = delta(disk.all.read_rawactive) / delta(disk.all.read)
+
+### disk.all.write_rawactive
+
+For each completed write on every disk the response time (queue time
+plus service time) in milliseconds is added to this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding writes across all disks.  When divided by
+the number of completed writes for all disks (disk.all.write), value
+represents the stochastic average of the write response (or wait) time
+across all disks.
+
+### disk.all.total_rawactive
+
+For each completed I/O on every disk the response time (queue time
+plus service time) in milliseconds is added to this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding I/Os across all disks.  When divided by
+the number of completed I/Os for all disks (disk.all.total), value
+represents the stochastic average of the I/O response (or wait) time
+across all disks.
+
+### disk.all.aveq
+
+When converted to a rate, this metric represents the average across all disks
+of the time averaged request queue length during the sampling interval.
+A value of 1.5 (or 150%) suggests that (on average) over all disks there was
+a time averaged queue length of 1.5 requests during the sampling interval.
+
+### disk.all.discard
+
+total discard operations, summed for all disks
+
+### disk.all.blkdiscard
+
+block discard operations, summed for all disks
+
+### disk.all.discard_bytes
+
+count of discard bytes for all disk devices
+
+### disk.all.discard_merge
+
+Total count of discard requests that were merged with an already queued
+discard request.
+
+### disk.all.discard_rawactive
+
+For each discard on every disk the response time (queue time plus
+service time) in milliseconds is added to this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding discards across all disks.  When divided
+by the number of completed discards for all disks (disk.all.discard), the
+value represents the stochastic average of the discard response (or wait)
+time across all disks.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.all.d_await = delta(disk.all.discard_rawactive) / delta(disk.all.discard)
+
+### disk.all.flush
+
+total flush operations, summed for all disks
+
+### disk.all.flush_rawactive
+
+For each flush on every disk the response time (queue time plus
+service time) in milliseconds is added to this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding flushes across all disks.  When divided
+by the number of completed flushes for all disks (disk.all.flush), the
+value represents the stochastic average of the flush response (or wait)
+time across all disks.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.all.f_await = delta(disk.all.flush_rawactive) / delta(disk.all.flush)
+
+### disk.partitions.read
+
+Cumulative number of disk read operations since system boot time
+(subject to counter wrap) for individual disk partitions or logical
+volumes.
+
+### disk.partitions.write
+
+Cumulative number of disk write operations since system boot time
+(subject to counter wrap) for individual disk partitions or logical
+volumes.
+
+### disk.partitions.total
+
+Cumulative number of disk read and write operations since system boot
+time (subject to counter wrap) for individual disk partitions or
+logical volumes.
+
+### disk.partitions.blkread
+
+Cumulative number of disk block read operations since system boot time
+(subject to counter wrap) for individual disk partitions or logical
+volumes.
+
+### disk.partitions.blkwrite
+
+Cumulative number of disk block write operations since system boot time
+(subject to counter wrap) for individual disk partitions or logical
+volumes.
+
+### disk.partitions.blktotal
+
+Cumulative number of disk block read and write operations since system
+boot time (subject to counter wrap) for individual disk partitions or
+logical volumes.
+
+### disk.partitions.read_bytes
+
+Cumulative number of bytes read since system boot time (subject to
+counter wrap) for individual disk partitions or logical volumes.
+
+### disk.partitions.write_bytes
+
+Cumulative number of bytes written since system boot time (subject to
+counter wrap) for individual disk partitions or logical volumes.
+
+### disk.partitions.total_bytes
+
+Cumulative number of bytes read and written since system boot time
+(subject to counter wrap) for individual disk partitions or logical
+volumes.
+
+### disk.partitions.read_merge
+
+per-disk-partition count of merged read requests
+
+### disk.partitions.write_merge
+
+per-disk-partition count of merged write requests
+
+### disk.partitions.avactive
+
+Counts the number of milliseconds for which at least one I/O is in
+progress for each disk partition.
+
+When converted to a rate, this metric represents the average utilization
+of the disk partition during the sampling interval.  A value of 0.5
+(or 50%) means the disk partition was active (i.e. busy) half the time.
+
+### disk.partitions.aveq
+
+per-disk-partition device time averaged count of request queue length
+
+### disk.partitions.read_rawactive
+
+For each completed read on each disk partition the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding reads for a disk partition.  When divided by
+the number of completed reads for a disk partition (disk.partitions.read),
+the value represents the stochastic average of the read response (or wait)
+time for that disk partition.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.partitions.r_await = delta(disk.partitions.read_rawactive) /
+                             delta(disk.partitions.read)
+
+### disk.partitions.write_rawactive
+
+For each completed write on each disk partition the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding writes for a disk partition.
+When divided by the number of completed writes for a disk partition
+(disk.partitions.write), the value represents the stochastic average of
+the write response (or wait) time for that disk partition.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.partitions.w_await = delta(disk.partitions.write_rawactive) /
+                             delta(disk.partitions.write)
+
+### disk.partitions.total_rawactive
+
+For each completed I/O on each disk partition the response time (queue
+time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding I/Os for a disk partition.
+When divided by the number of completed I/Os for a disk partition
+(disk.partitions.total), the value represents the stochastic average of
+the I/O response (or wait) time for that disk partition.
+
+### disk.partitions.capacity
+
+Total space presented by each disk partition, from /proc/partitions.
+
+### disk.partitions.discard
+
+discard operations count for storage partitions
+
+### disk.partitions.blkdiscard
+
+block discard operations count for storage partitions
+
+### disk.partitions.discard_bytes
+
+number of discard bytes for storage partitions
+
+### disk.partitions.discard_merge
+
+per-disk-partition count of merged discard requests
+
+### disk.partitions.discard_rawactive
+
+For each completed discard on each disk partition the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding discards for a disk partition.  When divided by
+the number of completed discards for a disk partition (disk.partitions.discard),
+the value represents the stochastic average of the discard response (or wait)
+time for that disk partition.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.partitions.d_await = delta(disk.partitions.discard_rawactive) /
+                             delta(disk.partitions.discard)
+
+### disk.partitions.flush
+
+flush operations metric for storage partitions
+
+### disk.partitions.flush_rawactive
+
+For each completed flush on each disk partition the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time average
+of the number of outstanding flushes for a disk partition.  When divided by
+the number of completed flushes for a disk partition (disk.partitions.flush),
+the value represents the stochastic average of the flush response (or wait)
+time for that disk partition.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.partitions.f_await = delta(disk.partitions.flush_rawactive) /
+                             delta(disk.partitions.flush)
+
+### disk.dm.read
+
+per-device-mapper device read operations
+
+### disk.dm.write
+
+per-device-mapper device write operations
+
+### disk.dm.total
+
+per-device-mapper device total (read+write) operations
+
+### disk.dm.blkread
+
+per-device-mapper device block read operations
+
+### disk.dm.blkwrite
+
+per-device-mapper device block write operations
+
+### disk.dm.blktotal
+
+per-device-mapper device total (read+write) block operations
+
+### disk.dm.read_bytes
+
+per-device-mapper device count of bytes read
+
+### disk.dm.write_bytes
+
+per-device-mapper device count of bytes written
+
+### disk.dm.total_bytes
+
+per-device-mapper device count of total bytes read and written
+
+### disk.dm.read_merge
+
+per-device-mapper device count of merged read requests
+
+### disk.dm.write_merge
+
+per-device-mapper device count of merged write requests
+
+### disk.dm.avactive
+
+Counts the number of milliseconds for which at least one I/O is in
+progress for each device-mapper device.
+
+When converted to a rate, this metric represents the average utilization
+of the device during the sampling interval.  A value of 0.5 (or 50%)
+means the device was active (i.e. busy) half the time.
+
+### disk.dm.aveq
+
+per-device-mapper device time averaged count of request queue length
+
+### disk.dm.read_rawactive
+
+For each completed read on each device-mapper device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding reads for a device-mapper device.
+When divided by the number of completed reads for a device-mapper device
+(disk.dm.read), the value represents the stochastic average of the read
+response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dm.r_await = delta(disk.dm.read_rawactive) / delta(disk.dm.read)
+
+### disk.dm.write_rawactive
+
+For each completed write on each device-mapper device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding writes for a device-mapper device.
+When divided by the number of completed writes for a device-mapper device
+(disk.dm.write), the value represents the stochastic average of the
+write response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dm.w_await = delta(disk.dm.write_rawactive) / delta(disk.dm.write)
+
+### disk.dm.total_rawactive
+
+For each completed I/O on each device-mapper device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding I/Os for a device-mapper device.
+When divided by the number of completed I/Os for a device-mapper device
+(disk.dm.total), the value represents the stochastic average of the I/O
+response (or wait) time for that device-mapper device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dm.await = delta(disk.dm.total_rawactive) / delta(disk.dm.total)
+
+### disk.dm.capacity
+
+Total space presented by each device mapper device, from /proc/partitions.
+
+### disk.dm.discard
+
+per-device-mapper device discard operations
+
+### disk.dm.blkdiscard
+
+per-device-mapper device block discard operations
+
+### disk.dm.discard_bytes
+
+per-device-mapper device count of discard bytes
+
+### disk.dm.discard_merge
+
+per-device-mapper device count of merged discard requests
+
+### disk.dm.discard_rawactive
+
+For each completed discard on each device-mapper device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding discards for a device-mapper device.
+When divided by the number of completed discards for a device-mapper device
+(disk.dm.discards), the value represents the stochastic average of the
+discard response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dm.d_await = delta(disk.dm.discard_rawactive) / delta(disk.dm.discard)
+
+### disk.dm.flush
+
+per-device-mapper device flush operations
+
+### disk.dm.flush_rawactive
+
+For each completed flush on each device-mapper device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding flushes for a device-mapper device.
+When divided by the number of completed flushes for a device-mapper device
+(disk.dm.flush), the value represents the stochastic average of the flush
+response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.dm.f_await = delta(disk.dm.flush_rawactive) / delta(disk.dm.flush)
+
+### disk.md.read
+
+per-multi-device device read operations
+
+### disk.md.write
+
+per-multi-device device write operations
+
+### disk.md.total
+
+per-multi-device device total (read+write) operations
+
+### disk.md.blkread
+
+per-multi-device device block read operations
+
+### disk.md.blkwrite
+
+per-multi-device device block write operations
+
+### disk.md.blktotal
+
+per-multi-device device total (read+write) block operations
+
+### disk.md.read_bytes
+
+per-multi-device device count of bytes read
+
+### disk.md.write_bytes
+
+per-multi-device device count of bytes written
+
+### disk.md.total_bytes
+
+per-multi-device device count of total bytes read and written
+
+### disk.md.read_merge
+
+per-multi-device device count of merged read requests
+
+### disk.md.write_merge
+
+per-multi-device device count of merged write requests
+
+### disk.md.avactive
+
+Counts the number of milliseconds for which at least one I/O is in
+progress for each multi-device device.
+
+When converted to a rate, this metric represents the average utilization
+of the device during the sampling interval.  A value of 0.5 (or 50%)
+means the device was active (i.e. busy) half the time.
+
+### disk.md.aveq
+
+per-multi-device device time averaged count of request queue length
+
+### disk.md.read_rawactive
+
+For each completed read on each multi-device device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding reads for a multi-device device.
+When divided by the number of completed reads for a multi-device device
+(disk.md.read), the value represents the stochastic average of the read
+response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.md.r_await = delta(disk.md.read_rawactive) / delta(disk.md.read)
+
+### disk.md.write_rawactive
+
+For each completed write on each multi-device device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding writes for a multi-device device.
+When divided by the number of completed writes for a multi-device device
+(disk.md.write), the value represents the stochastic average of the
+write response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.md.w_await = delta(disk.md.write_rawactive) / delta(disk.md.write)
+
+### disk.md.total_rawactive
+
+For each completed I/O on each multi-device device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding I/Os for a multi-device device.
+When divided by the number of completed I/Os for a multi-device device
+(disk.md.total), the value represents the stochastic average of the I/O
+response (or wait) time for that multi-device device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.md.await = delta(disk.md.total_rawactive) / delta(disk.md.total)
+
+### disk.md.status
+
+per-multi-device "mdadm --test --detail <device>" return code
+
+### disk.md.capacity
+
+Total space presented by each multi-device device, from /proc/partitions.
+
+### disk.md.discard
+
+per-multi-device device discard operations
+
+### disk.md.blkdiscard
+
+per-multi-device device block discard operations
+
+### disk.md.discard_bytes
+
+per-multi-device device count of discard bytes
+
+### disk.md.discard_merge
+
+per-multi-device device count of merged discard requests
+
+### disk.md.discard_rawactive
+
+For each completed discard on each multi-device device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding discards for a multi-device device.
+When divided by the number of completed discards for a multi-device device
+(disk.md.discards), the value represents the stochastic average of the
+discard response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.md.d_await = delta(disk.md.discard_rawactive) / delta(disk.md.discard)
+
+### disk.md.flush
+
+per-multi-device device flush operations
+
+### disk.md.flush_rawactive
+
+For each completed flush on each multi-device device the response time
+(queue time plus service time) in milliseconds is added to the associated
+instance of this metric.
+
+When converted to a normalized rate, the value represents the time
+average of the number of outstanding flushes for a multi-device device.
+When divided by the number of completed flushes for a multi-device device
+(disk.md.flush), the value represents the stochastic average of the flush
+response (or wait) time for that device.
+
+It is suitable mainly for use in calculations with other metrics,
+e.g. mirroring the results from existing performance tools:
+
+ iostat.md.f_await = delta(disk.md.flush_rawactive) / delta(disk.md.flush)
+
+### disk.dev.await
+
+average time in milliseconds that read and write requests
+were queued (and serviced) during the reporting interval.
+
+### disk.dev.r_await
+
+average time in milliseconds that read requests were queued
+(and serviced) during the reporting interval.
+
+### disk.dev.w_await
+
+average time in milliseconds that write requests were queued
+(and serviced) during the reporting interval.
+
+### disk.dev.d_await
+
+average time in milliseconds that discard requests were queued
+(and serviced) during the reporting interval.
+
+### disk.dev.f_await
+
+average time in milliseconds that flush requests were queued
+(and serviced) during the reporting interval.
+
+### disk.dev.avg_qlen
+
+average read and write I/O queue length to the device during the reporting interval.
+
+### disk.dev.avg_rqsz
+
+average I/O request size for both reads and writes during the reporting interval.
+
+### disk.dev.r_avg_rqsz
+
+average I/O request size for reads to the device during the reporting interval.
+
+### disk.dev.w_avg_rqsz
+
+average I/O request size for writes to the device during the reporting interval.
+
+### disk.dev.d_avg_rqsz
+
+average I/O request size for discards to the device during the reporting interval.
+
+### disk.dev.util
+
+The percentage of time during the reporting interval that the
+device was busy processing requests (reads and writes). A value
+of 100% indicates device saturation.
+
+### disk.dm.await
+
+average time in milliseconds that read and write requests
+were queued (and serviced) to the device-mapper logical
+device during the reporting interval.
+
+### disk.dm.r_await
+
+average time in milliseconds that read requests were queued
+(and serviced) to the device-mapper logical device during
+the reporting interval.
+
+### disk.dm.w_await
+
+average time in milliseconds that write requests were queued
+(and serviced) to the device-mapper logical device during
+the reporting interval.
+
+### disk.dm.d_await
+
+average time in milliseconds that discard requests were queued
+(and serviced) to the device-mapper logical device during
+the reporting interval.
+
+### disk.dm.f_await
+
+average time in milliseconds that flush requests were queued
+(and serviced) to the device-mapper logical device during
+the reporting interval.
+
+### disk.dm.avg_qlen
+
+average read and write I/O queue length to the device-mapper logical
+device during the reporting interval.
+
+### disk.dm.avg_rqsz
+
+average I/O request size for reads and writes to the device-mapper logical
+device during the reporting interval.
+
+### disk.dm.r_avg_rqsz
+
+average I/O request size for reads to the device-mapper logical device
+during the reporting interval.
+
+### disk.dm.w_avg_rqsz
+
+average I/O request size for writes to the device-mapper logical device
+during the reporting interval.
+
+### disk.dm.d_avg_rqsz
+
+average I/O request size for discards to the device-mapper logical device
+during the reporting interval.
+
+### disk.dm.util
+
+The percentage of time during the reporting interval that the
+device-mapper logical device was busy processing requests (reads
+and writes). A value of 100% indicates device saturation.
+
+### disk.md.await
+
+average time in milliseconds that read and write requests
+were queued (and serviced) to the per-multi-device logical
+device during the reporting interval.
+
+### disk.md.r_await
+
+average time in milliseconds that read requests were queued
+(and serviced) to the per-multi-device logical device during
+the reporting interval.
+
+### disk.md.w_await
+
+average time in milliseconds that write requests were queued
+(and serviced) to the per-multi-device logical device during
+the reporting interval.
+
+### disk.md.d_await
+
+average time in milliseconds that discard requests were queued
+(and serviced) to the per-multi-device logical device during
+the reporting interval.
+
+### disk.md.f_await
+
+average time in milliseconds that flush requests were queued
+(and serviced) to the per-multi-device logical device during
+the reporting interval.
+
+### disk.md.avg_qlen
+
+average read and write I/O queue length to the per-multi-device logical
+device during the reporting interval.
+
+### disk.md.avg_rqsz
+
+average I/O request size for reads and writes to the per-multi-device logical
+device during the reporting interval.
+
+### disk.md.r_avg_rqsz
+
+average I/O request size for reads to the per-multi-device logical device
+during the reporting interval.
+
+### disk.md.w_avg_rqsz
+
+average I/O request size for writes to the per-multi-device logical device
+during the reporting interval.
+
+### disk.md.d_avg_rqsz
+
+average I/O request size for discards to the per-multi-device logical device
+during the reporting interval.
+
+### disk.md.util
+
+The percentage of time during the reporting interval that the
+per-multi-device logical device was busy processing requests
+(reads and writes). A value of 100% indicates device saturation.
+## filesys
+
+### filesys.capacity
+
+Total capacity of mounted filesystem (Kbytes)
+
+### filesys.used
+
+Total space used on mounted filesystem (Kbytes)
+
+### filesys.free
+
+Total space free on mounted filesystem (Kbytes)
+
+### filesys.maxfiles
+
+Inodes capacity of mounted filesystem
+
+### filesys.usedfiles
+
+Number of inodes allocated on mounted filesystem
+
+### filesys.freefiles
+
+Number of unallocated inodes on mounted filesystem
+
+### filesys.mountdir
+
+File system mount point
+
+### filesys.full
+
+Percentage of filesystem in use
+
+### filesys.blocksize
+
+Size of each block on mounted filesystem (Bytes)
+
+### filesys.avail
+
+Total space free to non-superusers on mounted filesystem (Kbytes)
+
+### filesys.readonly
+
+Indicates whether a filesystem is mounted readonly
+## swap
+
+### swap.pagesin
+
+pages read from swap devices due to demand for physical memory
+
+### swap.pagesout
+
+pages written to swap devices due to demand for physical memory
+
+### swap.in
+
+number of swap in operations
+
+### swap.out
+
+number of swap out operations
+
+### swap.free
+
+swap free metric from /proc/meminfo
+
+### swap.length
+
+total swap available metric from /proc/meminfo
+
+### swap.used
+
+swap used metric from /proc/meminfo
+## mem
 
 ### mem.physmem
 
@@ -2248,34 +2988,7 @@ Whether the KSM daemon has run and/or is running
 ### mem.ksm.sleep_time
 
 Time ksmd should sleep between batches
-
-### swap.pagesin
-
-pages read from swap devices due to demand for physical memory
-
-### swap.pagesout
-
-pages written to swap devices due to demand for physical memory
-
-### swap.in
-
-number of swap in operations
-
-### swap.out
-
-number of swap out operations
-
-### swap.free
-
-swap free metric from /proc/meminfo
-
-### swap.length
-
-total swap available metric from /proc/meminfo
-
-### swap.used
-
-swap used metric from /proc/meminfo
+## network
 
 ### network.all.in.bytes
 
@@ -3921,1140 +4634,7 @@ Multipath TCP received a new mapping that did not match the previous one
 ### network.mptcp.infinitemaprx
 
 Multipath TCP received an infinite mapping
-
-### disk.dev.read
-
-Cumulative number of disk read operations since system boot time (subject
-to counter wrap).
-
-### disk.dev.write
-
-Cumulative number of disk write operations since system boot time (subject
-to counter wrap).
-
-### disk.dev.total
-
-Cumulative number of disk read and write operations since system boot
-time (subject to counter wrap).
-
-### disk.dev.blkread
-
-Cumulative number of disk block read operations since system boot time
-(subject to counter wrap).
-
-### disk.dev.blkwrite
-
-Cumulative number of disk block write operations since system boot time
-(subject to counter wrap).
-
-### disk.dev.blktotal
-
-Cumulative number of disk block read and write operations since system
-boot time (subject to counter wrap).
-
-### disk.dev.read_bytes
-
-per-disk count of bytes read
-
-### disk.dev.write_bytes
-
-per-disk count of bytes written
-
-### disk.dev.total_bytes
-
-per-disk count of total bytes read and written
-
-### disk.dev.read_merge
-
-Count of read requests that were merged with an already queued read request.
-
-### disk.dev.write_merge
-
-Count of write requests that were merged with an already queued write request.
-
-### disk.dev.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress for each device.
-
-When converted to a rate, this metric represents the average utilization of
-the disk during the sampling interval.  A value of 0.5 (or 50%) means the
-disk was active (i.e. busy) half the time.
-
-### disk.dev.read_rawactive
-
-For each completed read on each disk the response time (queue time plus
-service time) in milliseconds is added to the associated instance of
-this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding reads for a disk.  When divided by the number
-of completed reads for a disk (disk.dev.read), the value represents the
-stochastic average of the read response (or wait) time for that disk.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dev.r_await = delta(disk.dev.read_rawactive) / delta(disk.dev.read)
-
-### disk.dev.write_rawactive
-
-For each completed write on each disk the response time (queue time plus
-service time) in milliseconds is added to the associated instance of
-this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding writes for a disk.  When divided by
-the number of completed writes for a disk (disk.dev.write), the value
-represents the stochastic average of the write response (or wait)
-time for that disk.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dev.w_await = delta(disk.dev.write_rawactive) / delta(disk.dev.write)
-
-### disk.dev.total_rawactive
-
-For each completed I/O on each disk the response time (queue time plus
-service time) in milliseconds is added to the associated instance of
-this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding I/Os for a disk.  When divided by the number
-of completed I/Os for a disk (disk.dev.total), the value represents the
-stochastic average of the I/O response (or wait) time for that disk.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dev.await = delta(disk.dev.total_rawactive) / delta(disk.dev.total)
-
-### disk.dev.aveq
-
-When converted to a rate, this metric represents the time averaged disk
-request queue length during the sampling interval.  A value of 2.5 (or 250%)
-represents a time averaged queue length of 2.5 requests during the sampling
-interval.
-
-### disk.dev.scheduler
-
-The name of the I/O scheduler in use for each device.  The scheduler
-is part of the block layer in the kernel, and attempts to optimise the
-I/O submission patterns using various techniques (typically, sorting
-and merging adjacent requests into larger ones to reduce seek activity,
-but certainly not limited to that).
-
-### disk.dev.capacity
-
-Total space presented by each block device, from /proc/partitions.
-
-### disk.dev.discard
-
-Cumulative number of disk discard operations since system boot time.
-
-### disk.dev.blkdiscard
-
-Cumulative number of disk block discard operations since system boot time.
-
-### disk.dev.discard_bytes
-
-per-disk count of bytes discard'ed
-
-### disk.dev.discard_merge
-
-Count of discard requests that were merged with an already queued discard
-request.
-
-### disk.dev.discard_rawactive
-
-For each completed discard on each disk the response time (queue time plus
-service time) in milliseconds is added to the associated instance of
-this metric.
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dev.d_await = delta(disk.dev.discard_rawactive) / delta(disk.dev.discard)
-
-### disk.dev.flush
-
-per-disk flush operations
-
-### disk.dev.flush_rawactive
-
-For each completed flush on each disk the response time (queue time plus
-service time) in milliseconds is added to the associated instance of
-this metric.
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dev.f_await = delta(disk.dev.flush_rawactive) / delta(disk.dev.flush)
-
-### disk.all.read
-
-Cumulative number of disk read operations since system boot time
-(subject to counter wrap), summed over all disk devices.
-
-### disk.all.write
-
-Cumulative number of disk read operations since system boot time
-(subject to counter wrap), summed over all disk devices.
-
-### disk.all.total
-
-Cumulative number of disk read and write operations since system boot
-time (subject to counter wrap), summed over all disk devices.
-
-### disk.all.blkread
-
-Cumulative number of disk block read operations since system boot time
-(subject to counter wrap), summed over all disk devices.
-
-### disk.all.blkwrite
-
-Cumulative number of disk block write operations since system boot time
-(subject to counter wrap), summed over all disk devices.
-
-### disk.all.blktotal
-
-Cumulative number of disk block read and write operations since system
-boot time (subject to counter wrap), summed over all disk devices.
-
-### disk.all.read_bytes
-
-count of bytes read for all disk devices
-
-### disk.all.write_bytes
-
-count of bytes written for all disk devices
-
-### disk.all.total_bytes
-
-total count of bytes read and written for all disk devices
-
-### disk.all.read_merge
-
-Total count of read requests that were merged with an already queued read request.
-
-### disk.all.write_merge
-
-Total count of write requests that were merged with an already queued write request.
-
-### disk.all.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress on each disk, summed across all disks.
-
-When converted to a rate and divided by the number of disks (hinv.ndisk),
-this metric represents the average utilization of all disks during the
-sampling interval.  A value of 0.25 (or 25%) means that on average every
-disk was active (i.e. busy) one quarter of the time.
-
-### disk.all.read_rawactive
-
-For each completed read on every disk the response time (queue time plus
-service time) in milliseconds is added to this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding reads across all disks.  When divided
-by the number of completed reads for all disks (disk.all.read), value
-represents the stochastic average of the read response (or wait) time
-across all disks.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.all.r_await = delta(disk.all.read_rawactive) / delta(disk.all.read)
-
-### disk.all.write_rawactive
-
-For each completed write on every disk the response time (queue time
-plus service time) in milliseconds is added to this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding writes across all disks.  When divided by
-the number of completed writes for all disks (disk.all.write), value
-represents the stochastic average of the write response (or wait) time
-across all disks.
-
-### disk.all.total_rawactive
-
-For each completed I/O on every disk the response time (queue time
-plus service time) in milliseconds is added to this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding I/Os across all disks.  When divided by
-the number of completed I/Os for all disks (disk.all.total), value
-represents the stochastic average of the I/O response (or wait) time
-across all disks.
-
-### disk.all.aveq
-
-When converted to a rate, this metric represents the average across all disks
-of the time averaged request queue length during the sampling interval.
-A value of 1.5 (or 150%) suggests that (on average) over all disks there was
-a time averaged queue length of 1.5 requests during the sampling interval.
-
-### disk.all.discard
-
-total discard operations, summed for all disks
-
-### disk.all.blkdiscard
-
-block discard operations, summed for all disks
-
-### disk.all.discard_bytes
-
-count of discard bytes for all disk devices
-
-### disk.all.discard_merge
-
-Total count of discard requests that were merged with an already queued
-discard request.
-
-### disk.all.discard_rawactive
-
-For each discard on every disk the response time (queue time plus
-service time) in milliseconds is added to this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding discards across all disks.  When divided
-by the number of completed discards for all disks (disk.all.discard), the
-value represents the stochastic average of the discard response (or wait)
-time across all disks.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.all.d_await = delta(disk.all.discard_rawactive) / delta(disk.all.discard)
-
-### disk.all.flush
-
-total flush operations, summed for all disks
-
-### disk.all.flush_rawactive
-
-For each flush on every disk the response time (queue time plus
-service time) in milliseconds is added to this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding flushes across all disks.  When divided
-by the number of completed flushes for all disks (disk.all.flush), the
-value represents the stochastic average of the flush response (or wait)
-time across all disks.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.all.f_await = delta(disk.all.flush_rawactive) / delta(disk.all.flush)
-
-### disk.partitions.read
-
-Cumulative number of disk read operations since system boot time
-(subject to counter wrap) for individual disk partitions or logical
-volumes.
-
-### disk.partitions.write
-
-Cumulative number of disk write operations since system boot time
-(subject to counter wrap) for individual disk partitions or logical
-volumes.
-
-### disk.partitions.total
-
-Cumulative number of disk read and write operations since system boot
-time (subject to counter wrap) for individual disk partitions or
-logical volumes.
-
-### disk.partitions.blkread
-
-Cumulative number of disk block read operations since system boot time
-(subject to counter wrap) for individual disk partitions or logical
-volumes.
-
-### disk.partitions.blkwrite
-
-Cumulative number of disk block write operations since system boot time
-(subject to counter wrap) for individual disk partitions or logical
-volumes.
-
-### disk.partitions.blktotal
-
-Cumulative number of disk block read and write operations since system
-boot time (subject to counter wrap) for individual disk partitions or
-logical volumes.
-
-### disk.partitions.read_bytes
-
-Cumulative number of bytes read since system boot time (subject to
-counter wrap) for individual disk partitions or logical volumes.
-
-### disk.partitions.write_bytes
-
-Cumulative number of bytes written since system boot time (subject to
-counter wrap) for individual disk partitions or logical volumes.
-
-### disk.partitions.total_bytes
-
-Cumulative number of bytes read and written since system boot time
-(subject to counter wrap) for individual disk partitions or logical
-volumes.
-
-### disk.partitions.read_merge
-
-per-disk-partition count of merged read requests
-
-### disk.partitions.write_merge
-
-per-disk-partition count of merged write requests
-
-### disk.partitions.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress for each disk partition.
-
-When converted to a rate, this metric represents the average utilization
-of the disk partition during the sampling interval.  A value of 0.5
-(or 50%) means the disk partition was active (i.e. busy) half the time.
-
-### disk.partitions.aveq
-
-per-disk-partition device time averaged count of request queue length
-
-### disk.partitions.read_rawactive
-
-For each completed read on each disk partition the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding reads for a disk partition.  When divided by
-the number of completed reads for a disk partition (disk.partitions.read),
-the value represents the stochastic average of the read response (or wait)
-time for that disk partition.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.partitions.r_await = delta(disk.partitions.read_rawactive) /
-                             delta(disk.partitions.read)
-
-### disk.partitions.write_rawactive
-
-For each completed write on each disk partition the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding writes for a disk partition.
-When divided by the number of completed writes for a disk partition
-(disk.partitions.write), the value represents the stochastic average of
-the write response (or wait) time for that disk partition.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.partitions.w_await = delta(disk.partitions.write_rawactive) /
-                             delta(disk.partitions.write)
-
-### disk.partitions.total_rawactive
-
-For each completed I/O on each disk partition the response time (queue
-time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding I/Os for a disk partition.
-When divided by the number of completed I/Os for a disk partition
-(disk.partitions.total), the value represents the stochastic average of
-the I/O response (or wait) time for that disk partition.
-
-### disk.partitions.capacity
-
-Total space presented by each disk partition, from /proc/partitions.
-
-### disk.partitions.discard
-
-discard operations count for storage partitions
-
-### disk.partitions.blkdiscard
-
-block discard operations count for storage partitions
-
-### disk.partitions.discard_bytes
-
-number of discard bytes for storage partitions
-
-### disk.partitions.discard_merge
-
-per-disk-partition count of merged discard requests
-
-### disk.partitions.discard_rawactive
-
-For each completed discard on each disk partition the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding discards for a disk partition.  When divided by
-the number of completed discards for a disk partition (disk.partitions.discard),
-the value represents the stochastic average of the discard response (or wait)
-time for that disk partition.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.partitions.d_await = delta(disk.partitions.discard_rawactive) /
-                             delta(disk.partitions.discard)
-
-### disk.partitions.flush
-
-flush operations metric for storage partitions
-
-### disk.partitions.flush_rawactive
-
-For each completed flush on each disk partition the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding flushes for a disk partition.  When divided by
-the number of completed flushes for a disk partition (disk.partitions.flush),
-the value represents the stochastic average of the flush response (or wait)
-time for that disk partition.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.partitions.f_await = delta(disk.partitions.flush_rawactive) /
-                             delta(disk.partitions.flush)
-
-### disk.dm.read
-
-per-device-mapper device read operations
-
-### disk.dm.write
-
-per-device-mapper device write operations
-
-### disk.dm.total
-
-per-device-mapper device total (read+write) operations
-
-### disk.dm.blkread
-
-per-device-mapper device block read operations
-
-### disk.dm.blkwrite
-
-per-device-mapper device block write operations
-
-### disk.dm.blktotal
-
-per-device-mapper device total (read+write) block operations
-
-### disk.dm.read_bytes
-
-per-device-mapper device count of bytes read
-
-### disk.dm.write_bytes
-
-per-device-mapper device count of bytes written
-
-### disk.dm.total_bytes
-
-per-device-mapper device count of total bytes read and written
-
-### disk.dm.read_merge
-
-per-device-mapper device count of merged read requests
-
-### disk.dm.write_merge
-
-per-device-mapper device count of merged write requests
-
-### disk.dm.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress for each device-mapper device.
-
-When converted to a rate, this metric represents the average utilization
-of the device during the sampling interval.  A value of 0.5 (or 50%)
-means the device was active (i.e. busy) half the time.
-
-### disk.dm.aveq
-
-per-device-mapper device time averaged count of request queue length
-
-### disk.dm.read_rawactive
-
-For each completed read on each device-mapper device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding reads for a device-mapper device.
-When divided by the number of completed reads for a device-mapper device
-(disk.dm.read), the value represents the stochastic average of the read
-response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dm.r_await = delta(disk.dm.read_rawactive) / delta(disk.dm.read)
-
-### disk.dm.write_rawactive
-
-For each completed write on each device-mapper device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding writes for a device-mapper device.
-When divided by the number of completed writes for a device-mapper device
-(disk.dm.write), the value represents the stochastic average of the
-write response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dm.w_await = delta(disk.dm.write_rawactive) / delta(disk.dm.write)
-
-### disk.dm.total_rawactive
-
-For each completed I/O on each device-mapper device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding I/Os for a device-mapper device.
-When divided by the number of completed I/Os for a device-mapper device
-(disk.dm.total), the value represents the stochastic average of the I/O
-response (or wait) time for that device-mapper device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dm.await = delta(disk.dm.total_rawactive) / delta(disk.dm.total)
-
-### disk.dm.capacity
-
-Total space presented by each device mapper device, from /proc/partitions.
-
-### disk.dm.discard
-
-per-device-mapper device discard operations
-
-### disk.dm.blkdiscard
-
-per-device-mapper device block discard operations
-
-### disk.dm.discard_bytes
-
-per-device-mapper device count of discard bytes
-
-### disk.dm.discard_merge
-
-per-device-mapper device count of merged discard requests
-
-### disk.dm.discard_rawactive
-
-For each completed discard on each device-mapper device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding discards for a device-mapper device.
-When divided by the number of completed discards for a device-mapper device
-(disk.dm.discards), the value represents the stochastic average of the
-discard response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dm.d_await = delta(disk.dm.discard_rawactive) / delta(disk.dm.discard)
-
-### disk.dm.flush
-
-per-device-mapper device flush operations
-
-### disk.dm.flush_rawactive
-
-For each completed flush on each device-mapper device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding flushes for a device-mapper device.
-When divided by the number of completed flushes for a device-mapper device
-(disk.dm.flush), the value represents the stochastic average of the flush
-response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.dm.f_await = delta(disk.dm.flush_rawactive) / delta(disk.dm.flush)
-
-### disk.md.read
-
-per-multi-device device read operations
-
-### disk.md.write
-
-per-multi-device device write operations
-
-### disk.md.total
-
-per-multi-device device total (read+write) operations
-
-### disk.md.blkread
-
-per-multi-device device block read operations
-
-### disk.md.blkwrite
-
-per-multi-device device block write operations
-
-### disk.md.blktotal
-
-per-multi-device device total (read+write) block operations
-
-### disk.md.read_bytes
-
-per-multi-device device count of bytes read
-
-### disk.md.write_bytes
-
-per-multi-device device count of bytes written
-
-### disk.md.total_bytes
-
-per-multi-device device count of total bytes read and written
-
-### disk.md.read_merge
-
-per-multi-device device count of merged read requests
-
-### disk.md.write_merge
-
-per-multi-device device count of merged write requests
-
-### disk.md.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress for each multi-device device.
-
-When converted to a rate, this metric represents the average utilization
-of the device during the sampling interval.  A value of 0.5 (or 50%)
-means the device was active (i.e. busy) half the time.
-
-### disk.md.aveq
-
-per-multi-device device time averaged count of request queue length
-
-### disk.md.read_rawactive
-
-For each completed read on each multi-device device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding reads for a multi-device device.
-When divided by the number of completed reads for a multi-device device
-(disk.md.read), the value represents the stochastic average of the read
-response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.md.r_await = delta(disk.md.read_rawactive) / delta(disk.md.read)
-
-### disk.md.write_rawactive
-
-For each completed write on each multi-device device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding writes for a multi-device device.
-When divided by the number of completed writes for a multi-device device
-(disk.md.write), the value represents the stochastic average of the
-write response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.md.w_await = delta(disk.md.write_rawactive) / delta(disk.md.write)
-
-### disk.md.total_rawactive
-
-For each completed I/O on each multi-device device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding I/Os for a multi-device device.
-When divided by the number of completed I/Os for a multi-device device
-(disk.md.total), the value represents the stochastic average of the I/O
-response (or wait) time for that multi-device device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.md.await = delta(disk.md.total_rawactive) / delta(disk.md.total)
-
-### disk.md.status
-
-per-multi-device "mdadm --test --detail <device>" return code
-
-### disk.md.capacity
-
-Total space presented by each multi-device device, from /proc/partitions.
-
-### disk.md.discard
-
-per-multi-device device discard operations
-
-### disk.md.blkdiscard
-
-per-multi-device device block discard operations
-
-### disk.md.discard_bytes
-
-per-multi-device device count of discard bytes
-
-### disk.md.discard_merge
-
-per-multi-device device count of merged discard requests
-
-### disk.md.discard_rawactive
-
-For each completed discard on each multi-device device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding discards for a multi-device device.
-When divided by the number of completed discards for a multi-device device
-(disk.md.discards), the value represents the stochastic average of the
-discard response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.md.d_await = delta(disk.md.discard_rawactive) / delta(disk.md.discard)
-
-### disk.md.flush
-
-per-multi-device device flush operations
-
-### disk.md.flush_rawactive
-
-For each completed flush on each multi-device device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding flushes for a multi-device device.
-When divided by the number of completed flushes for a multi-device device
-(disk.md.flush), the value represents the stochastic average of the flush
-response (or wait) time for that device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.md.f_await = delta(disk.md.flush_rawactive) / delta(disk.md.flush)
-
-### filesys.capacity
-
-Total capacity of mounted filesystem (Kbytes)
-
-### filesys.used
-
-Total space used on mounted filesystem (Kbytes)
-
-### filesys.free
-
-Total space free on mounted filesystem (Kbytes)
-
-### filesys.maxfiles
-
-Inodes capacity of mounted filesystem
-
-### filesys.usedfiles
-
-Number of inodes allocated on mounted filesystem
-
-### filesys.freefiles
-
-Number of unallocated inodes on mounted filesystem
-
-### filesys.mountdir
-
-File system mount point
-
-### filesys.full
-
-Percentage of filesystem in use
-
-### filesys.blocksize
-
-Size of each block on mounted filesystem (Bytes)
-
-### filesys.avail
-
-Total space free to non-superusers on mounted filesystem (Kbytes)
-
-### filesys.readonly
-
-Indicates whether a filesystem is mounted readonly
-
-### swapdev.free
-
-physical swap free space
-
-### swapdev.length
-
-physical swap size
-
-### swapdev.maxswap
-
-maximum swap length (same as swapdev.length on Linux)
-
-### swapdev.vlength
-
-Virtual swap size (always zero on Linux since Linux does not support
-virtual swap).
-
-This metric is retained on Linux for interoperability with PCP monitor
-tools running on IRIX.
-
-### swapdev.priority
-
-swap resource priority
-
-### rpc.client.rpccnt
-
-cumulative total of client RPC requests
-
-### rpc.client.rpcretrans
-
-cumulative total of client RPC retransmissions
-
-### rpc.client.rpcauthrefresh
-
-cumulative total of client RPC auth refreshes
-
-### rpc.client.netcnt
-
-cumulative total of client RPC network layer requests
-
-### rpc.client.netudpcnt
-
-cumulative total of client RPC UDP network layer requests
-
-### rpc.client.nettcpcnt
-
-cumulative total of client RPC TCP network layer requests
-
-### rpc.client.nettcpconn
-
-cumulative total of client RPC TCP network layer connection requests
-
-### rpc.server.rpccnt
-
-cumulative total of server RPC requests
-
-### rpc.server.rpcerr
-
-cumulative total of server RPC errors
-
-### rpc.server.rpcbadfmt
-
-cumulative total of server RPC bad format errors
-
-### rpc.server.rpcbadauth
-
-cumulative total of server RPC bad auth errors
-
-### rpc.server.rpcbadclnt
-
-cumulative total of server RPC bad client errors
-
-### rpc.server.rchits
-
-cumulative total of request-reply-cache hits
-
-### rpc.server.rcmisses
-
-cumulative total of request-reply-cache misses
-
-### rpc.server.rcnocache
-
-cumulative total of uncached request-reply-cache requests
-
-### rpc.server.fh_cached
-
-cumulative total of file handle cache requests
-
-### rpc.server.fh_valid
-
-cumulative total of file handle cache validations
-
-### rpc.server.fh_fixup
-
-cumulative total of file handle cache fixup validations
-
-### rpc.server.fh_lookup
-
-cumulative total of file handle cache new lookups
-
-### rpc.server.fh_stale
-
-cumulative total of stale file handle cache errors
-
-### rpc.server.fh_concurrent
-
-cumulative total of concurrent file handle cache requests
-
-### rpc.server.netcnt
-
-cumulative total of server RPC network layer requests
-
-### rpc.server.netudpcnt
-
-cumulative total of server RPC UDP network layer requests
-
-### rpc.server.nettcpcnt
-
-cumulative total of server RPC TCP network layer requests
-
-### rpc.server.nettcpconn
-
-cumulative total of server RPC TCP network layer connection requests
-
-### rpc.server.fh_anon
-
-cumulative total anonymous file dentries returned
-
-### rpc.server.fh_nocache_dir
-
-count of directory file handles not found cached
-
-### rpc.server.fh_nocache_nondir
-
-count of non-directory file handles not found cached
-
-### rpc.server.io_read
-
-cumulative count of bytes returned from read requests
-
-### rpc.server.io_write
-
-cumulative count of bytes passed into write requests
-
-### rpc.server.th_cnt
-
-available nfsd threads
-
-### rpc.server.th_fullcnt
-
-number of times the last free nfsd thread was used
-
-### rpc.server.ra_size
-
-size of read-ahead params cache
-
-### rpc.server.ra_hits
-
-count of read-ahead params cache hits
-
-### rpc.server.ra_misses
-
-count of read-ahead params cache misses
-
-### nfs.client.calls
-
-cumulative total of client NFSv2 requests
-
-### nfs.client.reqs
-
-cumulative total of client NFSv2 requests by request type
-
-### nfs.server.calls
-
-cumulative total of server NFSv2 requests
-
-### nfs.server.reqs
-
-cumulative total of client NFSv2 requests by request type
-
-### nfs.server.threads.total
-
-number of nfsd threads running
-
-### nfs.server.threads.pools
-
-number of thread pools
-
-### nfs.server.threads.requests
-
-cumulative total of requests received
-
-### nfs.server.threads.enqueued
-
-cumulative total of requests that had to wait to be processed
-
-### nfs.server.threads.processed
-
-cumulative total of requests processed immediately
-
-### nfs.server.threads.timedout
-
-cumulative total of threads that timedout from inactivity
-
-### nfs3.client.calls
-
-cumulative total of client NFSv3 requests
-
-### nfs3.client.reqs
-
-cumulative total of client NFSv3 requests by request type
-
-### nfs3.server.calls
-
-cumulative total of server NFSv3 requests
-
-### nfs3.server.reqs
-
-cumulative total of client NFSv3 requests by request type
-
-### nfs4.client.calls
-
-cumulative total of client NFSv4 requests
-
-### nfs4.client.reqs
-
-cumulative total for each client NFSv4 request type
-
-### nfs4.server.calls
-
-cumulative total of server NFSv4 operations, plus NULL requests
-
-### nfs4.server.reqs
-
-cumulative total for each server NFSv4 operation, and for NULL requests
-
-### pmda.uname
-
-Identity and type of current system.  The concatenation of the values
-returned from utsname(2), also similar to uname -a.
-
-See also the kernel.uname.* metrics
-
-### pmda.version
-
-build version of Linux PMDA
+## ipc
 
 ### ipc.sem.max_semmap
 
@@ -5268,6 +4848,7 @@ process creating each shared memory segment
 ### ipc.shm.last_access_pid
 
 process last accessing each shared memory segment
+## vfs
 
 ### vfs.files.count
 
@@ -5340,6 +4921,12 @@ number of file leases held for writing
 ### vfs.locks.lease.count
 
 number of file lease structures
+## sysfs
+
+### sysfs.kernel.uevent_seqnum
+
+counter of the number of uevents processed by the udev subsystem
+## tmpfs
 
 ### tmpfs.capacity
 
@@ -5368,1075 +4955,133 @@ Number of unallocated inodes on mounted tmpfs filesystem
 ### tmpfs.full
 
 Percentage of tmpfs filesystem in use
+## containers
 
-### sysfs.kernel.uevent_seqnum
+### containers.engine
 
-counter of the number of uevents processed by the udev subsystem
+technology backing each container (e.g. docker)
 
-### tape.dev.in_flight
+### containers.name
 
-number of I/Os currently outstanding to this tape device
+mapping of unique container IDs to human-readable names
 
-### tape.dev.io_ns
+### containers.pid
 
-The amount of time spent waiting (in nanoseconds) for all I/O to complete
-(including read and write). This includes tape movement commands such as seeking
-between file or set marks and implicit tape movement such as when rewind on close
-tape devices are used.
+process identifier for each containers initial process
 
-### tape.dev.other_cnt
+### containers.cgroup
 
-number of I/Os issued to the tape drive other than read or write commands
+path mapping container names to their cgroups
 
-### tape.dev.read_byte_cnt
+### containers.state.running
 
-number of bytes read from the tape drive
+this container is currently running (one/zero)
 
-### tape.dev.read_cnt
+### containers.state.paused
 
-number of read requests issued to the tape drive
+this container is currently paused (one/zero)
 
-### tape.dev.read_ns
+### containers.state.restarting
 
-cumulative amount of time spent waiting for read requests to complete
+this container is restarting (one/zero)
+## nvidia
 
-### tape.dev.resid_cnt
+### nvidia.numcards
 
-Number of times during a read or write we found the residual amount to be non-zero.
-For reads this means a program is issuing a read larger than the block size on tape.
-For writes it means not all data made it to tape.
+The number of NVIDIA Graphics cards installed in this system
 
-### tape.dev.write_byte_cnt
+### nvidia.gpuid
 
-number of bytes written to the tape drive
+Zero indexed id of this NVIDIA card
 
-### tape.dev.write_cnt
+### nvidia.cardname
 
-number of write requests issued to the tape drive
+The name of the graphics card
 
-### tape.dev.write_ns
+### nvidia.busid
 
-cumulative amount of time spent waiting for write requests to complete
+The Bus ID as reported by the NVIDIA tools, not lspci
 
-### tty.serial.tx
+### nvidia.temp
 
-Number of transmit interrupts for current serial line.
+The Temperature of the GPU on the NVIDIA card in degrees celcius.
 
-### tty.serial.rx
+### nvidia.fanspeed
 
-Number of receive interrupts for current serial line.
+Speed of the GPU fan as a percentage of the maximum
 
-### tty.serial.frame
+### nvidia.perfstate
 
-Number of frame errors for current serial line.
+The PX performance state as reported from NVML.  Value is an integer
+which should range from 0 (maximum performance) to 15 (minimum).  If
+the state is unknown the reported value will be 32, however.
 
-### tty.serial.parity
+### nvidia.gpuactive
 
-Number of parity errors for current serial line.
+Percentage of time over the past sample period during which one or more
+kernels was executing on the GPU.
 
-### tty.serial.brk
+### nvidia.memactive
 
-Number of breaks for current serial line.
+Percent of time over the past sample period during which global (device)
+memory was being read or written.  This metric shows if the memory is
+actively being accesed, and is not correlated to storage amount used.
 
-### tty.serial.overrun
+### nvidia.memused
 
-Number of overrun errors for current serial line.
+Amount of GPU FB memory that has currently been allocated, in bytes.
+Note that the driver/GPU always sets aside a small amount of memory
+for bookkeeping. 
 
-### tty.serial.irq
+### nvidia.memtotal
 
-IRQ number.
+The total amount of GPU FB memory available on the card, in bytes.
 
-### zram.read
+### nvidia.memfree
 
-Cumulative number of disk read operations since system boot time
-(subject to counter wrap) for compressed memory devices.
+Amount of GPU FB memory that is not currently allocated, in bytes.
 
-### zram.write
+### nvidia.proc.samples
 
-Cumulative number of disk write operations since system boot time
-(subject to counter wrap) for compressed memory devices.
+Number of times process stats have been sampled
 
-### zram.total
+### nvidia.proc.memused
 
-Cumulative number of disk read and write operations since system boot
-time (subject to counter wrap) for compressed memory devices.
+Memory in use by each process accessing each card
 
-### zram.blkread
+### nvidia.proc.memaccum
 
-Cumulative number of disk block read operations since system boot time
-(subject to counter wrap) for compressed memory devices.
+Accumulated memory used by processes accessing each card
 
-### zram.blkwrite
+### nvidia.proc.gpuactive
 
-Cumulative number of disk block write operations since system boot time
-(subject to counter wrap) for compressed memory devices.
+Graphics card utilization by processes accessing each card
 
-### zram.blktotal
+### nvidia.proc.memactive
 
-Cumulative number of disk block read and write operations since system
-boot time (subject to counter wrap) for compressed memory devices.
+Memory access utilization by processes accessing each card
 
-### zram.read_bytes
+### nvidia.proc.time
 
-Cumulative number of bytes read since system boot time (subject to
-counter wrap) for compressed memory devices.
+Milliseconds spent by processes accessing each graphics card
+## nfs4
 
-### zram.write_bytes
+### nfs4.client.calls
 
-Cumulative number of bytes written since system boot time (subject to
-counter wrap) for compressed memory devices.
+cumulative total of client NFSv4 requests
 
-### zram.total_bytes
+### nfs4.client.reqs
 
-Cumulative number of bytes read and written since system boot time
-(subject to counter wrap) for compressed memory devices.
+cumulative total for each client NFSv4 request type
 
-### zram.read_merge
+### nfs4.server.calls
 
-per-compressed-memory-device count of merged read requests
+cumulative total of server NFSv4 operations, plus NULL requests
 
-### zram.write_merge
+### nfs4.server.reqs
 
-per-compressed-memory-device count of merged write requests
-
-### zram.avactive
-
-Counts the number of milliseconds for which at least one I/O is in
-progress for each compressed memory device.
-
-When converted to a rate, this metric represents the average utilization
-of the compressed memory device during the sampling interval.  A value of 0.5
-(or 50%) means the memory device was active (i.e. busy) half the time.
-
-### zram.aveq
-
-per-compressed-memory-device time averaged count of request queue length
-
-### zram.read_rawactive
-
-For each completed read on each compressed memory device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding reads for a compressed memory device.  When
-divided by the number of completed reads for a zram device (zram.read),
-the value represents the stochastic average of the read response (or wait)
-time for that compressed memory device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.zram.r_await = delta(zram.read_rawactive) / delta(zram.read)
-
-### zram.write_rawactive
-
-For each completed write on each compressed memory device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding writes for a zram device.
-When divided by the number of completed writes for a zram device
-(zram.write), the value represents the stochastic average of
-the write response (or wait) time for that zram device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.zram.w_await = delta(zram.write_rawactive) / delta(zram.write)
-
-### zram.total_rawactive
-
-For each completed I/O on each compressed memory device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time
-average of the number of outstanding I/Os for a zram device.
-When divided by the number of completed I/Os for a zram device
-(zram.total), the value represents the stochastic average of
-the I/O response (or wait) time for that zram device.
-
-### zram.capacity
-
-Total space presented by each zram device, from /proc/partitions.
-
-### zram.discard
-
-discard operations count for compressed memory devices
-
-### zram.blkdiscard
-
-block discard operations count for compressed memory device
-
-### zram.discard_bytes
-
-number of discard bytes for compressed memory device
-
-### zram.discard_merge
-
-per-zram-device count of merged discard requests
-
-### zram.discard_rawactive
-
-For each completed discard on each compressed memory device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding discards for a zram device.  When divided by
-the number of completed discards for a zram device (zram.discard),
-the value represents the stochastic average of the discard response (or wait)
-time for that compressed memory device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.zram.d_await = delta(zram.discard_rawactive) / delta(zram.discard)
-
-### zram.flush
-
-flush operations metric for compressed memory devices
-
-### zram.flush_rawactive
-
-For each completed flush on each compressed memory device the response time
-(queue time plus service time) in milliseconds is added to the associated
-instance of this metric.
-
-When converted to a normalized rate, the value represents the time average
-of the number of outstanding flushes for a zram device.  When divided by
-the number of completed flushes for a compressed memory device (zram.flush),
-the value represents the stochastic average of the flush response (or wait)
-time for that compressed memory device.
-
-It is suitable mainly for use in calculations with other metrics,
-e.g. mirroring the results from existing performance tools:
-
- iostat.zram.f_await = delta(zram.flush_rawactive) / delta(zram.flush)
-
-### zram.io_stat.invalid
-
-number of non-page-size-aligned I/O requests
-
-### zram.io_stat.notify_free
-
-Depending on device usage scenario it may account:
-- the number of pages freed because of swap slot free notifications
-- the number of pages freed because of REQ_OP_DISCARD requests sent by
-bio. The former ones are sent to a swap block device when a swap slot
-is freed, which implies that this disk is being used as a swap disk.
-
-The latter ones are sent by filesystem mounted with discard option,
-whenever some data blocks are getting discarded.
-
-### zram.io_stat.failed.reads
-
-number of failed reads
-
-### zram.io_stat.failed.writes
-
-number of failed writes
-
-### zram.mm_stat.data_size.original
-
-uncompressed data stored in this disk
-
-### zram.mm_stat.data_size.compressed
-
-compressed data stored in this disk
-
-### zram.mm_stat.mem.used_total
-
-This includes allocator fragmentation and metadata overhead, allocated
-for this disk.  So, allocator space efficiency can be calculated using
-zram.mm_stat.data_size.compressed and this statistic.
-
-### zram.mm_stat.mem.limit
-
-maximum amount of memory zram can use to store compressed data
-
-### zram.mm_stat.mem.max_used
-
-maximum amount of memory zram has consumed to store the data
-
-### zram.mm_stat.pages.same
-
-number of same element filled pages written to this disk
-
-### zram.mm_stat.pages.compacted
-
-pages freed during compaction
-
-### zram.mm_stat.pages.huge
-
-the number of incompressible pages
-
-### zram.bd_stat.count
-
-size of data written in backing device
-
-### zram.bd_stat.reads
-
-the number of reads from backing device
-
-### zram.bd_stat.writes
-
-the number of writes to backing device
-
-### fchost.lip_count
-
-The number of LIP (loop initializaton FC primitive) resets that have
-occurred.
-This should be the number initiated by the HBA unless there are other
-ports on the link the HBA is connected to that can also issue the LIP
-primitive.
-One can send a LIP by writing to /sys/class/fc_host/hostN/issue_lip
-A LIP will cause temporary loss of link (link down/link up events).
-
-### fchost.nos_count
-
-The number of NOS (not operational) FC primitives that have occurred
-on the switched fabric.
-This would typically be recieved by the HBA during link initialization
-between the HBA port and the switch if the switch detected a problem -
-typically NOS is sent by a port that is offline or has detected a link
-problem or failure of some type.  This being non-zero implies problems
-at the link level or with the switch port the HBA is connected to.
-
-### fchost.error_frames
-
-Count of FC frames received in error
-
-### fchost.dumped_frames
-
-The count of FC frames that were lost due to lack of local resources
-(buffers).
-A frame arrives at the HBA nport, but there is no place to capture it
-due to lack of available buffers within the adapter.
-The frame is "dumped", i.e. dropped and the firmware never sees it.
-Something is not working with buffer credits between ports at a lower
-FC link level if this is happening (one guess as to why dumped frames
-could occur).
-
-### fchost.in.frames
-
-The total number of Fibre Channel (FC) frames that have been received
-by the Host Bus Adapter (HBA).
-This count is across all protocols and classes, which includes general
-services etc. as well as frames associated with SCSI traffic.
-
-### fchost.in.bytes
-
-The total number of received bytes by the Host Bus Adapter (HBA).
-This count is across all protocols and classes, which includes general
-services etc. as well as frames associated with SCSI traffic.
-Also this counts all received words, frame headers, CRC, and so on,
-and not only "user" data bytes.
-
-### fchost.out.frames
-
-The total number of Fibre Channel (FC) frames that have been transmitted
-by the Host Bus Adapter (HBA).
-This count is across all protocols and classes, which includes general
-services etc. as well as frames associated with SCSI traffic.
-
-### fchost.out.bytes
-
-The total number of transmitted bytes by the Host Bus Adapter (HBA).
-This count is across all protocols and classes, which includes general
-services etc. as well as frames associated with SCSI traffic.
-Also this counts all transmitted words, frame headers, CRC, and so on,
-and not only "user" data bytes.
-
-### mmv.control.files
-
-Count of currently mapped and exported statistics files.
-
-### mmv.control.debug
-
-See pmdbg(1).  pmstore into this metric to change the debug value.
-
-### mmv.control.reload
-
-Writing anything other then 0 to this metric will result in
-re-reading directory and re-mapping files.
-
-### pmcd.datasize
-
-This metric returns the amount of memory in kilobytes allocated for the
-data segment of PMCD and any DSO agents (PMDAs) that it has loaded.
-
-This is handy for tracing memory utilization (and leaks) in DSOs during
-development.
-
-### pmcd.numagents
-
-The number of agents (PMDAs) currently connected to PMCD.  This may differ
-from the number of agents configured in $PCP_PMCDCONF_PATH if agents have
-terminated and/or been timed-out by PMCD.
-
-### pmcd.numclients
-
-The number of connections open to client programs retrieving information
-from PMCD.
-
-### pmcd.timezone
-
-Value for the $TZ environment variable where the PMCD is running.
-Enables determination of "local" time for timestamps returned via
-PMCD from a remote host.
-
-### pmcd.simabi
-
-SIM is the subprogram interface model (originally from the MIPS object
-code formats), and ABI is the application binary interface.  Both
-relate to the way the PMCD binary was compiled and linked.
-
-Usually DSO PMDAs must be compiled and linked in the same way before
-they can be used with PMCD.
-
-On some platforms this metric is not available.
-
-### pmcd.version
-
-PMCD version
-
-### pmcd.services
-
-A space-separated string representing all running PCP services with PID
-files in $PCP_RUN_DIR (such as pmcd itself, pmproxy and a few others).
-
-### pmcd.openfds
-
-The highest file descriptor index used by PMCD for a Client or PMDA
-connection.
-
-### pmcd.build
-
-Minor part of the PCP build version numbering.  For example on Linux
-with RPM packaging, if the PCP RPM version is pcp-2.5.99-20070323 then
-pmcd.build returns the string "20070323".
-
-### pmcd.hostname
-
-A reasonably unique identifier of the PMCD installation, for use
-by pmlogger or other tools to identify the source principal of
-the data (as distinct from identifying the connection/protocol
-used to reach it).
-
-### pmcd.sighups
-
-count of SIGHUP signals pmcd has received
-
-### pmcd.pid
-
-PID for the current pmcd invocation
-
-### pmcd.seqnum
-
-
-The configuration sequence number starts at 1 when pmcd is started
-and is incremented by 1 each time a PMDA is started or restarted.
-
-So all the while the value of pmcd.seqnum remains constant we can
-assert the data from all the PMDAs forms a continuous time series
-and in particular no counters or other metrics have been reset due
-to a PMDA start/restart.
-
-### pmcd.labels
-
-Additional end-user and PMCS metadata can be associated with performance
-metrics via $PCP_SYSCONF_DIR/labels files.  This metric exports the user
-defined labels that will be reported by pmGetContextLabels(3).  This set
-does not include labels automatically associated with every context such
-as the hostname, user and group identifier, container identifier, etc.
-
-### pmcd.control.debug
-
-The current value of the PMCD debug flags.  This is a bit-wise OR of the
-flags described in the output of pmdbg -l.  The PMCD-specific flags are:
-
-    DBG_TRACE_APPL0       2048  Trace agent & client I/O and termination
-    DBG_TRACE_APPL1       4096  Trace host access control
-    DBG_TRACE_APPL2       8192  Trace config file scanner and parser
-
-It is possible to store values into this metric, see the -ol options for
-pmdbg(1) to help determine appropriate values for the debug flags.
-
-Diagnostic output is written to the PMCD log file (usually
-$PCP_LOG_DIR/pmcd/pmcd.log).
-
-### pmcd.control.timeout
-
-PDU exchanges with agents (PMDAs) managed by PMCD are subject to timeouts
-which detect and clean up slow or disfunctional agents.  This metric
-returns the current timeout period in seconds being used for the agents.
-If the value is zero, timeouts are not being used.  This corresponds to
-the -t option described in the man page, pmcd(1).
-
-It is possible to store a new timeout value into this metric.  Storing zero
-will turn off timeouts.  Subsequent storing of a non-zero value will turn
-on the timeouts again.
-
-### pmcd.control.register
-
-A vector of 16 32-bit registers that are identified by the instance
-identifiers 0 through 15.
-
-The register contents are initially zero, but may be subsequently
-modified to be an arbitrary value using pmStore(3) or pmstore(1).
-
-The values are not used internally, but rather act as a repository into
-which operational information might be stored, and then exported to
-modify the behavior of client programs, e.g. inhibit pmie(1) rule
-firing, or trigger a status indicator.  In this way,
-pmcd.control.register acts like a primitive bulletin board.
-
-Example use might be as follows
-    register[0]	telephone no. of person assigned to current system problem
-    register[1]	telephone no. of person assigned to current network problem
-    register[2]	ORACLE database is down
-    register[3]	backup in progress
-    register[4]	shopping days to Christmas
-
-### pmcd.control.traceconn
-
-Set to 1 to enable PMCD event tracing for all connection-related
-events for clients and PMDAs.
-
-Set to 0 to disable PMCD connection event tracing.
-
-### pmcd.control.tracepdu
-
-Set to 1 to enable PMCD event tracing for all PDUs sent and received
-by PMCD.
-
-Set to 0 to disable PMCD PDU event tracing.
-
-### pmcd.control.tracenobuf
-
-Set to 1 to enable unbuffered PMCD event tracing, where each event is
-reported as it happens.
-
-Set to 0 to enable buffering of PMCD event traces (this is the default),
-and event traces will only be dumped or reported when an error occurs or
-a value is stored into the PCP metric pmcd.control.dumptrace.
-
-### pmcd.control.tracebufs
-
-Defaults to 20.  May be changed dynamically.
-
-### pmcd.control.dumptrace
-
-Storing any value into this metric causes the PMCD event trace buffers to
-be dumped to PMCD's log file.
-
-### pmcd.control.dumpconn
-
-Storing any value into this metric causes the details of the current PMCD
-client connections to be dumped to PMCD's log file.
-
-### pmcd.control.sighup
-
-Storing any value into this metric causes PMCD to be reset by sending
-itself a SIGHUP signal.
-
-On reset (either by storing into pmcd.control.sighup or by sending PMCD a
-SIGHUP directly), PMCD will restart any failed PMDAs and reload the PMNS
-if it has been changed.
-
-### pmcd.pdu_in.error
-
-Running total of BINARY mode ERROR PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.result
-
-Running total of BINARY mode RESULT PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.profile
-
-Running total of BINARY mode PROFILE PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.fetch
-
-Running total of BINARY mode FETCH PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.desc_req
-
-Running total of BINARY mode DESC_REQ PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.desc
-
-Running total of BINARY mode DESC PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.instance_req
-
-Running total of BINARY mode INSTANCE_REQ PDUs received by the PMCD
-from clients and agents.
-
-### pmcd.pdu_in.instance
-
-Running total of BINARY mode INSTANCE PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.text_req
-
-Running total of BINARY mode TEXT_REQ PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.text
-
-Running total of BINARY mode TEXT PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.control_req
-
-Running total of BINARY mode CONTROL_REQ PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.creds
-
-Running total of BINARY mode CREDS PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.pmns_ids
-
-Running total of BINARY mode PMNS_IDS PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.pmns_names
-
-Running total of BINARY mode PMNS_NAMES PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.pmns_child
-
-Running total of BINARY mode PMNS_CHILD PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.total
-
-Running total of all BINARY mode PDUs received by the PMCD from clients
-and agents.
-
-### pmcd.pdu_in.pmns_traverse
-
-Running total of BINARY mode PMNS_TRAVERSE PDUs received by the PMCD from
-clients and agents.
-
-### pmcd.pdu_in.auth
-
-Running total of BINARY mode AUTH PDUs received by PMCD from
-clients and agents.  These PDUs are used for authentication.
-
-### pmcd.pdu_in.label_req
-
-Running total of BINARY mode LABEL_REQ PDUs received by PMCD from
-clients and agents.  These PDUs are used to request metric metadata
-labels.
-
-### pmcd.pdu_in.label
-
-Running total of BINARY mode LABEL PDUs received by PMCD from
-clients and agents.  These PDUs are used to send custom metric
-metadata in the form of name:value pairs (labels).
-
-### pmcd.pdu_in.highres_fetch
-
-Running total of HIGHRES FETCH PDUs received by PMCD from clients and
-agents.  These PDUs are used to request high resolution timestamps in
-fetch (metric value sampling) responses.
-
-### pmcd.pdu_in.highres_result
-
-Running total of HIGHRES RESULT PDUs received by PMCD from clients and
-agents.  These PDUs are used to respond with high resolution timestamps
-to fetch (metric value sampling) requests.
-
-### pmcd.pdu_out.error
-
-Running total of BINARY mode ERROR PDUs sent by the PMCD to clients and
-agents.
-
-### pmcd.pdu_out.result
-
-Running total of BINARY mode RESULT PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.profile
-
-Running total of BINARY mode PROFILE PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.fetch
-
-Running total of BINARY mode FETCH PDUs sent by the PMCD to clients and
-agents.
-
-### pmcd.pdu_out.desc_req
-
-Running total of BINARY mode DESC_REQ PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.desc
-
-Running total of BINARY mode DESC PDUs sent by the PMCD to clients and
-agents.
-
-### pmcd.pdu_out.instance_req
-
-Running total of BINARY mode INSTANCE_REQ PDUs sent by the PMCD to
-clients and agents.
-
-### pmcd.pdu_out.instance
-
-Running total of BINARY mode INSTANCE PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.text_req
-
-Running total of BINARY mode TEXT_REQ PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.text
-
-Running total of BINARY mode TEXT PDUs sent by the PMCD to clients and
-agents.
-
-### pmcd.pdu_out.control_req
-
-Running total of BINARY mode CONTROL_REQ PDUs sent by the PMCD to
-clients and agents.
-
-### pmcd.pdu_out.creds
-
-Running total of BINARY mode CREDS PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.pmns_ids
-
-Running total of BINARY mode PMNS_IDS PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.pmns_names
-
-Running total of BINARY mode PMNS_NAMES PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.pmns_child
-
-Running total of BINARY mode PMNS_CHILD PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.total
-
-Running total of all BINARY mode PDUs sent by the PMCD to clients and
-agents.
-
-### pmcd.pdu_out.pmns_traverse
-
-Running total of BINARY mode PMNS_TRAVERSE PDUs sent by the PMCD to clients
-and agents.
-
-### pmcd.pdu_out.auth
-
-Running total of BINARY mode AUTH PDUs sent by the PMCD to clients
-and agents.  These PDUs are used for authentication.
-
-### pmcd.pdu_out.label_req
-
-Running total of BINARY mode LABEL_REQ PDUs sent by the PMCD to clients
-and agents.  These are used to request metadata labels (name:value pairs).
-
-### pmcd.pdu_out.label
-
-Running total of BINARY mode LABEL PDUs sent by the PMCD to clients
-and agents.  These are used to send metadata labels (name:value pairs).
-
-### pmcd.pdu_out.highres_fetch
-
-Running total of HIGHRES FETCH PDUs sent by the PMCD to clients and
-agents.  These PDUs are used to request high resolution timestamps in
-fetch (metric value sampling) responses.
-
-### pmcd.pdu_out.highres_result
-
-Running total of HIGHRES RESULT PDUs sent by the PMCD to clients and
-agents.  These PDUs are used to respond with high resolution timestamps
-to fetch (metric value sampling) requests.
-
-### pmcd.agent.type
-
-From $PCP_PMCDCONF_PATH, this metric encodes the PMDA type as follows:
-	(x << 1) | y
-where "x" is the IPC type between PMCD and the PMDA, i.e. 0 for DSO, 1
-for socket or 2 for pipe, and "y" is the message passing style, i.e.
-0 for binary or 1 for ASCII.
-
-### pmcd.agent.status
-
-This metric encodes the current status of each PMDA.  The default value
-is 0 if the PMDA is active.
-
-Other values encode various degrees of PMDA difficulty in three bit fields
-(bit 0 is the low-order bit) as follows:
-
-bits 7..0
-    1   the PMDA is connected, but not yet "ready" to accept requests
-        from the PMDA
-    2   the PMDA has exited of its own accord
-    4   some error prevented the PMDA being started
-    8   PMCD stopped communication with the PMDA due to a protocol or
-        timeout error
-
-bits 15..8
-        the exit() status from the PMDA
-
-bits 23..16
-        the number of the signal that terminated the PMDA
-
-### pmcd.agent.fenced
-
-A value of zero indicates not enabled, one indicates that operations
-requiring fetch-level access controls are currently being denied and
-PM_ERR_PMDAFENCED error code returned, for each PMDA.
-
-The fence status is initially zero for all PMDAs, but may be subsequently
-modified to start and stop fencing using pmStore(3) or pmstore(1).  Note:
-only root may store to this metric and the PMCD PMDA cannot be fenced (it
-will be silently ignored if attempted).
-
-### pmcd.agent.name
-
-Useful for creating pmlogconf group conditional expressions.
-
-### pmcd.pmlogger.host
-
-The fully qualified domain name of the host on which a pmlogger
-instance is running.
-
-The instance names are process IDs of the active pmloggers.  The
-primary pmlogger has an extra instance with the instance name "primary"
-and an instance ID of zero (in addition to its normal process ID
-instance).
-
-### pmcd.pmlogger.port
-
-Each pmlogger instance has a port for receiving log control
-information.  This metric is a list of the active pmlogger control
-ports on the same machine as this PMCD (i.e. the host identified in the
-corresponding pmcd.pmlogger.host metric).
-
-The instance names are process IDs of the active pmloggers.  The
-primary pmlogger has an extra instance with the instance name "primary"
-and an instance ID of zero (in addition to its normal process ID
-instance).
-
-### pmcd.pmlogger.archive
-
-The full pathname through the filesystem on the corresponding host
-(pmcd.pmlogger.host) that is the base name for the archive log files.
-
-The instance names are process IDs of the active pmloggers.  The
-primary pmlogger has an extra instance with the instance name "primary"
-and an instance ID of zero (in addition to its normal process ID
-instance).
-
-### pmcd.pmlogger.pmcd_host
-
-The fully qualified domain name of the host from which a pmlogger
-instance is fetching metrics to be archived.
-
-The instance names are process IDs of the active pmloggers.  The
-primary pmlogger has an extra instance with the instance name "primary"
-and an instance ID of zero (in addition to its normal process ID
-instance).
-
-### pmcd.pmie.configfile
-
-The full path in the filesystem to the configuration file containing the
-rules being evaluated by each pmie instance.
-
-If the configuration file was supplied on the standard input, then this
-metric will have the value "<stdin>".  If multiple configuration files were
-given to pmie, then the value of this metric will be the first configuration
-file specified.
-
-### pmcd.pmie.logfile
-
-The file to which each instance of pmie is writting events.  No two pmie
-instances can share the same log file.  If no logfile was specified when
-pmie was started, this metrics has the value "<none>".  All daemon pmie
-instances started through pmie_check(1) must have an associated log file.
-
-### pmcd.pmie.pmcd_host
-
-The default host from which pmie is fetching metrics.  This is either the
-hostname given to pmie on the command line or the local host.  Note that this
-does not consider host names specified in the pmie configuration file (these
-are considered non-default and can be more than one per pmie instance).
-All daemon pmie instances started through pmie_check(1) will have their
-default host passed in on their command line.
-
-### pmcd.pmie.numrules
-
-The total number of rules being evaluated by each pmie process.
-
-### pmcd.pmie.actions
-
-A cumulative count of the evaluated pmie rules which have evaluated to true.
-
-This value is incremented once each time an action is executed.  This value
-will always be less than or equal to pmcd.pmie.eval.true because predicates
-which have evaluated to true may be suppressed in the action part of the
-pmie rule, in which case this counter will not be incremented.
-
-### pmcd.pmie.eval.true
-
-The predicate part of a pmie rule can be said to evaluate to either true,
-false, or not known.  This metric is a cumulative count of the number of
-rules which have evaluated to true for each pmie instance.
-
-### pmcd.pmie.eval.false
-
-The predicate part of a pmie rule can be said to evaluate to either true,
-false, or not known.  This metric is a cumulative count of the number of
-rules which have evaluated to false for each pmie instance.
-
-### pmcd.pmie.eval.unknown
-
-The predicate part of a pmie rule can be said to evaluate to either true,
-false, or not known.  This metric is a cumulative count of the number of
-rules which have not been successfully evaluated.  This could be due to not
-yet having sufficient values to evaluate the rule, or a metric fetch may
-have been unsuccessful in retrieving current values for metrics required
-for evaluation of the rule.
-
-### pmcd.pmie.eval.expected
-
-This is the expected rate of evaluation of pmie rules.  The value is
-calculated once when pmie starts, and is the number of pmie rules divided
-by the average time interval over which they are to be evaluated.
-
-### pmcd.pmie.eval.actual
-
-A cumulative count of the pmie rules which have been evaluated.
-
-This value is incremented once for each evaluation of each rule.
-
-### pmcd.buf.alloc
-
-This metric returns the number of allocated buffers for the various buffer
-pools used by pmcd.
-
-This is handy for tracing memory utilization (and leaks) in DSOs during
-development.
-
-### pmcd.buf.free
-
-This metric returns the number of free buffers for the various buffer
-pools used by pmcd.
-
-This is handy for tracing memory utilization (and leaks) in DSOs during
-development.
-
-### pmcd.client.whoami
-
-This metric is defined over an instance domain containing one entry
-per active client of pmcd.  The instance number is a sequence number
-for each client (restarts at 0 each time pmcd is restarted).  The value
-of the metric by default is the IP address of the client.
-
-Clients can optionally use pmStore to modify their own "whoami" string
-to provide more useful information about the client.
-
-### pmcd.client.start_date
-
-The date and time in ctime(2) format on which the client connected
-to pmcd.
-
-### pmcd.client.container
-
-The name of the container (if any) associated with this context at
-the time of the fetch request.  The container name can be set when
-establishing a PMAPI context, or by storing into this metric using
-the pmStore interface.
-
-### pmcd.cputime.total
-
-Sum of user and system time since pmcd started.
-
-### pmcd.cputime.per_pdu_in
-
-When first requested it is the average since pmcd started, so
-pmcd.cputime.total divided by pmcd.pdu_in.total.
-
-Subsequent fetches by a PMAPI client will return the average CPU
-time per PDU received by pmcd (for all clients) since the last time
-the PMAPI client fetched this metric.
-
-### pmcd.feature.secure
-
-A value of zero indicates no support, one indicates actively available
-(including configuration and validity of the server side certificates).
-
-### pmcd.feature.compress
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.ipv6
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.authentication
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.creds_required
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.unix_domain_sockets
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.service_discovery
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.containers
-
-A value of zero indicates no support, one indicates actively available.
-
-### pmcd.feature.local
-
-A value of zero indicates not enabled, one indicates the localhost-only
-mode of operation is active.
-
-### pmcd.feature.client_cert_required
-
-A value of zero indicates not required, one indicates required.
-
-### pmproxy.control.files
-
-Count of currently mapped and exported statistics files.
-
-### pmproxy.control.debug
-
-See pmdbg(1).  pmstore into this metric to change the debug value.
-
-### pmproxy.control.reload
-
-Writing anything other then 0 to this metric will result in
-re-reading directory and re-mapping files.
+cumulative total for each server NFSv4 operation, and for NULL requests
+## cgroup
 
 ### cgroup.subsys.hierarchy
 
@@ -7299,1368 +5944,7 @@ Direct IO bytes per-cgroup, per-device
 ### cgroup.io.stat.dios
 
 Direct IO operations per-cgroup, per-device
-
-### proc.nprocs
-
-instantaneous number of processes
-
-### proc.psinfo.oom_score
-
-out-of-memory process selection score (from /proc/<pid>/oom_score)
-
-### proc.psinfo.tgid
-
-thread group identifier
-
-### proc.psinfo.ngid
-
-NUMA group identifier (from /proc/<pid>/status)
-
-### proc.psinfo.cpusallowed
-
-the cpus allowed list (from /proc/<pid>/status)
-
-### proc.psinfo.nvctxsw
-
-number of non-voluntary context switches (from /proc/<pid>/status)
-
-### proc.psinfo.vctxsw
-
-number of voluntary context switches (from /proc/<pid>/status)
-
-### proc.psinfo.labels
-
-list of processes security labels (from /proc/<pid>/attr/current)
-
-### proc.psinfo.cgroups
-
-list of processes cgroups (from /proc/<pid>/cgroup)
-
-### proc.psinfo.threads
-
-number of threads (from /proc/<pid>/status)
-
-### proc.psinfo.sigcatch_s
-
-caught signals mask in string form (from /proc/<pid>/status)
-
-### proc.psinfo.sigignore_s
-
-ignored signals mask in string form (from /proc/<pid>/status)
-
-### proc.psinfo.blocked_s
-
-blocked signals mask in string form (from /proc/<pid>/status)
-
-### proc.psinfo.signal_s
-
-pending signals mask in string form (from /proc/<pid>/status)
-
-### proc.psinfo.policy_s
-
-scheduling policy in string form
-
-### proc.psinfo.environ
-
-process environment (from /proc/<pid>/environ ascii space replaces null).
-
-### proc.psinfo.cguest_time
-
-Guest time of the process’s children
-
-### proc.psinfo.guest_time
-
-Time spent running a virtual CPU for a guest operating system.
-
-### proc.psinfo.delayacct_blkio_time
-
-Aggregated block I/O delays
-
-### proc.psinfo.policy
-
-scheduling policy (/from /proc/<pid>/stat)
-
-### proc.psinfo.rt_priority
-
-Real-time scheduling priority, a number in the range 1 to 99
-
-### proc.psinfo.psargs
-
-full command string
-
-### proc.psinfo.wchan_s
-
-This field needs access to a namelist file for proper 
-address-to-symbol name translation. If no namelist file
-is available, the address is printed instead. The namelist
-file must match the current Linux kernel exactly.
-The search path for the namelist file is as follows:
-	/boot/System.map-`uname -r`
-	/boot/System.map
-	/lib/modules/`uname -r`/System.map
-	/usr/src/linux/System.map
-	/System.map
-
-### proc.psinfo.ttyname
-
-name of controlling tty device, or ? if none. See also proc.psinfo.tty.
-
-### proc.psinfo.processor
-
-last CPU the process was running on
-
-### proc.psinfo.exit_signal
-
-the value in the exit_signal field of struct task_struct for the process
-
-### proc.psinfo.cnswap
-
-count of page swap operations of all exited children
-
-### proc.psinfo.nswap
-
-count of page swap operations
-
-### proc.psinfo.wchan
-
-wait channel, kernel address this process is blocked or sleeping on
-
-### proc.psinfo.sigcatch
-
-the value in the sigcatch field of struct task_struct for the process
-
-### proc.psinfo.sigignore
-
-the value in the sigignore field of struct task_struct for the process
-
-### proc.psinfo.blocked
-
-the value in the blocked field of struct task_struct for the process
-
-### proc.psinfo.signal
-
-the value in the signal field of struct task_struct for the process
-
-### proc.psinfo.eip
-
-the value in the eip field of struct task_struct for the process
-
-### proc.psinfo.esp
-
-the value in the esp field of struct task_struct for the process
-
-### proc.psinfo.start_stack
-
-address of the stack segment for the process
-
-### proc.psinfo.end_code
-
-address of the end of the code segment for the process
-
-### proc.psinfo.start_code
-
-address of the start of the code segment for the process
-
-### proc.psinfo.rss_rlim
-
-limit on resident set size of process
-
-### proc.psinfo.rss
-
-resident set size (i.e. physical memory) of the process
-
-### proc.psinfo.vsize
-
-virtual size of the process in Kbytes
-
-### proc.psinfo.start_time
-
-start time of the process relative to system boot time (in ms)
-
-### proc.psinfo.it_real_value
-
-current interval timer value (zero if none)
-
-### proc.psinfo.nice
-
-process nice value (negative nice values are lower priority)
-
-### proc.psinfo.priority
-
-scheduling priority value
-
-### proc.psinfo.cstime
-
-time (in ms) spent executing system code of all exited children
-
-### proc.psinfo.cutime
-
-time (in ms) spent executing user code of all exited children
-
-### proc.psinfo.stime
-
-time (in ms) spent executing system code (calls) since process started
-
-### proc.psinfo.utime
-
-time (in ms) spent executing user code since process started
-
-### proc.psinfo.cmaj_flt
-
-count of page faults other than reclaims of all exited children
-
-### proc.psinfo.maj_flt
-
-count of page faults other than reclaims
-
-### proc.psinfo.cmin_flt
-
-count of minor page faults (i.e. reclaims) of all exited children
-
-### proc.psinfo.minflt
-
-count of minor page faults (i.e. reclaims)
-
-### proc.psinfo.flags
-
-process state flags, as a bitmap
-
-### proc.psinfo.tty_pgrp
-
-controlling tty process group identifier
-
-### proc.psinfo.tty
-
-controlling tty device number (zero if none)
-
-### proc.psinfo.session
-
-process session identifier
-
-### proc.psinfo.pgrp
-
-process group identifier
-
-### proc.psinfo.ppid
-
-parent process identifier
-
-### proc.psinfo.sname
-
-process state identifier (see ps(1)). See also proc.runq metrics.
-
-### proc.psinfo.cmd
-
-command name
-
-### proc.psinfo.pid
-
-process identifier
-
-### proc.memory.vmnonlib
-
-difference between process real memory use (vmreal) and libraries (vmlib)
-
-### proc.memory.vmreal
-
-sum of resident set size and virtual memory swapped out
-
-### proc.memory.vmpte
-
-memory occupied by page table entries (from /proc/<pid>/status)
-
-### proc.memory.vmhwm
-
-peak usage of physical memory (from /proc/<pid>/status)
-
-### proc.memory.vmpin
-
-fixed physical address unswappable pages (from /proc/<pid>/status)
-
-### proc.memory.vmpeak
-
-peak virtual memory size (from /proc/<pid>/status)
-
-### proc.memory.vmswap
-
-virtual memory size currently swapped out (from /proc/<pid>/status)
-
-### proc.memory.vmlib
-
-virtual memory used for libraries (from /proc/<pid>/status)
-
-### proc.memory.vmexe
-
-virtual memory used for non-library executable code (from /proc/<pid>/status)
-
-### proc.memory.vmstack
-
-virtual memory used for stack (from /proc/<pid>/status)
-
-### proc.memory.vmdata
-
-virtual memory used for data (from /proc/<pid>/status)
-
-### proc.memory.vmrss
-
-resident virtual memory (from /proc/<pid>/status)
-
-### proc.memory.vmlock
-
-locked virtual memory (from /proc/<pid>/status)
-
-### proc.memory.vmsize
-
-total virtual memory (from /proc/<pid>/status)
-
-### proc.memory.maps
-
-table of memory mapped by process in string form from /proc/<pid>/maps
-
-### proc.memory.dirty
-
-instantaneous amount of memory that has been modified by the process, in Kbytes
-
-### proc.memory.datrss
-
-instantaneous resident size of process data segment, in Kbytes
-
-### proc.memory.librss
-
-instantaneous resident size of library code mapped by the process, in Kbytes
-
-### proc.memory.textrss
-
-instantaneous resident size of process code segment in Kbytes
-
-### proc.memory.share
-
-instantaneous amount of memory shared by this process with other processes 
-
-### proc.memory.rss
-
-instantaneous resident size of process, excluding page table and task structure.
-
-### proc.memory.size
-
-instantaneous virtual size of process, excluding page table and task structure.
-
-### proc.id.container
-
-name of processes container (from /proc/<pid>/cgroup heuristics)
-
-### proc.id.fsgid_nm
-
-filesystem group name based on filesystem group ID from /proc/<pid>/status
-
-### proc.id.sgid_nm
-
-saved group name based on saved group ID from /proc/<pid>/status
-
-### proc.id.egid_nm
-
-effective group name based on effective group ID from /proc/<pid>/status
-
-### proc.id.gid_nm
-
-real group name based on real group ID from /proc/<pid>/status
-
-### proc.id.fsuid_nm
-
-filesystem user name based on filesystem user ID from /proc/<pid>/status
-
-### proc.id.suid_nm
-
-saved user name based on saved user ID from /proc/<pid>/status
-
-### proc.id.euid_nm
-
-effective user name based on effective user ID from /proc/<pid>/status
-
-### proc.id.uid_nm
-
-real user name based on real user ID from /proc/<pid>/status
-
-### proc.id.fsgid
-
-filesystem group ID from /proc/<pid>/status
-
-### proc.id.sgid
-
-saved group ID from /proc/<pid>/status
-
-### proc.id.egid
-
-effective group ID from /proc/<pid>/status
-
-### proc.id.gid
-
-real group ID from /proc/<pid>/status
-
-### proc.id.fsuid
-
-filesystem user ID from /proc/<pid>/status
-
-### proc.id.suid
-
-saved user ID from /proc/<pid>/status
-
-### proc.id.euid
-
-effective user ID from /proc/<pid>/status
-
-### proc.id.uid
-
-real user ID from /proc/<pid>/status
-
-### proc.io.cancelled_write_bytes
-
-Number of bytes cancelled via truncate by this process.  Actual physical
-writes for an individual process can be calculated as:
-	proc.io.write_bytes - proc.io.cancelled_write_bytes.
-
-### proc.io.write_bytes
-
-Number of bytes physically written to devices on behalf of this process.
-This must be reduced by any truncated I/O (proc.io.cancelled_write_bytes).
-
-### proc.io.read_bytes
-
-Number of bytes physically read on by devices on behalf of this process.
-
-### proc.io.syscw
-
-Extended accounting information - count of number of calls to the
-write(2), writev(2) and sendfile(2) syscalls by each process.
-
-### proc.io.syscr
-
-Extended accounting information - count of number of calls to the
-read(2), readv(2) and sendfile(2) syscalls by each process.
-
-### proc.io.wchar
-
-Extended accounting information - count of the number of bytes that
-have passed over the write(2), writev(2) and sendfile(2) syscalls by
-each process.
-
-### proc.io.rchar
-
-Extended accounting information - count of the number of bytes that
-have passed over the read(2), readv(2) and sendfile(2) syscalls by
-each process.
-
-### proc.schedstat.pcount
-
-Number of times a process has been scheduled to run on a CPU (this is
-incremented when a task actually reaches a CPU to run on, not simply
-when it is added to the run queue).
-
-### proc.schedstat.run_delay
-
-Length of time in nanoseconds that a process spent waiting to be scheduled
-to run in the run queue.
-
-### proc.schedstat.cpu_time
-
-Length of time in nanoseconds that a process has been running, including
-scheduling time.
-
-### proc.fd.count
-
-Number of file descriptors this process has open.
-
-### proc.namespaces.envid
-
-OpenVZ container identifier
-
-### proc.namespaces.sid
-
-descendant namespace session ID hierarchy (/proc/<pid>/status)
-
-### proc.namespaces.pgid
-
-descendant namespace process group ID hierarchy (/proc/<pid>/status)
-
-### proc.namespaces.pid
-
-descendant namespace process ID hierarchy (/proc/<pid>/status)
-
-### proc.namespaces.tgid
-
-descendant namespace thread group ID hierarchy (/proc/<pid>/status)
-
-### proc.smaps.locked
-
-Locked indicates whether the mapping is locked in memory or not.
-
-### proc.smaps.swappss
-
-SwapPss shows proportional swap share of this mapping. Unlike Swap, this
-does not take into account swapped out page of underlying shmem objects.
-
-### proc.smaps.swap
-
-Swap shows how much would-be-anonymous memory is also used, but out on swap.
-For shmem mappings, Swap includes also the size of the mapped (and not
-replaced by copy-on-write) part of the underlying shmem object out on swap.
-
-### proc.smaps.private_hugetlb
-
-Private_Hugetlb shows the amount of memory backed by private hugetlbfs pages
-which is *not* counted in RSS or PSS fields for historical reasons.
-
-### proc.smaps.shared_hugetlb
-
-Shared_Hugetlb shows the amount of memory backed by shared hugetlbfs pages
-which is *not* counted in RSS or PSS fields for historical reasons.
-
-### proc.smaps.filepmdmapped
-
-FilePmdMapped shows the amount of memory backed by filesystem pages.
-
-### proc.smaps.shmempmdmapped
-
-ShmemPmdMapped shows the amount of shared (shmem/tmpfs) memory backed by
-huge pages.
-
-### proc.smaps.anonhugepages
-
-AnonHugePages shows the amount of memory backed by transparent hugepages.
-
-### proc.smaps.lazyfree
-
-LazyFree shows the amount of memory which is marked by madvise(MADV_FREE).
-The memory isn't freed immediately with madvise(), rather it's freed in memory
-pressure if the memory is clean.
-
-### proc.smaps.anonymous
-
-Anonymous shows the amount of memory that does not belong to any file.
-Even a mapping associated with a file may contain anonymous pages: when MAP_PRIVATE
-and a page is modified, the file page is replaced by a private anonymous copy.
-
-### proc.smaps.referenced
-
-Referenced indicates the amount of memory currently marked as referenced
-or accessed.
-
-### proc.smaps.private_dirty
-
-Private_Dirty mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.private_clean
-
-Private_Clean mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.shared_dirty
-
-Shared_Dirty mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.shared_clean
-
-Shared_Clean mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.pss_shmem
-
-Pss_Shmem mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.pss_file
-
-Pss_File mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.pss_anon
-
-Pss_Anon mappings size from /proc/<pid>/smaps_rollup
-
-### proc.smaps.pss
-
-The proportional set size (PSS) of a process is the count of pages it has
-in memory, where each page is divided by the number of processes sharing it.
-So if a process has 1000 pages all to itself, and 1000 shared with one other
-process, its PSS will be 1500.
-Note that even a page which is part of a MAP_SHARED mapping, but has only
-a single pte mapped, i.e.  is currently used by only one process, is accounted
-as private and not as shared.
-
-### proc.smaps.rss
-
-amount of mapping that is currently resident (/proc/<pid>/smaps_rollup)
-
-### proc.runq.runnable
-
-Instantaneous number of runnable (on run queue) processes;
-state 'R' in ps(1).
-
-### proc.runq.blocked
-
-Instantaneous number of processes in uninterruptible sleep or parked;
-state 'D' in ps(1).
-
-### proc.runq.sleeping
-
-Instantaneous number of processes sleeping; state 'S' in ps(1).
-
-### proc.runq.stopped
-
-Instantaneous number of traced, stopped or suspended processes; state
-'tT' in ps(1).
-
-### proc.runq.swapped
-
-Instantaneous number of processes (excluding kernel threads) that are
-swapped; state 'SW' in ps(1).
-
-### proc.runq.defunct
-
-Instantaneous number of defunct/zombie processes; state 'Z' in ps(1).
-
-### proc.runq.unknown
-
-Instantaneous number of processes is an unknown state, including all
-kernel threads
-
-### proc.runq.kernel
-
-Instantaneous number of processes with virtual size of zero (kernel threads)
-
-### proc.control.all.threads
-
-If set to one, the process instance domain as reported by pmdaproc
-contains all threads as well as the processes that started them.
-If set to zero, the process instance domain contains only processes.
-
-This setting is persistent for the life of pmdaproc and affects all
-client tools that request instances and values from pmdaproc.
-Use either pmstore(1) or pmStore(3) to modify this metric.
-
-### proc.control.perclient.threads
-
-If set to one, the process instance domain as reported by pmdaproc
-contains all threads as well as the processes that started them.
-If set to zero, the process instance domain contains only processes.
-
-This setting is only visible to the active client context.  In other
-words, storing into this metric has no effect for other monitoring
-tools.  See proc.control.all.threads, if that is the desired outcome.
-Only pmStore(3) can effectively set this metric (pmstore(1) cannot).
-
-### proc.control.perclient.cgroups
-
-If set to the empty string (the default), the process instance domain
-as reported by pmdaproc contains all processes.  However, a cgroup
-name (full path) can be stored into this metric in order to restrict
-processes reported to only those within the specified cgroup.  This
-set is further affected by the value of proc.control.perclient.threads.
-
-This setting is only visible to the active client context.  In other
-words, storing into this metric has no effect for other monitoring
-tools.  pmStore(3) must be used to set this metric (not pmstore(1)).
-
-### hotproc.nprocs
-
-instantaneous number of interesting ("hot") processes
-
-### hotproc.psinfo.oom_score
-
-out-of-memory process selection score (from /proc/<pid>/oom_score)
-
-### hotproc.psinfo.tgid
-
-thread group identifier
-
-### hotproc.psinfo.ngid
-
-NUMA group identifier (from /proc/<pid>/status)
-
-### hotproc.psinfo.cpusallowed
-
-the cpus allowed list (from /proc/<pid>/status)
-
-### hotproc.psinfo.nvctxsw
-
-number of non-voluntary context switches (from /proc/<pid>/status)
-
-### hotproc.psinfo.vctxsw
-
-number of voluntary context switches (from /proc/<pid>/status)
-
-### hotproc.psinfo.labels
-
-list of processes security labels (from /proc/<pid>/attr/current)
-
-### hotproc.psinfo.cgroups
-
-list of processes cgroups (from /proc/<pid>/cgroup)
-
-### hotproc.psinfo.threads
-
-number of threads (from /proc/<pid>/status)
-
-### hotproc.psinfo.sigcatch_s
-
-caught signals mask in string form (from /proc/<pid>/status)
-
-### hotproc.psinfo.sigignore_s
-
-ignored signals mask in string form (from /proc/<pid>/status)
-
-### hotproc.psinfo.blocked_s
-
-blocked signals mask in string form (from /proc/<pid>/status)
-
-### hotproc.psinfo.signal_s
-
-pending signals mask in string form (from /proc/<pid>/status)
-
-### hotproc.psinfo.policy_s
-
-scheduling policy in string form
-
-### hotproc.psinfo.environ
-
-process environment (from /proc/<pid>/environ ascii space replaces null).
-
-### hotproc.psinfo.cguest_time
-
-Guest time of the process’s children
-
-### hotproc.psinfo.guest_time
-
-Time spent running a virtual CPU for a guest operating system.
-
-### hotproc.psinfo.delayacct_blkio_time
-
-Aggregated block I/O delays
-
-### hotproc.psinfo.policy
-
-scheduling policy (/from /proc/<pid>/stat)
-
-### hotproc.psinfo.rt_priority
-
-Real-time scheduling priority, a number in the range 1 to 99
-
-### hotproc.psinfo.psargs
-
-full command string
-
-### hotproc.psinfo.wchan_s
-
-This field needs access to a namelist file for proper 
-address-to-symbol name translation. If no namelist file
-is available, the address is printed instead. The namelist
-file must match the current Linux kernel exactly.
-The search path for the namelist file is as follows:
-	/boot/System.map-`uname -r`
-	/boot/System.map
-	/lib/modules/`uname -r`/System.map
-	/usr/src/linux/System.map
-	/System.map
-
-### hotproc.psinfo.ttyname
-
-name of controlling tty device, or ? if none. See also proc.psinfo.tty.
-
-### hotproc.psinfo.processor
-
-last CPU the process was running on
-
-### hotproc.psinfo.exit_signal
-
-the value in the exit_signal field of struct task_struct for the process
-
-### hotproc.psinfo.cnswap
-
-count of page swap operations of all exited children
-
-### hotproc.psinfo.nswap
-
-count of page swap operations
-
-### hotproc.psinfo.wchan
-
-wait channel, kernel address this process is blocked or sleeping on
-
-### hotproc.psinfo.sigcatch
-
-the value in the sigcatch field of struct task_struct for the process
-
-### hotproc.psinfo.sigignore
-
-the value in the sigignore field of struct task_struct for the process
-
-### hotproc.psinfo.blocked
-
-the value in the blocked field of struct task_struct for the process
-
-### hotproc.psinfo.signal
-
-the value in the signal field of struct task_struct for the process
-
-### hotproc.psinfo.eip
-
-the value in the eip field of struct task_struct for the process
-
-### hotproc.psinfo.esp
-
-the value in the esp field of struct task_struct for the process
-
-### hotproc.psinfo.start_stack
-
-address of the stack segment for the process
-
-### hotproc.psinfo.end_code
-
-address of the end of the code segment for the process
-
-### hotproc.psinfo.start_code
-
-address of the start of the code segment for the process
-
-### hotproc.psinfo.rss_rlim
-
-limit on resident set size of process
-
-### hotproc.psinfo.rss
-
-resident set size (i.e. physical memory) of the process
-
-### hotproc.psinfo.vsize
-
-virtual size of the process in Kbytes
-
-### hotproc.psinfo.start_time
-
-start time of the process relative to system boot time (in ms)
-
-### hotproc.psinfo.it_real_value
-
-current interval timer value (zero if none)
-
-### hotproc.psinfo.nice
-
-process nice value (negative nice values are lower priority)
-
-### hotproc.psinfo.priority
-
-scheduling priority value
-
-### hotproc.psinfo.cstime
-
-time (in ms) spent executing system code of all exited children
-
-### hotproc.psinfo.cutime
-
-time (in ms) spent executing user code of all exited children
-
-### hotproc.psinfo.stime
-
-time (in ms) spent executing system code (calls) since process started
-
-### hotproc.psinfo.utime
-
-time (in ms) spent executing user code since process started
-
-### hotproc.psinfo.cmaj_flt
-
-count of page faults other than reclaims of all exited children
-
-### hotproc.psinfo.maj_flt
-
-count of page faults other than reclaims
-
-### hotproc.psinfo.cmin_flt
-
-count of minor page faults (i.e. reclaims) of all exited children
-
-### hotproc.psinfo.minflt
-
-count of minor page faults (i.e. reclaims)
-
-### hotproc.psinfo.flags
-
-process state flags, as a bitmap
-
-### hotproc.psinfo.tty_pgrp
-
-controlling tty process group identifier
-
-### hotproc.psinfo.tty
-
-controlling tty device number (zero if none)
-
-### hotproc.psinfo.session
-
-process session identifier
-
-### hotproc.psinfo.pgrp
-
-process group identifier
-
-### hotproc.psinfo.ppid
-
-parent process identifier
-
-### hotproc.psinfo.sname
-
-process state identifier (see ps(1)). See also proc.runq metrics.
-
-### hotproc.psinfo.cmd
-
-command name
-
-### hotproc.psinfo.pid
-
-process identifier
-
-### hotproc.memory.vmnonlib
-
-difference between process real memory use (vmreal) and libraries (vmlib)
-
-### hotproc.memory.vmreal
-
-sum of resident set size and virtual memory swapped out
-
-### hotproc.memory.vmpte
-
-memory occupied by page table entries (from /proc/<pid>/status)
-
-### hotproc.memory.vmhwm
-
-peak usage of physical memory (from /proc/<pid>/status)
-
-### hotproc.memory.vmpin
-
-fixed physical address unswappable pages (from /proc/<pid>/status)
-
-### hotproc.memory.vmpeak
-
-peak virtual memory size (from /proc/<pid>/status)
-
-### hotproc.memory.vmswap
-
-virtual memory size currently swapped out (from /proc/<pid>/status)
-
-### hotproc.memory.vmlib
-
-virtual memory used for libraries (from /proc/<pid>/status)
-
-### hotproc.memory.vmexe
-
-virtual memory used for non-library executable code (from /proc/<pid>/status)
-
-### hotproc.memory.vmstack
-
-virtual memory used for stack (from /proc/<pid>/status)
-
-### hotproc.memory.vmdata
-
-virtual memory used for data (from /proc/<pid>/status)
-
-### hotproc.memory.vmrss
-
-resident virtual memory (from /proc/<pid>/status)
-
-### hotproc.memory.vmlock
-
-locked virtual memory (from /proc/<pid>/status)
-
-### hotproc.memory.vmsize
-
-total virtual memory (from /proc/<pid>/status)
-
-### hotproc.memory.maps
-
-table of memory mapped by process in string form from /proc/<pid>/maps
-
-### hotproc.memory.dirty
-
-instantaneous amount of memory that has been modified by the process, in Kbytes
-
-### hotproc.memory.datrss
-
-instantaneous resident size of process data segment, in Kbytes
-
-### hotproc.memory.librss
-
-instantaneous resident size of library code mapped by the process, in Kbytes
-
-### hotproc.memory.textrss
-
-instantaneous resident size of process code segment in Kbytes
-
-### hotproc.memory.share
-
-instantaneous amount of memory shared by this process with other processes 
-
-### hotproc.memory.rss
-
-instantaneous resident size of process, excluding page table and task structure.
-
-### hotproc.memory.size
-
-instantaneous virtual size of process, excluding page table and task structure.
-
-### hotproc.id.container
-
-name of processes container (from /proc/<pid>/cgroup heuristics)
-
-### hotproc.id.fsgid_nm
-
-filesystem group name based on filesystem group ID from /proc/<pid>/status
-
-### hotproc.id.sgid_nm
-
-saved group name based on saved group ID from /proc/<pid>/status
-
-### hotproc.id.egid_nm
-
-effective group name based on effective group ID from /proc/<pid>/status
-
-### hotproc.id.gid_nm
-
-real group name based on real group ID from /proc/<pid>/status
-
-### hotproc.id.fsuid_nm
-
-filesystem user name based on filesystem user ID from /proc/<pid>/status
-
-### hotproc.id.suid_nm
-
-saved user name based on saved user ID from /proc/<pid>/status
-
-### hotproc.id.euid_nm
-
-effective user name based on effective user ID from /proc/<pid>/status
-
-### hotproc.id.uid_nm
-
-real user name based on real user ID from /proc/<pid>/status
-
-### hotproc.id.fsgid
-
-filesystem group ID from /proc/<pid>/status
-
-### hotproc.id.sgid
-
-saved group ID from /proc/<pid>/status
-
-### hotproc.id.egid
-
-effective group ID from /proc/<pid>/status
-
-### hotproc.id.gid
-
-real group ID from /proc/<pid>/status
-
-### hotproc.id.fsuid
-
-filesystem user ID from /proc/<pid>/status
-
-### hotproc.id.suid
-
-saved user ID from /proc/<pid>/status
-
-### hotproc.id.euid
-
-effective user ID from /proc/<pid>/status
-
-### hotproc.id.uid
-
-real user ID from /proc/<pid>/status
-
-### hotproc.io.cancelled_write_bytes
-
-Number of bytes cancelled via truncate by this process.  Actual physical
-writes for an individual process can be calculated as:
-	proc.io.write_bytes - proc.io.cancelled_write_bytes.
-
-### hotproc.io.write_bytes
-
-Number of bytes physically written to devices on behalf of this process.
-This must be reduced by any truncated I/O (proc.io.cancelled_write_bytes).
-
-### hotproc.io.read_bytes
-
-Number of bytes physically read on by devices on behalf of this process.
-
-### hotproc.io.syscw
-
-Extended accounting information - count of number of calls to the
-write(2), writev(2) and sendfile(2) syscalls by each process.
-
-### hotproc.io.syscr
-
-Extended accounting information - count of number of calls to the
-read(2), readv(2) and sendfile(2) syscalls by each process.
-
-### hotproc.io.wchar
-
-Extended accounting information - count of the number of bytes that
-have passed over the write(2), writev(2) and sendfile(2) syscalls by
-each process.
-
-### hotproc.io.rchar
-
-Extended accounting information - count of the number of bytes that
-have passed over the read(2), readv(2) and sendfile(2) syscalls by
-each process.
-
-### hotproc.schedstat.pcount
-
-Number of times a process has been scheduled to run on a CPU (this is
-incremented when a task actually reaches a CPU to run on, not simply
-when it is added to the run queue).
-
-### hotproc.schedstat.run_delay
-
-Length of time in nanoseconds that a process spent waiting to be scheduled
-to run in the run queue.
-
-### hotproc.schedstat.cpu_time
-
-Length of time in nanoseconds that a process has been running, including
-scheduling time.
-
-### hotproc.fd.count
-
-Number of file descriptors this process has open.
-
-### hotproc.namespaces.envid
-
-OpenVZ container identifier
-
-### hotproc.namespaces.sid
-
-descendant namespace session ID hierarchy (/proc/<pid>/status)
-
-### hotproc.namespaces.pgid
-
-descendant namespace process group ID hierarchy (/proc/<pid>/status)
-
-### hotproc.namespaces.pid
-
-descendant namespace process ID hierarchy (/proc/<pid>/status)
-
-### hotproc.namespaces.tgid
-
-descendant namespace thread group ID hierarchy (/proc/<pid>/status)
-
-### hotproc.smaps.locked
-
-Locked indicates whether the mapping is locked in memory or not.
-
-### hotproc.smaps.swappss
-
-SwapPss shows proportional swap share of this mapping. Unlike Swap, this
-does not take into account swapped out page of underlying shmem objects.
-
-### hotproc.smaps.swap
-
-Swap shows how much would-be-anonymous memory is also used, but out on swap.
-For shmem mappings, Swap includes also the size of the mapped (and not
-replaced by copy-on-write) part of the underlying shmem object out on swap.
-
-### hotproc.smaps.private_hugetlb
-
-Private_Hugetlb shows the amount of memory backed by private hugetlbfs pages
-which is *not* counted in RSS or PSS fields for historical reasons.
-
-### hotproc.smaps.shared_hugetlb
-
-Shared_Hugetlb shows the amount of memory backed by shared hugetlbfs pages
-which is *not* counted in RSS or PSS fields for historical reasons.
-
-### hotproc.smaps.filepmdmapped
-
-FilePmdMapped shows the amount of memory backed by filesystem pages.
-
-### hotproc.smaps.shmempmdmapped
-
-ShmemPmdMapped shows the amount of shared (shmem/tmpfs) memory backed by
-huge pages.
-
-### hotproc.smaps.anonhugepages
-
-AnonHugePages shows the amount of memory backed by transparent hugepages.
-
-### hotproc.smaps.lazyfree
-
-LazyFree shows the amount of memory which is marked by madvise(MADV_FREE).
-The memory isn't freed immediately with madvise(), rather it's freed in memory
-pressure if the memory is clean.
-
-### hotproc.smaps.anonymous
-
-Anonymous shows the amount of memory that does not belong to any file.
-Even a mapping associated with a file may contain anonymous pages: when MAP_PRIVATE
-and a page is modified, the file page is replaced by a private anonymous copy.
-
-### hotproc.smaps.referenced
-
-Referenced indicates the amount of memory currently marked as referenced
-or accessed.
-
-### hotproc.smaps.private_dirty
-
-Private_Dirty mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.private_clean
-
-Private_Clean mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.shared_dirty
-
-Shared_Dirty mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.shared_clean
-
-Shared_Clean mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.pss_shmem
-
-Pss_Shmem mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.pss_file
-
-Pss_File mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.pss_anon
-
-Pss_Anon mappings size from /proc/<pid>/smaps_rollup
-
-### hotproc.smaps.pss
-
-The proportional set size (PSS) of a process is the count of pages it has
-in memory, where each page is divided by the number of processes sharing it.
-So if a process has 1000 pages all to itself, and 1000 shared with one other
-process, its PSS will be 1500.
-Note that even a page which is part of a MAP_SHARED mapping, but has only
-a single pte mapped, i.e.  is currently used by only one process, is accounted
-as private and not as shared.
-
-### hotproc.smaps.rss
-
-amount of mapping that is currently resident (/proc/<pid>/smaps_rollup)
-
-### hotproc.control.refresh
-
-Controls how long it takes before the "interesting" process list is refreshed
-and new cpuburn times (see hotproc.cpuburn) calculated.  This value can be
-changed at any time by using pmstore(1). Once the value is changed, the instances
-will not be available until after the new refresh period has elapsed.
-
-### hotproc.control.config
-
-The configuration predicate that is used to characterize "interesting"
-processes.  This will initially be the predicate as specified in the
-configuration file.  This value can be changed at any time by using
-pmstore(1).  Once the value is changed, the instances will not be available
-until after the refresh period has elapsed.
-
-### hotproc.control.config_gen
-
-Each time the configuration predicate is updated (see hotproc.control.config)
-the configuration generation number is incremented.
-
-### hotproc.control.reload_config
-
-Instructs the pmda to reload its configuration file.  This value can be
-changed at any time by using pmstore(1). Once the value is changed, the instances
-will not be available until after the new refresh period has elapsed.
-
-### hotproc.total.cpuidle
-
-The fraction of all CPU time classified as idle over the last refresh
-interval.
-
-### hotproc.total.cpuburn
-
-The sum of the CPU utilization ("cpuburn" or the fraction of time that each
-process was executing in user or system mode over the last refresh interval)
-for all the "interesting" processes.
-
-Values are in the range 0 to the number of CPUs.
-
-### hotproc.total.cpuother.transient
-
-The total CPU utilization (fraction of time that each process was executing
-in user or system mode) for processes which are not present throughout
-the most recent refreshes interval.  The hotproc PMDA is limited to
-selecting processes which are present throughout each refresh intervals.
-If processes come and/or go during a refresh interval then they will never
-be considered.  This metric gives an indication of the level of activity of
-these "transient" processes.  If the value is large in comparison to the
-sum of hotproc.total.cpuburn and hotproc.total.cpuother.not_cpuburn then
-the "transient" processes are consuming lots of CPU time.  Under these
-circumstances, the hotproc PMDA may be less useful, or consideration
-should be given to decreasing the value of the refresh interval
-(hotproc.control.refresh) so fewer "transient" processes escape
-consideration.
-
-Values are in the range 0 to the number of CPUs.
-
-### hotproc.total.cpuother.not_cpuburn
-
-The sum of the CPU utilization ("cpuburn" or the fraction of time that
-each process was executing in user or system mode over the last refresh
-interval) for all the "uninteresting" processes.  If this value is high in
-comparison to hotproc.total.cpuburn, then configuration predicate of the
-hotproc PMDA is classifying a significant fraction of the CPU utilization
-to processes that are not "interesting".
-
-Values are in the range 0 to the number of CPUs.
-
-### hotproc.total.cpuother.total
-
-Non-idle CPU utilization not accounted for by processes other than those
-deemed "interesting".  It is equivalent to hotproc.total.cpuother.not_cpuburn
-+ hotproc.total.cpuother.transient.
-
-Values are in the range 0 to the number of CPUs.
-
-### hotproc.total.cpuother.percent
-
-Gives an indication of how much of the CPU time the "transient" processes
-and the "uninteresting" processes are accounting for.  Computed as:
-    100 * hotproc.total.cpuother.total / number of CPUs
-
-### hotproc.predicate.ctxswitch
-
-The number of context switches per second over the last refresh interval
-for each "interesting" process.
-
-### hotproc.predicate.virtualsize
-
-The virtual size of each "interesting" process in kilobytes at the last
-refresh time.
-
-### hotproc.predicate.residentsize
-
-The resident size of each "interesting" process in kilobytes at the last
-refresh.
-
-### hotproc.predicate.iodemand
-
-The total kilobytes read and written per second over the last refresh
-interval for each "interesting" process.
-
-### hotproc.predicate.iowait
-
-The fraction of time waiting for I/O for each "interesting" process over
-refresh interval.
-
-### hotproc.predicate.schedwait
-
-The fraction of time waiting on the run queue for each "interesting"
-process over the last refresh interval.
-
-### hotproc.predicate.cpuburn
-
-CPU utilization, or the fraction of time that each "interesting" process
-was executing (user and system time) over the last refresh interval.
-Also known as the "cpuburn" time.
+## acct
 
 ### acct.psinfo.tty
 
@@ -8777,2114 +6061,164 @@ Interval to check if private acct file should be reopened
 ### acct.control.enable_acct
 
 Boolean for whether to open private acct file and to use acct(2) syscall
+## kvm
 
-### containers.engine
+### kvm.trace.kvm_vcpu_wakeup
 
-technology backing each container (e.g. docker)
+KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
 
-### containers.name
+### kvm.trace.kvm_hypercall
 
-mapping of unique container IDs to human-readable names
+KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
 
-### containers.pid
+### kvm.trace.kvm_mmio
 
-process identifier for each containers initial process
+KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
 
-### containers.cgroup
+### kvm.trace.kvm_entry
 
-path mapping container names to their cgroups
+KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
 
-### containers.state.running
+### kvm.trace.kvm_exit
 
-this container is currently running (one/zero)
+KVM trace point values from /sys/kernel/debug/tracing/events/kvm files
 
-### containers.state.paused
+### kvm.trace.count
 
-this container is currently paused (one/zero)
+Number of KVM trace points from /var/lib/pcp/pmdas/kvm/kvm.conf
 
-### containers.state.restarting
+### kvm.efer_reload
 
-this container is restarting (one/zero)
+Number of Extended Feature Enable Register (EFER) reloads.
 
-### xfs.write
+### kvm.exits
 
-This is the number of write(2) system calls made to files in
-XFS file systems.
+Number of guest exits from I/O port accesses. 
 
-### xfs.write_bytes
+### kvm.fpu_reload
 
-This is the number of bytes written via write(2) system calls to files
-in XFS file systems. It can be used in conjunction with the write_calls
-count to calculate the average size of the write operations to files in
-XFS file systems.
+Number of reload fpu(Float Point Unit).
 
-### xfs.read
+### kvm.halt_attempted_poll
 
-This is the number of read(2) system calls made to files in XFS file
-systems.
+Number of times the vcpu attempts to polls.
 
-### xfs.read_bytes
+### kvm.halt_exits
 
-This is the number of bytes read via read(2) system calls to files in
-XFS file systems. It can be used in conjunction with the read_calls
-count to calculate the average size of the read operations to files in
-XFS file systems.
+This type of exit is usually seen when a guest is idle.
 
-### xfs.iflush_count
+### kvm.halt_successful_poll
 
-This is the number of calls to xfs_iflush which gets called when an
-inode is being flushed (such as by bdflush or tail pushing).
-xfs_iflush searches for other inodes in the same cluster which are
-dirty and flushable.
+The number of times the vcpu attempts to polls successfully.
 
-### xfs.icluster_flushcnt
+### kvm.halt_wakeup
 
-value from xs_icluster_flushcnt field of struct xfsstats
+Number of wakeups from a halt.
 
-### xfs.icluster_flushinode
+### kvm.host_state_reload
 
-This is the number of times that the inode clustering was not able to
-flush anything but the one inode it was called with.
+Currently tallies MSR setup and guest MSR reads.
 
-### xfs.allocs.alloc_extent
+### kvm.hypercalls
 
-Number of file system extents allocated over XFS filesystems
+Number of guest hypervisor service calls.
 
-### xfs.allocs.alloc_block
+### kvm.insn_emulation
 
-Number of file system blocks allocated over XFS filesystems
+Number of insn_emulation attempts.
 
-### xfs.allocs.free_extent
+### kvm.insn_emulation_fail
 
-Number of file system extents freed over XFS filesystems
+Number of failed insn_emulation attempts.
 
-### xfs.allocs.free_block
+### kvm.invlpg
 
-Number of file system blocks freed over XFS filesystems
+Number of invlpg attepts. 
 
-### xfs.alloc_btree.lookup
+### kvm.io_exits
 
-Number of lookup operations in XFS filesystem allocation btrees
+Number of guest exits from I/O port accesses.
 
-### xfs.alloc_btree.compare
+### kvm.irq_exits
 
-Number of compares in XFS filesystem allocation btree lookups
+Number of guest exits due to external interrupts.
 
-### xfs.alloc_btree.insrec
+### kvm.irq_injections
 
-Number of extent records inserted into XFS filesystem allocation btrees
+Number of interrupts sent to guests.
 
-### xfs.alloc_btree.delrec
+### kvm.irq_window
 
-Number of extent records deleted from XFS filesystem allocation btrees
+Number of guest exits from an outstanding interrupt window.
 
-### xfs.block_map.read_ops
+### kvm.largepages
 
-Number of block map for read operations performed on XFS files
+Number of large pages currently in use.
 
-### xfs.block_map.write_ops
+### kvm.mmio_exits
 
-Number of block map for write operations performed on XFS files
+Number of guest exits due to memory mapped I/O (MMIO) accesses.
 
-### xfs.block_map.unmap
+### kvm.mmu_cache_miss
 
-Number of block unmap (delete) operations performed on XFS files
+Number of cache miss.
 
-### xfs.block_map.add_exlist
+### kvm.mmu_flooded
 
-Number of extent list insertion operations for XFS files
+This counts detected write operations not of individual write operations.
 
-### xfs.block_map.del_exlist
+### kvm.mmu_pde_zapped
 
-Number of extent list deletion operations for XFS files
+Number of page directory entry (PDE) destruction operations.
 
-### xfs.block_map.look_exlist
+### kvm.mmu_pte_updated
 
-Number of extent list lookup operations for XFS files
+Number of PTE updated. 
 
-### xfs.block_map.cmp_exlist
+### kvm.mmu_pte_write
 
-Number of extent list comparisons in XFS extent list lookups
+Number of PTE write.
 
-### xfs.bmap_btree.lookup
+### kvm.mmu_recycled
 
-Number of block map btree lookup operations on XFS files
+Number of shadow pages that can be reclaimed.
 
-### xfs.bmap_btree.compare
+### kvm.mmu_shadow_zapped
 
-Number of block map btree compare operations in XFS block map lookups
+Number of shadow pages that has been zapped.
 
-### xfs.bmap_btree.insrec
+### kvm.mmu_unsync
 
-Number of block map btree records inserted for XFS files
+Number of non-synchronized pages which are not yet unlinked 
 
-### xfs.bmap_btree.delrec
+### kvm.nmi_injections
 
-Number of block map btree records deleted for XFS files
+Number of Non-maskable Interrupt (NMI) injections.
 
-### xfs.dir_ops.lookup
+### kvm.nmi_window
 
-This is a count of the number of file name directory lookups in XFS
-filesystems. It counts only those lookups which miss in the operating
-system's directory name lookup cache and must search the real directory
-structure for the name in question.  The count is incremented once for
-each level of a pathname search that results in a directory lookup.
+Number of guest exits from (outstanding) Non-maskable Interrupt (NMI) windows.
 
-### xfs.dir_ops.create
+### kvm.pf_fixed
 
-This is the number of times a new directory entry was created in XFS
-filesystems. Each time that a new file, directory, link, symbolic link,
-or special file is created in the directory hierarchy the count is
-incremented.
+Number of fixed (non-paging) page table entry (PTE) maps.
 
-### xfs.dir_ops.remove
+### kvm.pf_guest
 
-This is the number of times an existing directory entry was removed in
-XFS filesystems. Each time that a file, directory, link, symbolic link,
-or special file is removed from the directory hierarchy the count is
-incremented.
+Number of page faults injected into guests.
 
-### xfs.dir_ops.getdents
+### kvm.remote_tlb_flush
 
-This is the number of times the XFS directory getdents operation was
-performed. The getdents operation is used by programs to read the
-contents of directories in a file system independent fashion.  This
-count corresponds exactly to the number of times the getdents(2) system
-call was successfully used on an XFS directory.
+Number of tlb_flush operations performed by the hypervisor.
 
-### xfs.transactions.sync
+### kvm.request_irq
 
-This is the number of meta-data transactions which waited to be
-committed to the on-disk log before allowing the process performing the
-transaction to continue. These transactions are slower and more
-expensive than asynchronous transactions, because they force the in
-memory log buffers to be forced to disk more often and they wait for
-the completion of the log buffer writes.
+Number of guest interrupt window request exits.
 
-### xfs.transactions.async
+### kvm.signal_exits
 
-This is the number of meta-data transactions which did not wait to be
-committed to the on-disk log before allowing the process performing the
-transaction to continue. These transactions are faster and more
-efficient than synchronous transactions, because they commit their data
-to the in memory log buffers without forcing those buffers to be
-written to disk. This allows multiple asynchronous transactions to be
-committed to disk in a single log buffer write. Most transactions used
-in XFS file systems are asynchronous.
+Number of guest exits due to pending signals from the host.
 
-### xfs.transactions.empty
+### kvm.tlb_flush
 
-This is the number of meta-data transactions which did not actually
-change anything. These are transactions which were started for some
-purpose, but in the end it turned out that no change was necessary.
-
-### xfs.inode_ops.ig_attempts
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache. Whether the inode was found in the cache or
-needed to be read in from the disk is not indicated here, but this can
-be computed from the ig_found and ig_missed counts.
-
-### xfs.inode_ops.ig_found
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and found it. The closer this count is to the
-ig_attempts count the better the inode cache is performing.
-
-### xfs.inode_ops.ig_frecycle
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and saw that it was there but was unable to
-use the in memory inode because it was being recycled by another
-process.
-
-### xfs.inode_ops.ig_missed
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and the inode was not there. The further this
-count is from the ig_attempts count the better.
-
-### xfs.inode_ops.ig_dup
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and found that it was not there but upon
-attempting to add the inode to the cache found that another process had
-already inserted it.
-
-### xfs.inode_ops.ig_reclaims
-
-This is the number of times the operating system recycled an XFS inode
-from the inode cache in order to use the memory for that inode for
-another purpose. Inodes are recycled in order to keep the inode cache
-from growing without bound. If the reclaim rate is high it may be
-beneficial to raise the vnode_free_ratio kernel tunable variable to
-increase the size of inode cache.
-
-### xfs.inode_ops.ig_attrchg
-
-This is the number of times the operating system explicitly changed the
-attributes of an XFS inode. For example, this could be to change the
-inode's owner, the inode's size, or the inode's timestamps.
-
-### xfs.log.writes
-
-This variable counts the number of log buffer writes going to the
-physical log partitions of XFS filesystems. Log data traffic is
-proportional to the level of meta-data updating. Log buffer writes get
-generated when they fill up or external syncs occur.
-
-### xfs.log.blocks
-
-This variable counts the number of Kbytes of information being written
-to the physical log partitions of XFS filesystems. Log data traffic
-is proportional to the level of meta-data updating. The rate with which
-log data gets written depends on the size of internal log buffers and
-disk write speed. Therefore, filesystems with very high meta-data
-updating may need to stripe the log partition or put the log partition
-on a separate drive.
-
-### xfs.log.write_ratio
-
-The ratio of log blocks written to log writes.  If block count isn't a
-"reasonable" multiple of writes, then many small log writes are being
-performed - this is suboptimal.  Perfection is 64.  Fine-grain control
-can be obtained when this metric is used in conjuntion with pmstore(1)
-and the xfs.control.reset metric.
-
-### xfs.log.noiclogs
-
-This variable keeps track of times when a logged transaction can not
-get any log buffer space. When this occurs, all of the internal log
-buffers are busy flushing their data to the physical on-disk log.
-
-### xfs.log.force
-
-The number of times the in-core log is forced to disk.  It is
-equivalent to the number of successful calls to the function
-xfs_log_force().
-
-### xfs.log.force_sleep
-
-This metric is exported from the xs_log_force_sleep field of struct xfsstats
-
-### xfs.log_tail.try_logspace
-
-This metric is exported from the xs_try_logspace field of struct xfsstats
-
-### xfs.log_tail.sleep_logspace
-
-This metric is exported from the xs_sleep_logspace field of struct xfsstats
-
-### xfs.log_tail.push_ail.pushes
-
-The number of times the tail of the AIL is moved forward.  It is
-equivalent to the number of successful calls to the function
-xfs_trans_push_ail().
-
-### xfs.log_tail.push_ail.success
-
-value from xs_push_ail_success field of struct xfsstats
-
-### xfs.log_tail.push_ail.pushbuf
-
-value from xs_push_ail_pushbuf field of struct xfsstats
-
-### xfs.log_tail.push_ail.pinned
-
-value from xs_push_ail_pinned field of struct xfsstats
-
-### xfs.log_tail.push_ail.locked
-
-value from xs_push_ail_locked field of struct xfsstats
-
-### xfs.log_tail.push_ail.flushing
-
-value from xs_push_ail_flushing field of struct xfsstats
-
-### xfs.log_tail.push_ail.restarts
-
-value from xs_push_ail_restarts field of struct xfsstats
-
-### xfs.log_tail.push_ail.flush
-
-value from xs_push_ail_flush field of struct xfsstats
-
-### xfs.xstrat.bytes
-
-This is the number of bytes of file data flushed out by the XFS
-flushing daemons.
-
-### xfs.xstrat.quick
-
-This is the number of buffers flushed out by the XFS flushing daemons
-which are written to contiguous space on disk. The buffers handled by
-the XFS daemons are delayed allocation buffers, so this count gives an
-indication of the success of the XFS daemons in allocating contiguous
-disk space for the data being flushed to disk.
-
-### xfs.xstrat.split
-
-This is the number of buffers flushed out by the XFS flushing daemons
-which are written to non-contiguous space on disk. The buffers handled
-by the XFS daemons are delayed allocation buffers, so this count gives
-an indication of the failure of the XFS daemons in allocating
-contiguous disk space for the data being flushed to disk. Large values
-in this counter indicate that the file system has become fragmented.
-
-### xfs.attr.get
-
-The number of "get" operations performed on extended file attributes
-within XFS filesystems.  The "get" operation retrieves the value of an
-extended attribute.
-
-### xfs.attr.set
-
-The number of "set" operations performed on extended file attributes
-within XFS filesystems.  The "set" operation creates and sets the value
-of an extended attribute.
-
-### xfs.attr.remove
-
-The number of "remove" operations performed on extended file attributes
-within XFS filesystems.  The "remove" operation deletes an extended
-attribute.
-
-### xfs.attr.list
-
-The number of "list" operations performed on extended file attributes
-within XFS filesystems.  The "list" operation retrieves the set of
-extended attributes associated with a file.
-
-### xfs.quota.reclaims
-
-value from xs_qm_dqreclaims field of struct xfsstats
-
-### xfs.quota.reclaim_misses
-
-value from xs_qm_dqreclaim_misses field of struct xfsstats
-
-### xfs.quota.dquot_dups
-
-value from xs_qm_dquot_dups field of struct xfsstats
-
-### xfs.quota.cachemisses
-
-value from xs_qm_dqcachemisses field of struct xfsstats
-
-### xfs.quota.cachehits
-
-value from xs_qm_dqcachehits field of struct xfsstats
-
-### xfs.quota.wants
-
-value from xs_qm_dqwants field of struct xfsstats
-
-### xfs.quota.dquots
-
-value from xs_qm_dquots field of struct xfsstats
-
-### xfs.quota.dquots_unused
-
-value from xs_qm_dquots_unused field of struct xfsstats
-
-### xfs.buffer.get
-
-number of request buffer calls
-
-### xfs.buffer.create
-
-number of buffers created
-
-### xfs.buffer.get_locked
-
-number of requests for a locked buffer which succeeded
-
-### xfs.buffer.get_locked_waited
-
-number of requests for a locked buffer which waited
-
-### xfs.buffer.busy_locked
-
-number of non-blocking requests for a locked buffer which failed
-
-### xfs.buffer.miss_locked
-
-number of requests for a locked buffer which failed due to no buffer
-
-### xfs.buffer.page_retries
-
-number of retry attempts when allocating a page for insertion in a buffer
-
-### xfs.buffer.page_found
-
-number of hits in the page cache when looking for a page
-
-### xfs.buffer.get_read
-
-number of buffer get calls requiring immediate device reads
-
-### xfs.vnodes.active
-
-number of vnodes not on free lists
-
-### xfs.vnodes.alloc
-
-number of times vn_alloc called
-
-### xfs.vnodes.get
-
-number of times vn_get called
-
-### xfs.vnodes.hold
-
-number of times vn_hold called
-
-### xfs.vnodes.rele
-
-number of times vn_rele called
-
-### xfs.vnodes.reclaim
-
-number of times vn_reclaim called
-
-### xfs.vnodes.remove
-
-number of times vn_remove called
-
-### xfs.vnodes.free
-
-number of times vn_free called
-
-### xfs.control.reset
-
-reset the values of all XFS metrics to zero
-
-### xfs.btree.alloc_blocks.lookup
-
-Number of free-space-by-block-number btree record lookups
-
-### xfs.btree.alloc_blocks.compare
-
-Number of free-space-by-block-number btree record compares
-
-### xfs.btree.alloc_blocks.insrec
-
-Number of free-space-by-block-number btree insert record operations executed
-
-### xfs.btree.alloc_blocks.delrec
-
-Number of free-space-by-block-number btree delete record operations executed
-
-### xfs.btree.alloc_blocks.newroot
-
-Number of times a new level is added to a free-space-by-block-number btree
-
-### xfs.btree.alloc_blocks.killroot
-
-Number of times a level is removed from a free-space-by-block-number btree
-
-### xfs.btree.alloc_blocks.increment
-
-Number of times a cursor has been moved forward one free-space-by-block-number
-btree record
-
-### xfs.btree.alloc_blocks.decrement
-
-Number of times a cursor has been moved backward one free-space-by-block-number
-btree record
-
-### xfs.btree.alloc_blocks.lshift
-
-Left shift block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.btree.alloc_blocks.rshift
-
-Right shift block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.btree.alloc_blocks.split
-
-Split block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.btree.alloc_blocks.join
-
-Merge block operations when deleting free-space-by-block-number btree records
-
-### xfs.btree.alloc_blocks.alloc
-
-Btree block allocations during free-space-by-block-number btree operations
-
-### xfs.btree.alloc_blocks.free
-
-Btree blocks freed during free-space-by-block-number btree operations
-
-### xfs.btree.alloc_blocks.moves
-
-Records moved inside blocks during free-space-by-block-number btree operations
-
-### xfs.btree.alloc_contig.lookup
-
-Number of free-space-by-size btree record lookups
-
-### xfs.btree.alloc_contig.compare
-
-Number of free-space-by-size btree btree record compares
-
-### xfs.btree.alloc_contig.insrec
-
-Number of free-space-by-size btree insert record operations executed
-
-### xfs.btree.alloc_contig.delrec
-
-Number of free-space-by-size btree delete record operations executed
-
-### xfs.btree.alloc_contig.newroot
-
-Number of times a new level is added to a free-space-by-size btree tree
-
-### xfs.btree.alloc_contig.killroot
-
-Number of times a level is removed from a free-space-by-size btree tree
-
-### xfs.btree.alloc_contig.increment
-
-Number of times a free-space-by-size btree cursor has been moved forward
-one record
-
-### xfs.btree.alloc_contig.decrement
-
-Number of times a free-space-by-size btree cursor has been moved backward
-one record
-
-### xfs.btree.alloc_contig.lshift
-
-Left shift block operations to make space for a new free-space-by-size
-btree record
-
-### xfs.btree.alloc_contig.rshift
-
-Right shift block operations to make space for a new free-space-by-size
-btree record
-
-### xfs.btree.alloc_contig.split
-
-Split block operations to make space for a new free-space-by-size btree
-### record
-
-### xfs.btree.alloc_contig.join
-
-Merge block operations when deleting free-space-by-size btree records
-
-### xfs.btree.alloc_contig.alloc
-
-Btree block allocations during free-space-by-size btree operations
-
-### xfs.btree.alloc_contig.free
-
-Btree blocks freed during free-space-by-size btree operations
-
-### xfs.btree.alloc_contig.moves
-
-Records moved inside blocks during free-space-by-size btree operations
-
-### xfs.btree.block_map.lookup
-
-Number of inode-block-map/extent btree record lookups
-
-### xfs.btree.block_map.compare
-
-Number of inode-block-map/extent btree record compares
-
-### xfs.btree.block_map.insrec
-
-Number of inode-block-map/extent btree insert record operations executed
-
-### xfs.btree.block_map.delrec
-
-Number of inode-block-map/extent btree delete record operations executed
-
-### xfs.btree.block_map.newroot
-
-Number of times a new level is added to an inode-block-map/extent btree
-
-### xfs.btree.block_map.killroot
-
-Number of times a level is removed from an inode-block-map/extent btree
-
-### xfs.btree.block_map.increment
-
-Number of times an inode-block-map/extent btree cursor has been moved
-forward one record
-
-### xfs.btree.block_map.decrement
-
-Number of times an inode-block-map/extent btree cursor has been moved
-backward one record
-
-### xfs.btree.block_map.lshift
-
-Left shift block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.btree.block_map.rshift
-
-Right shift block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.btree.block_map.split
-
-Split block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.btree.block_map.join
-
-Merge block operations when deleting inode-block-map/extent btree records
-
-### xfs.btree.block_map.alloc
-
-Btree block allocations during inode-block-map/extent btree operations
-
-### xfs.btree.block_map.free
-
-Btree blocks freed during inode-block-map/extent btree operations
-
-### xfs.btree.block_map.moves
-
-Records moved inside blocks during inode-block-map/extent btree operations
-
-### xfs.btree.inode.lookup
-
-Number of inode-allocation btree record lookups
-
-### xfs.btree.inode.compare
-
-Number of inode-allocation btree record compares
-
-### xfs.btree.inode.insrec
-
-Number of inode-allocation btree insert record operations executed
-
-### xfs.btree.inode.delrec
-
-Number of inode-allocation btree delete record operations executed
-
-### xfs.btree.inode.newroot
-
-Number of times a new level is added to an inode-allocation btree
-
-### xfs.btree.inode.killroot
-
-Number of times a level is removed from an inode-allocation btree
-
-### xfs.btree.inode.increment
-
-Number of times a cursor has been moved forward one inode-allocation
-btree record
-
-### xfs.btree.inode.decrement
-
-Number of times a cursor has been moved backward one inode-allocation
-btree record
-
-### xfs.btree.inode.lshift
-
-Left shift block operations to make space for a new inode-allocation
-btree record
-
-### xfs.btree.inode.rshift
-
-Right shift block operations to make space for a new inode-allocation
-btree record
-
-### xfs.btree.inode.split
-
-Split block operations to make space for a new inode-allocation btree record
-
-### xfs.btree.inode.join
-
-Merge block operations when deleting inode-allocation btree records
-
-### xfs.btree.inode.alloc
-
-Btree block allocations during inode-allocation btree operations
-
-### xfs.btree.inode.free
-
-Btree blocks freed during inode-allocation btree operations
-
-### xfs.btree.inode.moves
-
-Records moved inside blocks during inode-allocation btree operations
-
-### xfs.btree.free_inode.lookup
-
-Number of free-inode btree record lookups
-
-### xfs.btree.free_inode.compare
-
-Number of free-inode btree record compares
-
-### xfs.btree.free_inode.insrec
-
-Number of free-inode btree insert record operations executed
-
-### xfs.btree.free_inode.delrec
-
-Number of free-inode btree delete record operations executed
-
-### xfs.btree.free_inode.newroot
-
-Number of times a new level is added to a free-inode btree
-
-### xfs.btree.free_inode.killroot
-
-Number of times a level is removed from a free-inode btree
-
-### xfs.btree.free_inode.increment
-
-Number of times a cursor has been moved forward one free-inode
-btree record
-
-### xfs.btree.free_inode.decrement
-
-Number of times a cursor has been moved backward one free-inode
-btree record
-
-### xfs.btree.free_inode.lshift
-
-Left shift block operations to make space for a new free-inode
-btree record
-
-### xfs.btree.free_inode.rshift
-
-Right shift block operations to make space for a new free-inode
-btree record
-
-### xfs.btree.free_inode.split
-
-Split block operations to make space for a new free-inode btree record
-
-### xfs.btree.free_inode.join
-
-Merge block operations when deleting free-inode btree records
-
-### xfs.btree.free_inode.alloc
-
-Btree block allocations during free-inode btree operations
-
-### xfs.btree.free_inode.free
-
-Btree blocks freed during free-inode btree operations
-
-### xfs.btree.free_inode.moves
-
-Records moved inside blocks during free-inode btree operations
-
-### xfs.btree.reverse_map.lookup
-
-Number of reverse-mapping btree record lookups
-
-### xfs.btree.reverse_map.compare
-
-Number of reverse-mapping btree record compares
-
-### xfs.btree.reverse_map.insrec
-
-Number of reverse-mapping btree insert record operations executed
-
-### xfs.btree.reverse_map.delrec
-
-Number of reverse-mapping btree delete record operations executed
-
-### xfs.btree.reverse_map.newroot
-
-Number of times a new level is added to a reverse-mapping btree
-
-### xfs.btree.reverse_map.killroot
-
-Number of times a level is removed from a reverse-mapping btree
-
-### xfs.btree.reverse_map.increment
-
-Number of times a cursor has been moved forward one reverse-mapping
-btree record
-
-### xfs.btree.reverse_map.decrement
-
-Number of times a cursor has been moved backward one reverse-mapping
-btree record
-
-### xfs.btree.reverse_map.lshift
-
-Left shift block operations to make space for a new reverse-mapping
-btree record
-
-### xfs.btree.reverse_map.rshift
-
-Right shift block operations to make space for a new reverse-mapping
-btree record
-
-### xfs.btree.reverse_map.split
-
-Split block operations to make space for a new reverse-mapping btree record
-
-### xfs.btree.reverse_map.join
-
-Merge block operations when deleting reverse-mapping btree records
-
-### xfs.btree.reverse_map.alloc
-
-Btree block allocations during reverse-mapping btree operations
-
-### xfs.btree.reverse_map.free
-
-Btree blocks freed during reverse-mapping btree operations
-
-### xfs.btree.reverse_map.moves
-
-Records moved inside blocks during reverse-mapping btree operations
-
-### xfs.btree.refcount.lookup
-
-Number of reference-count btree record lookups
-
-### xfs.btree.refcount.compare
-
-Number of reference-count btree record compares
-
-### xfs.btree.refcount.insrec
-
-Number of reference-count btree insert record operations executed
-
-### xfs.btree.refcount.delrec
-
-Number of reference-count btree delete record operations executed
-
-### xfs.btree.refcount.newroot
-
-Number of times a new level is added to a reference-count btree
-
-### xfs.btree.refcount.killroot
-
-Number of times a level is removed from a reference-count btree
-
-### xfs.btree.refcount.increment
-
-Number of times a cursor has been moved forward one reference-count
-btree record
-
-### xfs.btree.refcount.decrement
-
-Number of times a cursor has been moved backward one reference-count
-btree record
-
-### xfs.btree.refcount.lshift
-
-Left shift block operations to make space for a new reference-count
-btree record
-
-### xfs.btree.refcount.rshift
-
-Right shift block operations to make space for a new reference-count
-btree record
-
-### xfs.btree.refcount.split
-
-Split block operations to make space for a new reference-count btree record
-
-### xfs.btree.refcount.join
-
-Merge block operations when deleting reference-count btree records
-
-### xfs.btree.refcount.alloc
-
-Btree block allocations during reference-count btree operations
-
-### xfs.btree.refcount.free
-
-Btree blocks freed during reference-count btree operations
-
-### xfs.btree.refcount.moves
-
-Records moved inside blocks during reference-count btree operations
-
-### xfs.perdev.write
-
-This is the number of write(2) system calls made to files in
-XFS file systems.
-
-### xfs.perdev.write_bytes
-
-This is the number of bytes written via write(2) system calls to files
-in XFS file systems. It can be used in conjunction with the write_calls
-count to calculate the average size of the write operations to files in
-XFS file systems.
-
-### xfs.perdev.read
-
-This is the number of read(2) system calls made to files in XFS file
-systems.
-
-### xfs.perdev.read_bytes
-
-This is the number of bytes read via read(2) system calls to files in
-XFS file systems. It can be used in conjunction with the read_calls
-count to calculate the average size of the read operations to files in
-XFS file systems.
-
-### xfs.perdev.iflush_count
-
-This is the number of calls to xfs_iflush which gets called when an
-inode is being flushed (such as by bdflush or tail pushing).
-xfs_iflush searches for other inodes in the same cluster which are
-dirty and flushable.
-
-### xfs.perdev.icluster_flushcnt
-
-value from xs_icluster_flushcnt field of struct xfsstats
-
-### xfs.perdev.icluster_flushinode
-
-This is the number of times that the inode clustering was not able to
-flush anything but the one inode it was called with.
-
-### xfs.perdev.allocs.alloc_extent
-
-Number of file system extents allocated over XFS filesystems
-
-### xfs.perdev.allocs.alloc_block
-
-Number of file system blocks allocated over XFS filesystems
-
-### xfs.perdev.allocs.free_extent
-
-Number of file system extents freed over XFS filesystems
-
-### xfs.perdev.allocs.free_block
-
-Number of file system blocks freed over XFS filesystems
-
-### xfs.perdev.alloc_btree.lookup
-
-Number of lookup operations in XFS filesystem allocation btrees
-
-### xfs.perdev.alloc_btree.compare
-
-Number of compares in XFS filesystem allocation btree lookups
-
-### xfs.perdev.alloc_btree.insrec
-
-Number of extent records inserted into XFS filesystem allocation btrees
-
-### xfs.perdev.alloc_btree.delrec
-
-Number of extent records deleted from XFS filesystem allocation btrees
-
-### xfs.perdev.block_map.read_ops
-
-Number of block map for read operations performed on XFS files
-
-### xfs.perdev.block_map.write_ops
-
-Number of block map for write operations performed on XFS files
-
-### xfs.perdev.block_map.unmap
-
-Number of block unmap (delete) operations performed on XFS files
-
-### xfs.perdev.block_map.add_exlist
-
-Number of extent list insertion operations for XFS files
-
-### xfs.perdev.block_map.del_exlist
-
-Number of extent list deletion operations for XFS files
-
-### xfs.perdev.block_map.look_exlist
-
-Number of extent list lookup operations for XFS files
-
-### xfs.perdev.block_map.cmp_exlist
-
-Number of extent list comparisons in XFS extent list lookups
-
-### xfs.perdev.bmap_btree.lookup
-
-Number of block map btree lookup operations on XFS files
-
-### xfs.perdev.bmap_btree.compare
-
-Number of block map btree compare operations in XFS block map lookups
-
-### xfs.perdev.bmap_btree.insrec
-
-Number of block map btree records inserted for XFS files
-
-### xfs.perdev.bmap_btree.delrec
-
-Number of block map btree records deleted for XFS files
-
-### xfs.perdev.dir_ops.lookup
-
-This is a count of the number of file name directory lookups in XFS
-filesystems. It counts only those lookups which miss in the operating
-system's directory name lookup cache and must search the real directory
-structure for the name in question.  The count is incremented once for
-each level of a pathname search that results in a directory lookup.
-
-### xfs.perdev.dir_ops.create
-
-This is the number of times a new directory entry was created in XFS
-filesystems. Each time that a new file, directory, link, symbolic link,
-or special file is created in the directory hierarchy the count is
-incremented.
-
-### xfs.perdev.dir_ops.remove
-
-This is the number of times an existing directory entry was removed in
-XFS filesystems. Each time that a file, directory, link, symbolic link,
-or special file is removed from the directory hierarchy the count is
-incremented.
-
-### xfs.perdev.dir_ops.getdents
-
-This is the number of times the XFS directory getdents operation was
-performed. The getdents operation is used by programs to read the
-contents of directories in a file system independent fashion.  This
-count corresponds exactly to the number of times the getdents(2) system
-call was successfully used on an XFS directory.
-
-### xfs.perdev.transactions.sync
-
-This is the number of meta-data transactions which waited to be
-committed to the on-disk log before allowing the process performing the
-transaction to continue. These transactions are slower and more
-expensive than asynchronous transactions, because they force the in
-memory log buffers to be forced to disk more often and they wait for
-the completion of the log buffer writes.
-
-### xfs.perdev.transactions.async
-
-This is the number of meta-data transactions which did not wait to be
-committed to the on-disk log before allowing the process performing the
-transaction to continue. These transactions are faster and more
-efficient than synchronous transactions, because they commit their data
-to the in memory log buffers without forcing those buffers to be
-written to disk. This allows multiple asynchronous transactions to be
-committed to disk in a single log buffer write. Most transactions used
-in XFS file systems are asynchronous.
-
-### xfs.perdev.transactions.empty
-
-This is the number of meta-data transactions which did not actually
-change anything. These are transactions which were started for some
-purpose, but in the end it turned out that no change was necessary.
-
-### xfs.perdev.inode_ops.ig_attempts
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache. Whether the inode was found in the cache or
-needed to be read in from the disk is not indicated here, but this can
-be computed from the ig_found and ig_missed counts.
-
-### xfs.perdev.inode_ops.ig_found
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and found it. The closer this count is to the
-ig_attempts count the better the inode cache is performing.
-
-### xfs.perdev.inode_ops.ig_frecycle
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and saw that it was there but was unable to
-use the in memory inode because it was being recycled by another
-process.
-
-### xfs.perdev.inode_ops.ig_missed
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and the inode was not there. The further this
-count is from the ig_attempts count the better.
-
-### xfs.perdev.inode_ops.ig_dup
-
-This is the number of times the operating system looked for an XFS
-inode in the inode cache and found that it was not there but upon
-attempting to add the inode to the cache found that another process had
-already inserted it.
-
-### xfs.perdev.inode_ops.ig_reclaims
-
-This is the number of times the operating system recycled an XFS inode
-from the inode cache in order to use the memory for that inode for
-another purpose. Inodes are recycled in order to keep the inode cache
-from growing without bound. If the reclaim rate is high it may be
-beneficial to raise the vnode_free_ratio kernel tunable variable to
-increase the size of inode cache.
-
-### xfs.perdev.inode_ops.ig_attrchg
-
-This is the number of times the operating system explicitly changed the
-attributes of an XFS inode. For example, this could be to change the
-inode's owner, the inode's size, or the inode's timestamps.
-
-### xfs.perdev.log.writes
-
-This variable counts the number of log buffer writes going to the
-physical log partitions of XFS filesystems. Log data traffic is
-proportional to the level of meta-data updating. Log buffer writes get
-generated when they fill up or external syncs occur.
-
-### xfs.perdev.log.blocks
-
-This variable counts the number of Kbytes of information being written
-to the physical log partitions of XFS filesystems. Log data traffic
-is proportional to the level of meta-data updating. The rate with which
-log data gets written depends on the size of internal log buffers and
-disk write speed. Therefore, filesystems with very high meta-data
-updating may need to stripe the log partition or put the log partition
-on a separate drive.
-
-### xfs.perdev.log.write_ratio
-
-The ratio of log blocks written to log writes.  If block count isn't a
-"reasonable" multiple of writes, then many small log writes are being
-performed - this is suboptimal.  Perfection is 64.  Fine-grain control
-can be obtained when this metric is used in conjuntion with pmstore(1)
-and the xfs.control.reset metric.
-
-### xfs.perdev.log.noiclogs
-
-This variable keeps track of times when a logged transaction can not
-get any log buffer space. When this occurs, all of the internal log
-buffers are busy flushing their data to the physical on-disk log.
-
-### xfs.perdev.log.force
-
-The number of times the in-core log is forced to disk.  It is
-equivalent to the number of successful calls to the function
-xfs_log_force().
-
-### xfs.perdev.log.force_sleep
-
-This metric is exported from the xs_log_force_sleep field of struct xfsstats
-
-### xfs.perdev.log_tail.try_logspace
-
-This metric is exported from the xs_try_logspace field of struct xfsstats
-
-### xfs.perdev.log_tail.sleep_logspace
-
-This metric is exported from the xs_sleep_logspace field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.pushes
-
-The number of times the tail of the AIL is moved forward.  It is
-equivalent to the number of successful calls to the function
-xfs_trans_push_ail().
-
-### xfs.perdev.log_tail.push_ail.success
-
-value from xs_push_ail_success field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.pushbuf
-
-value from xs_push_ail_pushbuf field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.pinned
-
-value from xs_push_ail_pinned field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.locked
-
-value from xs_push_ail_locked field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.flushing
-
-value from xs_push_ail_flushing field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.restarts
-
-value from xs_push_ail_restarts field of struct xfsstats
-
-### xfs.perdev.log_tail.push_ail.flush
-
-value from xs_push_ail_flush field of struct xfsstats
-
-### xfs.perdev.xstrat.bytes
-
-This is the number of bytes of file data flushed out by the XFS
-flushing daemons.
-
-### xfs.perdev.xstrat.quick
-
-This is the number of buffers flushed out by the XFS flushing daemons
-which are written to contiguous space on disk. The buffers handled by
-the XFS daemons are delayed allocation buffers, so this count gives an
-indication of the success of the XFS daemons in allocating contiguous
-disk space for the data being flushed to disk.
-
-### xfs.perdev.xstrat.split
-
-This is the number of buffers flushed out by the XFS flushing daemons
-which are written to non-contiguous space on disk. The buffers handled
-by the XFS daemons are delayed allocation buffers, so this count gives
-an indication of the failure of the XFS daemons in allocating
-contiguous disk space for the data being flushed to disk. Large values
-in this counter indicate that the file system has become fragmented.
-
-### xfs.perdev.attr.get
-
-The number of "get" operations performed on extended file attributes
-within XFS filesystems.  The "get" operation retrieves the value of an
-extended attribute.
-
-### xfs.perdev.attr.set
-
-The number of "set" operations performed on extended file attributes
-within XFS filesystems.  The "set" operation creates and sets the value
-of an extended attribute.
-
-### xfs.perdev.attr.remove
-
-The number of "remove" operations performed on extended file attributes
-within XFS filesystems.  The "remove" operation deletes an extended
-attribute.
-
-### xfs.perdev.attr.list
-
-The number of "list" operations performed on extended file attributes
-within XFS filesystems.  The "list" operation retrieves the set of
-extended attributes associated with a file.
-
-### xfs.perdev.quota.reclaims
-
-value from xs_qm_dqreclaims field of struct xfsstats
-
-### xfs.perdev.quota.reclaim_misses
-
-value from xs_qm_dqreclaim_misses field of struct xfsstats
-
-### xfs.perdev.quota.dquot_dups
-
-value from xs_qm_dquot_dups field of struct xfsstats
-
-### xfs.perdev.quota.cachemisses
-
-value from xs_qm_dqcachemisses field of struct xfsstats
-
-### xfs.perdev.quota.cachehits
-
-value from xs_qm_dqcachehits field of struct xfsstats
-
-### xfs.perdev.quota.wants
-
-value from xs_qm_dqwants field of struct xfsstats
-
-### xfs.perdev.quota.dquots
-
-value from xs_qm_dquots field of struct xfsstats
-
-### xfs.perdev.quota.dquots_unused
-
-value from xs_qm_dquots_unused field of struct xfsstats
-
-### xfs.perdev.buffer.get
-
-number of request buffer calls
-
-### xfs.perdev.buffer.create
-
-number of buffers created
-
-### xfs.perdev.buffer.get_locked
-
-number of requests for a locked buffer which succeeded
-
-### xfs.perdev.buffer.get_locked_waited
-
-number of requests for a locked buffer which waited
-
-### xfs.perdev.buffer.busy_locked
-
-number of non-blocking requests for a locked buffer which failed
-
-### xfs.perdev.buffer.miss_locked
-
-number of requests for a locked buffer which failed due to no buffer
-
-### xfs.perdev.buffer.page_retries
-
-number of retry attempts when allocating a page for insertion in a buffer
-
-### xfs.perdev.buffer.page_found
-
-number of hits in the page cache when looking for a page
-
-### xfs.perdev.buffer.get_read
-
-number of buffer get calls requiring immediate device reads
-
-### xfs.perdev.vnodes.active
-
-number of vnodes not on free lists
-
-### xfs.perdev.vnodes.alloc
-
-number of times vn_alloc called
-
-### xfs.perdev.vnodes.get
-
-number of times vn_get called
-
-### xfs.perdev.vnodes.hold
-
-number of times vn_hold called
-
-### xfs.perdev.vnodes.rele
-
-number of times vn_rele called
-
-### xfs.perdev.vnodes.reclaim
-
-number of times vn_reclaim called
-
-### xfs.perdev.vnodes.remove
-
-number of times vn_remove called
-
-### xfs.perdev.vnodes.free
-
-number of times vn_free called
-
-### xfs.perdev.btree.alloc_blocks.lookup
-
-Number of free-space-by-block-number btree record lookups
-
-### xfs.perdev.btree.alloc_blocks.compare
-
-Number of free-space-by-block-number btree record compares
-
-### xfs.perdev.btree.alloc_blocks.insrec
-
-Number of free-space-by-block-number btree insert record operations executed
-
-### xfs.perdev.btree.alloc_blocks.delrec
-
-Number of free-space-by-block-number btree delete record operations executed
-
-### xfs.perdev.btree.alloc_blocks.newroot
-
-Number of times a new level is added to a free-space-by-block-number btree
-
-### xfs.perdev.btree.alloc_blocks.killroot
-
-Number of times a level is removed from a free-space-by-block-number btree
-
-### xfs.perdev.btree.alloc_blocks.increment
-
-Number of times a cursor has been moved forward one free-space-by-block-number
-btree record
-
-### xfs.perdev.btree.alloc_blocks.decrement
-
-Number of times a cursor has been moved backward one free-space-by-block-number
-btree record
-
-### xfs.perdev.btree.alloc_blocks.lshift
-
-Left shift block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.perdev.btree.alloc_blocks.rshift
-
-Right shift block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.perdev.btree.alloc_blocks.split
-
-Split block operations to make space for a new free-space-by-block-number
-btree record
-
-### xfs.perdev.btree.alloc_blocks.join
-
-Merge block operations when deleting free-space-by-block-number btree records
-
-### xfs.perdev.btree.alloc_blocks.alloc
-
-Btree block allocations during free-space-by-block-number btree operations
-
-### xfs.perdev.btree.alloc_blocks.free
-
-Btree blocks freed during free-space-by-block-number btree operations
-
-### xfs.perdev.btree.alloc_blocks.moves
-
-Records moved inside blocks during free-space-by-block-number btree operations
-
-### xfs.perdev.btree.alloc_contig.lookup
-
-Number of free-space-by-size btree record lookups
-
-### xfs.perdev.btree.alloc_contig.compare
-
-Number of free-space-by-size btree btree record compares
-
-### xfs.perdev.btree.alloc_contig.insrec
-
-Number of free-space-by-size btree insert record operations executed
-
-### xfs.perdev.btree.alloc_contig.delrec
-
-Number of free-space-by-size btree delete record operations executed
-
-### xfs.perdev.btree.alloc_contig.newroot
-
-Number of times a new level is added to a free-space-by-size btree tree
-
-### xfs.perdev.btree.alloc_contig.killroot
-
-Number of times a level is removed from a free-space-by-size btree tree
-
-### xfs.perdev.btree.alloc_contig.increment
-
-Number of times a free-space-by-size btree cursor has been moved forward
-one record
-
-### xfs.perdev.btree.alloc_contig.decrement
-
-Number of times a free-space-by-size btree cursor has been moved backward
-one record
-
-### xfs.perdev.btree.alloc_contig.lshift
-
-Left shift block operations to make space for a new free-space-by-size
-btree record
-
-### xfs.perdev.btree.alloc_contig.rshift
-
-Right shift block operations to make space for a new free-space-by-size
-btree record
-
-### xfs.perdev.btree.alloc_contig.split
-
-Split block operations to make space for a new free-space-by-size btree
-### record
-
-### xfs.perdev.btree.alloc_contig.join
-
-Merge block operations when deleting free-space-by-size btree records
-
-### xfs.perdev.btree.alloc_contig.alloc
-
-Btree block allocations during free-space-by-size btree operations
-
-### xfs.perdev.btree.alloc_contig.free
-
-Btree blocks freed during free-space-by-size btree operations
-
-### xfs.perdev.btree.alloc_contig.moves
-
-Records moved inside blocks during free-space-by-size btree operations
-
-### xfs.perdev.btree.block_map.lookup
-
-Number of inode-block-map/extent btree record lookups
-
-### xfs.perdev.btree.block_map.compare
-
-Number of inode-block-map/extent btree record compares
-
-### xfs.perdev.btree.block_map.insrec
-
-Number of inode-block-map/extent btree insert record operations executed
-
-### xfs.perdev.btree.block_map.delrec
-
-Number of inode-block-map/extent btree delete record operations executed
-
-### xfs.perdev.btree.block_map.newroot
-
-Number of times a new level is added to an inode-block-map/extent btree
-
-### xfs.perdev.btree.block_map.killroot
-
-Number of times a level is removed from an inode-block-map/extent btree
-
-### xfs.perdev.btree.block_map.increment
-
-Number of times an inode-block-map/extent btree cursor has been moved
-forward one record
-
-### xfs.perdev.btree.block_map.decrement
-
-Number of times an inode-block-map/extent btree cursor has been moved
-backward one record
-
-### xfs.perdev.btree.block_map.lshift
-
-Left shift block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.perdev.btree.block_map.rshift
-
-Right shift block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.perdev.btree.block_map.split
-
-Split block operations to make space for a new inode-block-map/extent
-btree record
-
-### xfs.perdev.btree.block_map.join
-
-Merge block operations when deleting inode-block-map/extent btree records
-
-### xfs.perdev.btree.block_map.alloc
-
-Btree block allocations during inode-block-map/extent btree operations
-
-### xfs.perdev.btree.block_map.free
-
-Btree blocks freed during inode-block-map/extent btree operations
-
-### xfs.perdev.btree.block_map.moves
-
-Records moved inside blocks during inode-block-map/extent btree operations
-
-### xfs.perdev.btree.inode.lookup
-
-Number of inode-allocation btree record lookups
-
-### xfs.perdev.btree.inode.compare
-
-Number of inode-allocation btree record compares
-
-### xfs.perdev.btree.inode.insrec
-
-Number of inode-allocation btree insert record operations executed
-
-### xfs.perdev.btree.inode.delrec
-
-Number of inode-allocation btree delete record operations executed
-
-### xfs.perdev.btree.inode.newroot
-
-Number of times a new level is added to an inode-allocation btree
-
-### xfs.perdev.btree.inode.killroot
-
-Number of times a level is removed from an inode-allocation btree
-
-### xfs.perdev.btree.inode.increment
-
-Number of times a cursor has been moved forward one inode-allocation
-btree record
-
-### xfs.perdev.btree.inode.decrement
-
-Number of times a cursor has been moved backward one inode-allocation
-btree record
-
-### xfs.perdev.btree.inode.lshift
-
-Left shift block operations to make space for a new inode-allocation
-btree record
-
-### xfs.perdev.btree.inode.rshift
-
-Right shift block operations to make space for a new inode-allocation
-btree record
-
-### xfs.perdev.btree.inode.split
-
-Split block operations to make space for a new inode-allocation btree record
-
-### xfs.perdev.btree.inode.join
-
-Merge block operations when deleting inode-allocation btree records
-
-### xfs.perdev.btree.inode.alloc
-
-Btree block allocations during inode-allocation btree operations
-
-### xfs.perdev.btree.inode.free
-
-Btree blocks freed during inode-allocation btree operations
-
-### xfs.perdev.btree.inode.moves
-
-Records moved inside blocks during inode-allocation btree operations
-
-### xfs.perdev.btree.free_inode.lookup
-
-Number of free-inode btree record lookups
-
-### xfs.perdev.btree.free_inode.compare
-
-Number of free-inode btree record compares
-
-### xfs.perdev.btree.free_inode.insrec
-
-Number of free-inode btree insert record operations executed
-
-### xfs.perdev.btree.free_inode.delrec
-
-Number of free-inode btree delete record operations executed
-
-### xfs.perdev.btree.free_inode.newroot
-
-Number of times a new level is added to a free-inode btree
-
-### xfs.perdev.btree.free_inode.killroot
-
-Number of times a level is removed from a free-inode btree
-
-### xfs.perdev.btree.free_inode.increment
-
-Number of times a cursor has been moved forward one free-inode
-btree record
-
-### xfs.perdev.btree.free_inode.decrement
-
-Number of times a cursor has been moved backward one free-inode
-btree record
-
-### xfs.perdev.btree.free_inode.lshift
-
-Left shift block operations to make space for a new free-inode
-btree record
-
-### xfs.perdev.btree.free_inode.rshift
-
-Right shift block operations to make space for a new free-inode
-btree record
-
-### xfs.perdev.btree.free_inode.split
-
-Split block operations to make space for a new free-inode btree record
-
-### xfs.perdev.btree.free_inode.join
-
-Merge block operations when deleting free-inode btree records
-
-### xfs.perdev.btree.free_inode.alloc
-
-Btree block allocations during free-inode btree operations
-
-### xfs.perdev.btree.free_inode.free
-
-Btree blocks freed during free-inode btree operations
-
-### xfs.perdev.btree.free_inode.moves
-
-Records moved inside blocks during free-inode btree operations
-
-### xfs.perdev.btree.reverse_map.lookup
-
-Number of reverse-mapping btree record lookups
-
-### xfs.perdev.btree.reverse_map.compare
-
-Number of reverse-mapping btree record compares
-
-### xfs.perdev.btree.reverse_map.insrec
-
-Number of reverse-mapping btree insert record operations executed
-
-### xfs.perdev.btree.reverse_map.delrec
-
-Number of reverse-mapping btree delete record operations executed
-
-### xfs.perdev.btree.reverse_map.newroot
-
-Number of times a new level is added to a reverse-mapping btree
-
-### xfs.perdev.btree.reverse_map.killroot
-
-Number of times a level is removed from a reverse-mapping btree
-
-### xfs.perdev.btree.reverse_map.increment
-
-Number of times a cursor has been moved forward one reverse-mapping
-btree record
-
-### xfs.perdev.btree.reverse_map.decrement
-
-Number of times a cursor has been moved backward one reverse-mapping
-btree record
-
-### xfs.perdev.btree.reverse_map.lshift
-
-Left shift block operations to make space for a new reverse-mapping
-btree record
-
-### xfs.perdev.btree.reverse_map.rshift
-
-Right shift block operations to make space for a new reverse-mapping
-btree record
-
-### xfs.perdev.btree.reverse_map.split
-
-Split block operations to make space for a new reverse-mapping btree record
-
-### xfs.perdev.btree.reverse_map.join
-
-Merge block operations when deleting reverse-mapping btree records
-
-### xfs.perdev.btree.reverse_map.alloc
-
-Btree block allocations during reverse-mapping btree operations
-
-### xfs.perdev.btree.reverse_map.free
-
-Btree blocks freed during reverse-mapping btree operations
-
-### xfs.perdev.btree.reverse_map.moves
-
-Records moved inside blocks during reverse-mapping btree operations
-
-### xfs.perdev.btree.refcount.lookup
-
-Number of reference-count btree record lookups
-
-### xfs.perdev.btree.refcount.compare
-
-Number of reference-count btree record compares
-
-### xfs.perdev.btree.refcount.insrec
-
-Number of reference-count btree insert record operations executed
-
-### xfs.perdev.btree.refcount.delrec
-
-Number of reference-count btree delete record operations executed
-
-### xfs.perdev.btree.refcount.newroot
-
-Number of times a new level is added to a reference-count btree
-
-### xfs.perdev.btree.refcount.killroot
-
-Number of times a level is removed from a reference-count btree
-
-### xfs.perdev.btree.refcount.increment
-
-Number of times a cursor has been moved forward one reference-count
-btree record
-
-### xfs.perdev.btree.refcount.decrement
-
-Number of times a cursor has been moved backward one reference-count
-btree record
-
-### xfs.perdev.btree.refcount.lshift
-
-Left shift block operations to make space for a new reference-count
-btree record
-
-### xfs.perdev.btree.refcount.rshift
-
-Right shift block operations to make space for a new reference-count
-btree record
-
-### xfs.perdev.btree.refcount.split
-
-Split block operations to make space for a new reference-count btree record
-
-### xfs.perdev.btree.refcount.join
-
-Merge block operations when deleting reference-count btree records
-
-### xfs.perdev.btree.refcount.alloc
-
-Btree block allocations during reference-count btree operations
-
-### xfs.perdev.btree.refcount.free
-
-Btree blocks freed during reference-count btree operations
-
-### xfs.perdev.btree.refcount.moves
-
-Records moved inside blocks during reference-count btree operations
-
-### quota.state.project.accounting
-
-1 indicates quota accounting enabled, else 0
-
-### quota.state.project.enforcement
-
-1 indicates quotas enforced, else 0
-
-### quota.project.space.hard
-
-hard limit for this project and filesys in Kbytes
-
-### quota.project.space.soft
-
-soft limit for this project and filesys in Kbytes
-
-### quota.project.space.used
-
-space used for this project and filesys in Kbytes
-
-### quota.project.space.time_left
-
-when soft limit is exceeded, seconds until it is enacted
-
-### quota.project.files.hard
-
-file count hard limit for this project and filesys
-
-### quota.project.files.soft
-
-file count soft limit for this project and filesys
-
-### quota.project.files.used
-
-file count for this project and filesys
-
-### quota.project.files.time_left
-
-when soft limit is exceeded, seconds until it is enacted
-
-### event.flags
-
-An anonymous derived metric that is used to encode the event flags
-associated with event records.   See pmUnpackEventRecords(3).
-
-### event.missed
-
-An anonymous derived metric that is used to encode the number of
-event records missed because either the PMDA could not keep up
-or the PMAPI client did not collect the event records fast
-enough.  See pmUnpackEventRecords(3).
-
-### proc.psinfo.age
-
-time in seconds since process was started, calculated from
-proc.psinfo.start_time subtracted from kernel.all.uptime.
-
-### proc.io.total_bytes
-
-total bytes read and written by the process, less cancelled written bytes.
-
-### proc.hog.cpu
-
-average CPU utilization of each process expressed as a percentage
-of time since the process started.
-
-### proc.hog.mem
-
-amount of resident and swapped memory used by each process.
-
-### proc.hog.disk
-
-average I/O rate (reads and writes less cancelled writes) of each process
-since it was started.
-
-### disk.dev.await
-
-average time in milliseconds that read and write requests
-were queued (and serviced) during the reporting interval.
-
-### disk.dev.r_await
-
-average time in milliseconds that read requests were queued
-(and serviced) during the reporting interval.
-
-### disk.dev.w_await
-
-average time in milliseconds that write requests were queued
-(and serviced) during the reporting interval.
-
-### disk.dev.d_await
-
-average time in milliseconds that discard requests were queued
-(and serviced) during the reporting interval.
-
-### disk.dev.f_await
-
-average time in milliseconds that flush requests were queued
-(and serviced) during the reporting interval.
-
-### disk.dev.avg_qlen
-
-average read and write I/O queue length to the device during the reporting interval.
-
-### disk.dev.avg_rqsz
-
-average I/O request size for both reads and writes during the reporting interval.
-
-### disk.dev.r_avg_rqsz
-
-average I/O request size for reads to the device during the reporting interval.
-
-### disk.dev.w_avg_rqsz
-
-average I/O request size for writes to the device during the reporting interval.
-
-### disk.dev.d_avg_rqsz
-
-average I/O request size for discards to the device during the reporting interval.
-
-### disk.dev.util
-
-The percentage of time during the reporting interval that the
-device was busy processing requests (reads and writes). A value
-of 100% indicates device saturation.
-
-### disk.dm.await
-
-average time in milliseconds that read and write requests
-were queued (and serviced) to the device-mapper logical
-device during the reporting interval.
-
-### disk.dm.r_await
-
-average time in milliseconds that read requests were queued
-(and serviced) to the device-mapper logical device during
-the reporting interval.
-
-### disk.dm.w_await
-
-average time in milliseconds that write requests were queued
-(and serviced) to the device-mapper logical device during
-the reporting interval.
-
-### disk.dm.d_await
-
-average time in milliseconds that discard requests were queued
-(and serviced) to the device-mapper logical device during
-the reporting interval.
-
-### disk.dm.f_await
-
-average time in milliseconds that flush requests were queued
-(and serviced) to the device-mapper logical device during
-the reporting interval.
-
-### disk.dm.avg_qlen
-
-average read and write I/O queue length to the device-mapper logical
-device during the reporting interval.
-
-### disk.dm.avg_rqsz
-
-average I/O request size for reads and writes to the device-mapper logical
-device during the reporting interval.
-
-### disk.dm.r_avg_rqsz
-
-average I/O request size for reads to the device-mapper logical device
-during the reporting interval.
-
-### disk.dm.w_avg_rqsz
-
-average I/O request size for writes to the device-mapper logical device
-during the reporting interval.
-
-### disk.dm.d_avg_rqsz
-
-average I/O request size for discards to the device-mapper logical device
-during the reporting interval.
-
-### disk.dm.util
-
-The percentage of time during the reporting interval that the
-device-mapper logical device was busy processing requests (reads
-and writes). A value of 100% indicates device saturation.
-
-### disk.md.await
-
-average time in milliseconds that read and write requests
-were queued (and serviced) to the per-multi-device logical
-device during the reporting interval.
-
-### disk.md.r_await
-
-average time in milliseconds that read requests were queued
-(and serviced) to the per-multi-device logical device during
-the reporting interval.
-
-### disk.md.w_await
-
-average time in milliseconds that write requests were queued
-(and serviced) to the per-multi-device logical device during
-the reporting interval.
-
-### disk.md.d_await
-
-average time in milliseconds that discard requests were queued
-(and serviced) to the per-multi-device logical device during
-the reporting interval.
-
-### disk.md.f_await
-
-average time in milliseconds that flush requests were queued
-(and serviced) to the per-multi-device logical device during
-the reporting interval.
-
-### disk.md.avg_qlen
-
-average read and write I/O queue length to the per-multi-device logical
-device during the reporting interval.
-
-### disk.md.avg_rqsz
-
-average I/O request size for reads and writes to the per-multi-device logical
-device during the reporting interval.
-
-### disk.md.r_avg_rqsz
-
-average I/O request size for reads to the per-multi-device logical device
-during the reporting interval.
-
-### disk.md.w_avg_rqsz
-
-average I/O request size for writes to the per-multi-device logical device
-during the reporting interval.
-
-### disk.md.d_avg_rqsz
-
-average I/O request size for discards to the per-multi-device logical device
-during the reporting interval.
-
-### disk.md.util
-
-The percentage of time during the reporting interval that the
-per-multi-device logical device was busy processing requests
-(reads and writes). A value of 100% indicates device saturation.
-
-### kernel.cpu.util.user
-
-percentage of user time across all CPUs, including guest CPU time
-
-### kernel.cpu.util.nice
-
-percentage of nice user time across all CPUs, including guest nice CPU time
-
-### kernel.cpu.util.sys
-
-percentage of sys time across all CPUs
-
-### kernel.cpu.util.idle
-
-percentage of idle time across all CPUs
-
-### kernel.cpu.util.intr
-
-Percentage of time spent processing interrupts across all CPUs.
-This value includes both soft and hard interrupt processing time.
-
-### kernel.cpu.util.wait
-
-percentage of wait time across all CPUs
-
-### kernel.cpu.util.steal
-
-Percentage of time across all CPUs when a CPU had a runnable process,
-but the hypervisor (virtualisation layer) chose to run something else
-instead.
+Number of tlb_flush operations performed by the hypervisor.
