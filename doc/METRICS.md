@@ -17,7 +17,7 @@
  * [acct](#acct)
  * [kvm](#kvm)
 ## Metric Descriptions
-### kernel
+### _kernel_
 
 #### kernel.all.load
 
@@ -446,7 +446,7 @@ percentage of wait time across all CPUs
 Percentage of time across all CPUs when a CPU had a runnable process,
 but the hypervisor (virtualisation layer) chose to run something else
 instead.
-### disk
+### _disk_
 
 #### disk.dev.read
 
@@ -1463,7 +1463,7 @@ during the reporting interval.
 The percentage of time during the reporting interval that the
 per-multi-device logical device was busy processing requests
 (reads and writes). A value of 100% indicates device saturation.
-### filesys
+### _filesys_
 
 #### filesys.capacity
 
@@ -1508,7 +1508,7 @@ Total space free to non-superusers on mounted filesystem (Kbytes)
 #### filesys.readonly
 
 Indicates whether a filesystem is mounted readonly
-### swap
+### _swap_
 
 #### swap.pagesin
 
@@ -1537,7 +1537,7 @@ total swap available metric from /proc/meminfo
 #### swap.used
 
 swap used metric from /proc/meminfo
-### mem
+### _mem_
 
 #### mem.physmem
 
@@ -2990,7 +2990,7 @@ Whether the KSM daemon has run and/or is running
 #### mem.ksm.sleep_time
 
 Time ksmd should sleep between batches
-### network
+### _network_
 
 #### network.all.in.bytes
 
@@ -4636,7 +4636,7 @@ Multipath TCP received a new mapping that did not match the previous one
 #### network.mptcp.infinitemaprx
 
 Multipath TCP received an infinite mapping
-### ipc
+### _ipc_
 
 #### ipc.sem.max_semmap
 
@@ -4850,7 +4850,7 @@ process creating each shared memory segment
 #### ipc.shm.last_access_pid
 
 process last accessing each shared memory segment
-### vfs
+### _vfs_
 
 #### vfs.files.count
 
@@ -4923,12 +4923,12 @@ number of file leases held for writing
 #### vfs.locks.lease.count
 
 number of file lease structures
-### sysfs
+### _sysfs_
 
 #### sysfs.kernel.uevent_seqnum
 
 counter of the number of uevents processed by the udev subsystem
-### tmpfs
+### _tmpfs_
 
 #### tmpfs.capacity
 
@@ -4957,7 +4957,7 @@ Number of unallocated inodes on mounted tmpfs filesystem
 #### tmpfs.full
 
 Percentage of tmpfs filesystem in use
-### containers
+### _containers_
 
 #### containers.engine
 
@@ -4986,7 +4986,7 @@ this container is currently paused (one/zero)
 #### containers.state.restarting
 
 this container is restarting (one/zero)
-### nvidia
+### _nvidia_
 
 #### nvidia.numcards
 
@@ -5066,7 +5066,7 @@ Memory access utilization by processes accessing each card
 #### nvidia.proc.time
 
 Milliseconds spent by processes accessing each graphics card
-### nfs4
+### _nfs4_
 
 #### nfs4.client.calls
 
@@ -5083,7 +5083,7 @@ cumulative total of server NFSv4 operations, plus NULL requests
 #### nfs4.server.reqs
 
 cumulative total for each server NFSv4 operation, and for NULL requests
-### cgroup
+### _cgroup_
 
 #### cgroup.subsys.hierarchy
 
@@ -5946,7 +5946,7 @@ Direct IO bytes per-cgroup, per-device
 #### cgroup.io.stat.dios
 
 Direct IO operations per-cgroup, per-device
-### acct
+### _acct_
 
 #### acct.psinfo.tty
 
@@ -6063,7 +6063,7 @@ Interval to check if private acct file should be reopened
 #### acct.control.enable_acct
 
 Boolean for whether to open private acct file and to use acct(2) syscall
-### kvm
+### _kvm_
 
 #### kvm.trace.kvm_vcpu_wakeup
 

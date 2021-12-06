@@ -25,7 +25,7 @@ done
 
 echo "## Metric Descriptions" >> METRICS.md
 for prefix in ${METRIC_PREFIX[*]}; do
-    echo "### ${prefix}" >> METRICS.md 
+    echo "### _${prefix}_" >> METRICS.md 
     pminfo -T $prefix | \
 	sed -e 's/^\([a-z0-9A-Z][A-Za-z0-9_.]\+[A-Za-z0-9]\)$/#### \1/' \
 	    -e 's/^Help:$//' \
