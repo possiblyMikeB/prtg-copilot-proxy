@@ -1,111 +1,111 @@
 
-jbd2.njournals
+### jbd2.njournals
 
 Count of active JBD2 (Journal Block Device v2) devices
 
-jbd2.transaction.count
+### jbd2.transaction.count
 
 This metric is sourced from the per-device /proc/fs/jbd2 info file.
 
-jbd2.transaction.requested
+### jbd2.transaction.requested
 
 This metric is sourced from the per-device /proc/fs/jbd2 info file.
 
-jbd2.transaction.max_blocks
+### jbd2.transaction.max_blocks
 
 This metric is sourced from the per-device /proc/fs/jbd2 info file.
 
-jbd2.transaction.total.blocks
+### jbd2.transaction.total.blocks
 
 Total number of blocks in all transactions since device mounted.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.blocks_logged
+### jbd2.transaction.total.blocks_logged
 
 Total number of blocks logged in all transactions since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.handles
+### jbd2.transaction.total.handles
 
 Total count of handles used in all transactions since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.waiting
+### jbd2.transaction.total.time.waiting
 
 Total time spent waiting for transactions to complete since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.request_delay
+### jbd2.transaction.total.time.request_delay
 
 Total request delay for all transactions to complete since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.running
+### jbd2.transaction.total.time.running
 
 Total transaction running time over all transactions since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.being_locked
+### jbd2.transaction.total.time.being_locked
 
 Total transaction locked time over all transactions since mount.
 Derived from values in the per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.flushing_ordered_mode_data
+### jbd2.transaction.total.time.flushing_ordered_mode_data
 
 Total time flushing data (ordered mode) for all transactions since
 mount.  Derived from values in per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.total.time.logging
+### jbd2.transaction.total.time.logging
 
 Total time spent logging transactions for all transactions since
 mount.  Derived from values in per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.blocks
+### jbd2.transaction.average.blocks
 
 Average number of blocks per transaction for all transactions.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.blocks_logged
+### jbd2.transaction.average.blocks_logged
 
 Average number of blocks logged per transaction for all transactions.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.handles
+### jbd2.transaction.average.handles
 
 Average number of handles used per transaction for all transactions.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.waiting
+### jbd2.transaction.average.time.waiting
 
 Average time spent waiting for transactions to complete since mount.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.request_delay
+### jbd2.transaction.average.time.request_delay
 
 Average request delay for all transactions to complete since mount.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.running
+### jbd2.transaction.average.time.running
 
 Average transaction running time over all transactions since mount.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.being_locked
+### jbd2.transaction.average.time.being_locked
 
 Average transaction locked time over all transactions since mount.
 Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.flushing_ordered_mode_data
+### jbd2.transaction.average.time.flushing_ordered_mode_data
 
 Average time flushing data (ordered mode) for all transactions since
 mount.  Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.logging
+### jbd2.transaction.average.time.logging
 
 Average time spent logging transactions for all transactions since
 mount.  Exported directly from per-device /proc/fs/jbd2 info files.
 
-jbd2.transaction.average.time.committing
+### jbd2.transaction.average.time.committing
 
 Average time spent committing transactions for all transactions since
 mount.  Exported directly from per-device /proc/fs/jbd2 info files.
@@ -838,7 +838,7 @@ but doesn't include SwapCached.
 Memory that is not free (i.e. has been referenced) and is not cached.
 mem.physmem - mem.util.free - mem.util.cached - mem.util.buffers
 
-mem.util.swapCached
+### mem.util.swapCached
 
 Memory that once was swapped out, is swapped back in but still also
 is in the swapfile (if memory is needed it doesn't need to be swapped
@@ -854,7 +854,7 @@ absolutely necessary.
 Memory which has been less recently used.  It is more eligible to be
 reclaimed for other purposes
 
-mem.util.highTotal
+### mem.util.highTotal
 
 This is apparently an i386 specific metric, and seems to be always zero
 on ia64 architecture (and possibly others). On i386 arch (at least),
@@ -863,11 +863,11 @@ are for use by userspace programs, or for the pagecache. The kernel
 must use tricks to access this memory, making it slower to access
 than lowmem.
 
-mem.util.highFree
+### mem.util.highFree
 
 See mem.util.highTotal. Not used on ia64 arch (and possibly others).
 
-mem.util.lowTotal
+### mem.util.lowTotal
 
 Lowmem is memory which can be used for everything that highmem can be
 used for, but it is also availble for the kernel's use for its own
@@ -875,15 +875,15 @@ data structures. Among many other things, it is where everything
 from the Slab is allocated.  Bad things happen when you're out of lowmem.
 (this may only be true on i386 architectures).
 
-mem.util.lowFree
+### mem.util.lowFree
 
 See mem.util.lowTotal
 
-mem.util.swapTotal
+### mem.util.swapTotal
 
 total amount of swap space available
 
-mem.util.swapFree
+### mem.util.swapFree
 
 Memory which has been evicted from RAM, and is temporarily on the disk
 
@@ -903,7 +903,7 @@ files which have been mmaped, such as libraries
 
 in-kernel data structures cache
 
-mem.util.committed_AS
+### mem.util.committed_AS
 
 An estimate of how much RAM you would need to make a 99.99% guarantee
 that there never is OOM (out of memory) for this workload. Normally
@@ -911,11 +911,11 @@ the kernel will overcommit memory. That means, say you do a 1GB malloc,
 nothing happens, really. Only when you start USING that malloc memory
 you will get real memory on demand, and just as much as you use.
 
-mem.util.pageTables
+### mem.util.pageTables
 
 Kbytes in kernel page tables, from /proc/meminfo
 
-mem.util.reverseMaps
+### mem.util.reverseMaps
 
 Kbytes in reverse mapped pages, from /proc/meminfo
 
@@ -927,7 +927,7 @@ Kbytes cached and not dirty or writeback, derived from /proc/meminfo
 
 Kbytes in user pages not backed by files, from /proc/meminfo
 
-mem.util.commitLimit
+### mem.util.commitLimit
 
 The static total, in Kbytes, available for commitment to address
 spaces. Thus, mem.util.committed_AS may range up to this total. Normally
@@ -937,15 +937,15 @@ the kernel overcommits memory, so this value may exceed mem.physmem
 
 Kbytes in bounce buffers, from /proc/meminfo
 
-mem.util.NFS_Unstable
+### mem.util.NFS_Unstable
 
 Kbytes in NFS unstable memory, from /proc/meminfo
 
-mem.util.slabReclaimable
+### mem.util.slabReclaimable
 
 Kbytes in reclaimable slab pages, from /proc/meminfo
 
-mem.util.slabUnreclaimable
+### mem.util.slabUnreclaimable
 
 Kbytes in unreclaimable slab pages, from /proc/meminfo
 
@@ -977,43 +977,43 @@ kbytes of memory that is pinned via mlock()
 
 kbytes of shmem
 
-mem.util.kernelStack
+### mem.util.kernelStack
 
 kbytes of memory used for kernel stacks
 
-mem.util.hugepagesTotal
+### mem.util.hugepagesTotal
 
 a count of total hugepages
 
-mem.util.hugepagesFree
+### mem.util.hugepagesFree
 
 a count of free hugepages
 
-mem.util.hugepagesRsvd
+### mem.util.hugepagesRsvd
 
 a count of reserved hugepages
 
-mem.util.hugepagesSurp
+### mem.util.hugepagesSurp
 
 a count of surplus hugepages
 
-mem.util.directMap4k
+### mem.util.directMap4k
 
 amount of memory that is directly mapped in 4kB pages
 
-mem.util.directMap2M
+### mem.util.directMap2M
 
 amount of memory that is directly mapped in 2MB pages
 
-mem.util.vmallocTotal
+### mem.util.vmallocTotal
 
 amount of kernel memory allocated via vmalloc
 
-mem.util.vmallocUsed
+### mem.util.vmallocUsed
 
 amount of used vmalloc memory
 
-mem.util.vmallocChunk
+### mem.util.vmallocChunk
 
 amount of vmalloc chunk memory
 
@@ -1033,7 +1033,7 @@ amount of memory in hardware corrupted pages
 
 amount of memory in anonymous huge pages
 
-mem.util.directMap1G
+### mem.util.directMap1G
 
 amount of memory that is directly mapped in 1GB pages
 
@@ -1044,19 +1044,19 @@ without pushing the system into swap. Estimated from MemFree,
 Active(file), Inactive(file), and SReclaimable, as well as the "low"
 watermarks from /proc/zoneinfo.
 
-mem.util.hugepagesTotalBytes
+### mem.util.hugepagesTotalBytes
 
 amount of memory in total hugepages
 
-mem.util.hugepagesFreeBytes
+### mem.util.hugepagesFreeBytes
 
 amount of memory in free hugepages
 
-mem.util.hugepagesRsvdBytes
+### mem.util.hugepagesRsvdBytes
 
 amount of memory in reserved hugepages
 
-mem.util.hugepagesSurpBytes
+### mem.util.hugepagesSurpBytes
 
 
 User memory (Kbytes) in pages not backed by files, e.g. from malloc()
@@ -1106,19 +1106,19 @@ per-node file-backed Active list LRU memory
 
 per-node file-backed Inactive list LRU memory
 
-mem.numa.util.highTotal
+### mem.numa.util.highTotal
 
 per-node highmem total
 
-mem.numa.util.highFree
+### mem.numa.util.highFree
 
 per-node highmem free
 
-mem.numa.util.lowTotal
+### mem.numa.util.lowTotal
 
 per-node lowmem total
 
-mem.numa.util.lowFree
+### mem.numa.util.lowFree
 
 per-node lowmem free
 
@@ -1138,7 +1138,7 @@ per-node dirty memory
 
 per-node count of memory locked for writeback to stable storage
 
-mem.numa.util.filePages
+### mem.numa.util.filePages
 
 per-node count of memory backed by files
 
@@ -1154,15 +1154,15 @@ per-node anonymous memory
 
 per-node amount of shared memory
 
-mem.numa.util.kernelStack
+### mem.numa.util.kernelStack
 
 per-node memory used as kernel stacks
 
-mem.numa.util.pageTables
+### mem.numa.util.pageTables
 
 per-node memory used for pagetables
 
-mem.numa.util.NFS_Unstable
+### mem.numa.util.NFS_Unstable
 
 per-node memory holding NFS data that needs writeback
 
@@ -1170,7 +1170,7 @@ per-node memory holding NFS data that needs writeback
 
 per-node memory used for bounce buffers
 
-mem.numa.util.writebackTmp
+### mem.numa.util.writebackTmp
 
 per-node temporary memory used for writeback
 
@@ -1178,35 +1178,35 @@ per-node temporary memory used for writeback
 
 per-node memory used for slab objects
 
-mem.numa.util.slabReclaimable
+### mem.numa.util.slabReclaimable
 
 per-node memory used for slab objects that can be reclaimed
 
-mem.numa.util.slabUnreclaimable
+### mem.numa.util.slabUnreclaimable
 
 per-node memory used for slab objects that is unreclaimable
 
-mem.numa.util.hugepagesTotal
+### mem.numa.util.hugepagesTotal
 
 per-node total count of hugepages
 
-mem.numa.util.hugepagesFree
+### mem.numa.util.hugepagesFree
 
 per-node count of free hugepages
 
-mem.numa.util.hugepagesSurp
+### mem.numa.util.hugepagesSurp
 
 per-node count of surplus hugepages
 
-mem.numa.util.hugepagesTotalBytes
+### mem.numa.util.hugepagesTotalBytes
 
 per-node total amount of hugepages memory
 
-mem.numa.util.hugepagesFreeBytes
+### mem.numa.util.hugepagesFreeBytes
 
 per-node amount of free hugepages memory
 
-mem.numa.util.hugepagesSurpBytes
+### mem.numa.util.hugepagesSurpBytes
 
 per-node amount of surplus hugepages memory
 
@@ -1242,7 +1242,7 @@ Count of direct reclaim calls since boot, from /proc/vmstat
 
 Count of direct dma reclaim calls since boot, from /proc/vmstat
 
-mem.vmstat.allocstall_dma32
+### mem.vmstat.allocstall_dma32
 
 Count of direct dma32 reclaim calls since boot, from /proc/vmstat
 
@@ -1607,7 +1607,7 @@ Count of pages moved from inactive to active since boot, from /proc/vmstat
 
 Count of dma mem page allocations since boot, from /proc/vmstat
 
-mem.vmstat.pgalloc_dma32
+### mem.vmstat.pgalloc_dma32
 
 Count of dma32 mem page allocations since boot, from /proc/vmstat
 
@@ -1623,7 +1623,7 @@ Count of movable mem page allocations since boot, from /proc/vmstat
 
 Count of normal mem page allocations since boot, from /proc/vmstat
 
-mem.vmstat.pgrefill_dma32
+### mem.vmstat.pgrefill_dma32
 
 Count of dma32 mem pages inspected in refill_inactive_zone since boot,
 from /proc/vmstat
@@ -1701,7 +1701,7 @@ since Linux 3.4
 
 Count of dma mem pages scanned since boot, from /proc/vmstat
 
-mem.vmstat.pgscan_direct_dma32
+### mem.vmstat.pgscan_direct_dma32
 
 Count of dma32 mem pages scanned since boot, from /proc/vmstat
 
@@ -1735,7 +1735,7 @@ since Linux 3.4
 
 Count of dma mem pages scanned by kswapd since boot, from /proc/vmstat
 
-mem.vmstat.pgscan_kswapd_dma32
+### mem.vmstat.pgscan_kswapd_dma32
 
 Count of dma32 mem pages scanned by kswapd since boot, from /proc/vmstat
 
@@ -1759,7 +1759,7 @@ cumulative total mem pages scanned by kswapd
 
 Count of dma mem pages reclaimed since boot, from /proc/vmstat
 
-mem.vmstat.pgsteal_dma32
+### mem.vmstat.pgsteal_dma32
 
 Count of dma32 mem pages reclaimed since boot, from /proc/vmstat
 
@@ -1788,7 +1788,7 @@ Count of mem pages reclaimed by kswapd since boot, from /proc/vmstat
 Count of dma mem pages reclaimed by kswapd since boot, from /proc/vmstat
 since Linux 3.4
 
-mem.vmstat.pgsteal_kswapd_dma32
+### mem.vmstat.pgsteal_kswapd_dma32
 
 Count of dma32 mem pages reclaimed by kswapd since boot, from /proc/vmstat
 since Linux 3.4
@@ -1812,7 +1812,7 @@ Count of mem pages directly reclaimed since boot, from /proc/vmstat
 Count of dma mem pages reclaimed since boot, from /proc/vmstat
 since Linux 3.4
 
-mem.vmstat.pgsteal_direct_dma32
+### mem.vmstat.pgsteal_direct_dma32
 
 Count of dma32 mem pages reclaimed since boot, from /proc/vmstat
 since Linux 3.4
@@ -2388,11 +2388,11 @@ sysfs interface name assignment type value
 
 string INET interface address (ifconfig style)
 
-network.interface.ipv6_addr
+### network.interface.ipv6_addr
 
 string IPv6 interface address (ifconfig style)
 
-network.interface.ipv6_scope
+### network.interface.ipv6_scope
 
 string IPv6 interface scope (ifconfig style)
 
@@ -2551,27 +2551,27 @@ instantaneous number of frag sockets currently in use
 
 nstantaneous number of used memory for frag
 
-network.sockstat.tcp6.inuse
+### network.sockstat.tcp6.inuse
 
 instantaneous number of tcp6 sockets currently in use
 
-network.sockstat.udp6.inuse
+### network.sockstat.udp6.inuse
 
 instantaneous number of udp6 sockets currently in use
 
-network.sockstat.udplite6.inuse
+### network.sockstat.udplite6.inuse
 
 instantaneous number of udplite6 sockets currently in use
 
-network.sockstat.raw6.inuse
+### network.sockstat.raw6.inuse
 
 instantaneous number of raw6 sockets currently in use
 
-network.sockstat.frag6.inuse
+### network.sockstat.frag6.inuse
 
 instantaneous number of frag6 sockets currently in use
 
-network.sockstat.frag6.memory
+### network.sockstat.frag6.memory
 
 instantaneous number of used memory for frag6
 
@@ -2707,11 +2707,11 @@ Number of IP datagrams with checksum errors
 
 Number of packets received with NOECT
 
-network.ip.ect1pkts
+### network.ip.ect1pkts
 
 Number of packets received with ECT(1)
 
-network.ip.ect0pkts
+### network.ip.ect0pkts
 
 Number of packets received with ECT(0)
 
@@ -3171,11 +3171,11 @@ Number of ignored duplicate SACKs with undo_marker not set
 
 Number of FRTO's successfully detected spurious RTOs
 
-network.tcp.md5notfound
+### network.tcp.md5notfound
 
 Number of times MD5 hash expected but not found
 
-network.tcp.md5unexpected
+### network.tcp.md5unexpected
 
 Number of times MD5 hash unexpected but found
 
@@ -3387,11 +3387,11 @@ Number of SYN_SENT connections
 
 Number of SYN_RECV connections
 
-network.tcpconn.fin_wait1
+### network.tcpconn.fin_wait1
 
 Number of FIN_WAIT1 connections
 
-network.tcpconn.fin_wait2
+### network.tcpconn.fin_wait2
 
 Number of FIN_WAIT2 connections
 
@@ -3486,387 +3486,387 @@ Number of unix domain socket streams in listen state
 
 Number of unix domain socket streams
 
-network.ip6.inreceives
+### network.ip6.inreceives
 
 count of ip6 inreceives
 
-network.ip6.inhdrerrors
+### network.ip6.inhdrerrors
 
 count of ip6 inhdrerrors
 
-network.ip6.intoobigerrors
+### network.ip6.intoobigerrors
 
 count of ip6 intoobigerrors
 
-network.ip6.innoroutes
+### network.ip6.innoroutes
 
 count of ip6 innoroutes
 
-network.ip6.inaddrerrors
+### network.ip6.inaddrerrors
 
 count of ip6 inaddrerrors
 
-network.ip6.inunknownprotos
+### network.ip6.inunknownprotos
 
 count of ip6 inunknownprotos
 
-network.ip6.intruncatedpkts
+### network.ip6.intruncatedpkts
 
 count of ip6 intruncatedpkts
 
-network.ip6.indiscards
+### network.ip6.indiscards
 
 count of ip6 indiscards
 
-network.ip6.indelivers
+### network.ip6.indelivers
 
 count of ip6 indelivers
 
-network.ip6.outforwdatagrams
+### network.ip6.outforwdatagrams
 
 count of ip6 outforwdatagrams
 
-network.ip6.outrequests
+### network.ip6.outrequests
 
 count of ip6 outrequests
 
-network.ip6.outdiscards
+### network.ip6.outdiscards
 
 count of ip6 outdiscards
 
-network.ip6.outnoroutes
+### network.ip6.outnoroutes
 
 count of ip6 outnoroutes
 
-network.ip6.reasmtimeout
+### network.ip6.reasmtimeout
 
 count of ip6 reasmtimeout
 
-network.ip6.reasmreqds
+### network.ip6.reasmreqds
 
 count of ip6 reassembly requireds
 
-network.ip6.reasmoks
+### network.ip6.reasmoks
 
 count of ip6 reassembly oks
 
-network.ip6.reasmfails
+### network.ip6.reasmfails
 
 count of ip6 reassembly failures
 
-network.ip6.fragoks
+### network.ip6.fragoks
 
 count of ip6 fragmentation oks
 
-network.ip6.fragfails
+### network.ip6.fragfails
 
 count of ip6 fragmentation failures
 
-network.ip6.fragcreates
+### network.ip6.fragcreates
 
 count of ip6 fragmentation creations
 
-network.ip6.inmcastpkts
+### network.ip6.inmcastpkts
 
 count of ip6 multicast packets in
 
-network.ip6.outmcastpkts
+### network.ip6.outmcastpkts
 
 count of ip6 multicast packets out
 
-network.ip6.inoctets
+### network.ip6.inoctets
 
 count of ip6 octets in
 
-network.ip6.outoctets
+### network.ip6.outoctets
 
 count of ip6 octets out
 
-network.ip6.inmcastoctets
+### network.ip6.inmcastoctets
 
 count of ip6 multicast octets in
 
-network.ip6.outmcastoctets
+### network.ip6.outmcastoctets
 
 count of ip6 multicast octets out
 
-network.ip6.inbcastoctets
+### network.ip6.inbcastoctets
 
 count of ip6 broadcast octets in
 
-network.ip6.outbcastoctets
+### network.ip6.outbcastoctets
 
 count of ip6 broadcast octets uot
 
-network.ip6.innoectpkts
+### network.ip6.innoectpkts
 
 count of ip6 packets received with NOECT
 
-network.ip6.inect1pkts
+### network.ip6.inect1pkts
 
 count of ip6 packets received with ECT(1)
 
-network.ip6.inect0pkts
+### network.ip6.inect0pkts
 
 count of ip6 packets received with ECT(0)
 
-network.ip6.incepkts
+### network.ip6.incepkts
 
 count of ip6 Congestion Experimented packets in
 
-network.icmp6.inmsgs
+### network.icmp6.inmsgs
 
 count of icmp6 inmsgs
 
-network.icmp6.inerrors
+### network.icmp6.inerrors
 
 count of icmp6 inerrors
 
-network.icmp6.outmsgs
+### network.icmp6.outmsgs
 
 count of icmp6 outmsgs
 
-network.icmp6.outerrors
+### network.icmp6.outerrors
 
 count of icmp6 outerrors
 
-network.icmp6.incsumerrors
+### network.icmp6.incsumerrors
 
 count of icmp6 incsumerrors
 
-network.icmp6.indestunreachs
+### network.icmp6.indestunreachs
 
 count of icmp6 indestunreachs
 
-network.icmp6.inpkttoobigs
+### network.icmp6.inpkttoobigs
 
 count of icmp6 inpkttoobigs
 
-network.icmp6.intimeexcds
+### network.icmp6.intimeexcds
 
 count of icmp6 intimeexcds
 
-network.icmp6.inparmproblems
+### network.icmp6.inparmproblems
 
 count of icmp6 inparmprobs
 
-network.icmp6.inechos
+### network.icmp6.inechos
 
 count of icmp6 inechos
 
-network.icmp6.inechoreplies
+### network.icmp6.inechoreplies
 
 count of icmp6 inechoreplies
 
-network.icmp6.ingroupmembqueries
+### network.icmp6.ingroupmembqueries
 
 count of icmp6 ingroupmembqueries
 
-network.icmp6.ingroupmembresponses
+### network.icmp6.ingroupmembresponses
 
 count of icmp6 ingroupmembresponses
 
-network.icmp6.ingroupmembreductions
+### network.icmp6.ingroupmembreductions
 
 count of icmp6 ingroupmembreductions
 
-network.icmp6.inroutersolicits
+### network.icmp6.inroutersolicits
 
 count of icmp6 inroutersolicits
 
-network.icmp6.inrouteradvertisements
+### network.icmp6.inrouteradvertisements
 
 count of icmp6 inrouteradvertisements
 
-network.icmp6.inneighborsolicits
+### network.icmp6.inneighborsolicits
 
 count of icmp6 inneighborsolicits
 
-network.icmp6.inneighboradvertisements
+### network.icmp6.inneighboradvertisements
 
 count of icmp6 inneighboradvertisements
 
-network.icmp6.inredirects
+### network.icmp6.inredirects
 
 count of icmp6 inredirects
 
-network.icmp6.inmldv2reports
+### network.icmp6.inmldv2reports
 
 count of icmp6 inmldv2reports
 
-network.icmp6.outdestunreachs
+### network.icmp6.outdestunreachs
 
 count of icmp6 outdestunreachs
 
-network.icmp6.outpkttoobigs
+### network.icmp6.outpkttoobigs
 
 count of icmp6 outpkttoobigs
 
-network.icmp6.outtimeexcds
+### network.icmp6.outtimeexcds
 
 count of icmp6 outtimeexcds
 
-network.icmp6.outparmproblems
+### network.icmp6.outparmproblems
 
 count of icmp6 outparmproblems
 
-network.icmp6.outechos
+### network.icmp6.outechos
 
 count of icmp6 outechos
 
-network.icmp6.outechoreplies
+### network.icmp6.outechoreplies
 
 count of icmp6 outechoreplies
 
-network.icmp6.outgroupmembqueries
+### network.icmp6.outgroupmembqueries
 
 count of icmp6 outgroupmembqueries
 
-network.icmp6.outgroupmembresponses
+### network.icmp6.outgroupmembresponses
 
 count of icmp6 outgroupmembresponses
 
-network.icmp6.outgroupmembreductions
+### network.icmp6.outgroupmembreductions
 
 count of icmp6 outgroupmembreductions
 
-network.icmp6.outroutersolicits
+### network.icmp6.outroutersolicits
 
 count of icmp6 outroutersolicits
 
-network.icmp6.outrouteradvertisements
+### network.icmp6.outrouteradvertisements
 
 count of icmp6 outrouteradvertisements
 
-network.icmp6.outneighborsolicits
+### network.icmp6.outneighborsolicits
 
 count of icmp6 outneighborsolicits
 
-network.icmp6.outneighboradvertisements
+### network.icmp6.outneighboradvertisements
 
 count of icmp6 outneighboradvertisements
 
-network.icmp6.outredirects
+### network.icmp6.outredirects
 
 count of icmp6 outredirects
 
-network.icmp6.outmldv2reports
+### network.icmp6.outmldv2reports
 
 count of icmp6 outmldv2reports
 
-network.udp6.indatagrams
+### network.udp6.indatagrams
 
 count of udp6 indatagrams
 
-network.udp6.noports
+### network.udp6.noports
 
 count of udp6 noports
 
-network.udp6.inerrors
+### network.udp6.inerrors
 
 count of udp6 inerrors
 
-network.udp6.outdatagrams
+### network.udp6.outdatagrams
 
 count of udp6 outdatagrams
 
-network.udp6.rcvbuferrors
+### network.udp6.rcvbuferrors
 
 count of udp6 rcvbuferrors
 
-network.udp6.sndbuferrors
+### network.udp6.sndbuferrors
 
 count of udp6 sndbuferrors
 
-network.udp6.incsumerrors
+### network.udp6.incsumerrors
 
 count of udp6 incsumerrors
 
-network.udp6.ignoredmulti
+### network.udp6.ignoredmulti
 
 count of udp6 ignoredmulti
 
-network.udpconn6.established
+### network.udpconn6.established
 
 Number of established udp6 connections
 
-network.udpconn6.listen
+### network.udpconn6.listen
 
 Number of udp6 connections in listen state
 
-network.udplite6.indatagrams
+### network.udplite6.indatagrams
 
 count of udplite6 indatagrams
 
-network.udplite6.noports
+### network.udplite6.noports
 
 count of udplite6 noports
 
-network.udplite6.inerrors
+### network.udplite6.inerrors
 
 count of udplite6 inerrors
 
-network.udplite6.outdatagrams
+### network.udplite6.outdatagrams
 
 count of udplite6 outdatagrams
 
-network.udplite6.rcvbuferrors
+### network.udplite6.rcvbuferrors
 
 count of udplite6 receive buffer errors
 
-network.udplite6.sndbuferrors
+### network.udplite6.sndbuferrors
 
 count of udplite6 send buffer errors
 
-network.udplite6.incsumerrors
+### network.udplite6.incsumerrors
 
 count of udplite6 in checksum errors
 
-network.rawconn6.count
+### network.rawconn6.count
 
 Number of raw6 socket connections
 
-network.tcpconn6.established
+### network.tcpconn6.established
 
 Number of established tcp6 connections
 
-network.tcpconn6.syn_sent
+### network.tcpconn6.syn_sent
 
 Number of SYN_SENT tcp6 connections
 
-network.tcpconn6.syn_recv
+### network.tcpconn6.syn_recv
 
 Number of SYN_RECV tcp6 connections
 
-network.tcpconn6.fin_wait1
+### network.tcpconn6.fin_wait1
 
 Number of FIN_WAIT1 tcp6 connections
 
-network.tcpconn6.fin_wait2
+### network.tcpconn6.fin_wait2
 
 Number of FIN_WAIT2 tcp6 connections
 
-network.tcpconn6.time_wait
+### network.tcpconn6.time_wait
 
 Number of TIME_WAIT tcp6 connections
 
-network.tcpconn6.close
+### network.tcpconn6.close
 
 Number of CLOSE tcp6 connections
 
-network.tcpconn6.close_wait
+### network.tcpconn6.close_wait
 
 Number of CLOSE_WAIT tcp6 connections
 
-network.tcpconn6.last_ack
+### network.tcpconn6.last_ack
 
 Number of LAST_ACK tcp6 connections
 
-network.tcpconn6.listen
+### network.tcpconn6.listen
 
 Number of LISTEN tcp6 connections
 
-network.tcpconn6.closing
+### network.tcpconn6.closing
 
 Number of CLOSING tcp6 connections
 
@@ -5013,35 +5013,35 @@ cumulative total of requests processed immediately
 
 cumulative total of threads that timedout from inactivity
 
-nfs3.client.calls
+### nfs3.client.calls
 
 cumulative total of client NFSv3 requests
 
-nfs3.client.reqs
+### nfs3.client.reqs
 
 cumulative total of client NFSv3 requests by request type
 
-nfs3.server.calls
+### nfs3.server.calls
 
 cumulative total of server NFSv3 requests
 
-nfs3.server.reqs
+### nfs3.server.reqs
 
 cumulative total of client NFSv3 requests by request type
 
-nfs4.client.calls
+### nfs4.client.calls
 
 cumulative total of client NFSv4 requests
 
-nfs4.client.reqs
+### nfs4.client.reqs
 
 cumulative total for each client NFSv4 request type
 
-nfs4.server.calls
+### nfs4.server.calls
 
 cumulative total of server NFSv4 operations, plus NULL requests
 
-nfs4.server.reqs
+### nfs4.server.reqs
 
 cumulative total for each server NFSv4 operation, and for NULL requests
 
@@ -6392,7 +6392,7 @@ A value of zero indicates no support, one indicates actively available
 
 A value of zero indicates no support, one indicates actively available.
 
-pmcd.feature.ipv6
+### pmcd.feature.ipv6
 
 A value of zero indicates no support, one indicates actively available.
 
@@ -7156,19 +7156,19 @@ Per-cgroup total throttle operations serviced
 
 Each blkio cgroups container based on heuristics
 
-cgroup.pressure.cpu.some.avg10sec
+### cgroup.pressure.cpu.some.avg10sec
 
 Indicates the time in which at least some cgroup tasks stalled on CPU
 resources over the last 10 seconds.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name cpu.pressure
 
-cgroup.pressure.cpu.some.avg1min
+### cgroup.pressure.cpu.some.avg1min
 
 Indicates the time in which at least some cgroup tasks stalled on CPU
 resources over the last 1 minute.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name cpu.pressure
 
-cgroup.pressure.cpu.some.avg5min
+### cgroup.pressure.cpu.some.avg5min
 
 Indicates the time in which at least some cgroup tasks stalled on CPU
 resources over the last 5 minutes.  Pressure stall information (PSI)
@@ -7180,19 +7180,19 @@ Indicates the time in which at least some cgroup tasks stalled on CPU
 resources (total time, cumulative).  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name cpu.pressure
 
-cgroup.pressure.memory.some.avg10sec
+### cgroup.pressure.memory.some.avg10sec
 
 Indicates the time in which at least some cgroup tasks stalled on memory
 resources over the last 10 seconds.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.memory.some.avg1min
+### cgroup.pressure.memory.some.avg1min
 
 Indicates the time in which at least some cgroup tasks stalled on memory
 resources over the last 1 minute.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.memory.some.avg5min
+### cgroup.pressure.memory.some.avg5min
 
 Indicates the time in which at least some cgroup tasks stalled on memory
 resources over the last 5 minutes.  Pressure stall information (PSI)
@@ -7204,19 +7204,19 @@ The CPU time for which at least some cgroup tasks stalled on memory
 resources.  Pressure stall information (PSI) from:
 $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.memory.full.avg10sec
+### cgroup.pressure.memory.full.avg10sec
 
 Indicates the time in which all cgroup tasks stalled on memory
 resources over the last 10 seconds.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.memory.full.avg1min
+### cgroup.pressure.memory.full.avg1min
 
 Indicates the time in which all cgroup tasks stalled on memory
 resources over the last 1 minute.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.memory.full.avg5min
+### cgroup.pressure.memory.full.avg5min
 
 Indicates the time in which all cgroup tasks stalled on memory
 resources over the last 5 minutes.  Pressure stall information (PSI)
@@ -7228,19 +7228,19 @@ The CPU time for which all cgroup tasks stalled on memory resources.
 Pressure stall information (PSI) from:
 $ find /sys/fs/cgroup -name memory.pressure
 
-cgroup.pressure.io.some.avg10sec
+### cgroup.pressure.io.some.avg10sec
 
 Indicates the time in which at least some cgroup tasks stalled on IO
 resources over the last 10 seconds.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name io.pressure
 
-cgroup.pressure.io.some.avg1min
+### cgroup.pressure.io.some.avg1min
 
 Indicates the time in which at least some cgroup tasks stalled on IO
 resources over the last 1 minute.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name io.pressure
 
-cgroup.pressure.io.some.avg5min
+### cgroup.pressure.io.some.avg5min
 
 Indicates the time in which at least some cgroup tasks stalled on IO
 resources over the last 5 minutes.  Pressure stall information (PSI)
@@ -7252,19 +7252,19 @@ The CPU time in which at least some cgroup tasks stalled on IO
 resources.  Pressure stall information (PSI) from:
 $ find /sys/fs/cgroup -name io.pressure
 
-cgroup.pressure.io.full.avg10sec
+### cgroup.pressure.io.full.avg10sec
 
 Indicates the time in which all cgroup tasks stalled on input/output
 resources over the last 10 seconds.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name io.pressure
 
-cgroup.pressure.io.full.avg1min
+### cgroup.pressure.io.full.avg1min
 
 Indicates the time in which all cgroup tasks stalled on input/output
 resources over the last 1 minute.  Pressure stall information (PSI)
 from: $ find /sys/fs/cgroup -name io.pressure
 
-cgroup.pressure.io.full.avg5min
+### cgroup.pressure.io.full.avg5min
 
 Indicates the time in which all cgroup tasks stalled on input/output
 resources over the last 5 minutes.  Pressure stall information (PSI)
